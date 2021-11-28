@@ -1,0 +1,112 @@
+package com.apiGeneralV8.APIv8Baterias.entities;
+
+import java.util.Objects;
+
+public class ClientEntity {
+	private Long idClient;
+	private String strName;
+	private String strCpf;
+	private Addres adress;
+	private String strTelephone;
+	private String strEmail;
+	private ConfigEntity config;
+	
+	public ClientEntity() {
+		
+	}
+
+	public ClientEntity(Long idClient, String strName, String strCpf, Addres adress, String strTelephone,
+			String strEmail, ConfigEntity config) {
+		this.idClient = idClient;
+		this.strName = strName;
+		this.strCpf = strCpf;
+		this.adress = adress;
+		this.strTelephone = strTelephone;
+		this.strEmail = strEmail;
+		this.config = config;
+	}
+
+	public Long getIdClient() {
+		return idClient;
+	}
+
+	public void setIdClient(Long idClient) {
+		this.idClient = idClient;
+	}
+
+	public String getStrName() {
+		return strName;
+	}
+
+	public void setStrName(String strName) {
+		this.strName = strName;
+	}
+
+	public String getStrCpf() {
+		return strCpf;
+	}
+
+	public void setStrCpf(String strCpf) {
+		this.strCpf = strCpf;
+	}
+
+	public Addres getAdress() {
+		return adress;
+	}
+
+	public void setAdress(Addres adress) {
+		this.adress = adress;
+	}
+
+	public String getStrTelephone() {
+		return strTelephone;
+	}
+
+	public void setStrTelephone(String strTelephone) {
+		this.strTelephone = strTelephone;
+	}
+
+	public String getStrEmail() {
+		return strEmail;
+	}
+
+	public void setStrEmail(String strEmail) {
+		this.strEmail = strEmail;
+	}
+
+	public ConfigEntity getConfig() {
+		return config;
+	}
+
+	public void setConfig(ConfigEntity config) {
+		this.config = config;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(adress, config, idClient, strCpf, strEmail, strName, strTelephone);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ClientEntity other = (ClientEntity) obj;
+		return Objects.equals(adress, other.adress) && Objects.equals(config, other.config)
+				&& Objects.equals(idClient, other.idClient) && Objects.equals(strCpf, other.strCpf)
+				&& Objects.equals(strEmail, other.strEmail) && Objects.equals(strName, other.strName)
+				&& Objects.equals(strTelephone, other.strTelephone);
+	}
+
+	@Override
+	public String toString() {
+		return "ClientEntity [idClient=" + idClient + ", strName=" + strName + ", strCpf=" + strCpf + ", adress="
+				+ adress + ", strTelephone=" + strTelephone + ", strEmail=" + strEmail + ", config=" + config + "]";
+	}
+	
+	
+}

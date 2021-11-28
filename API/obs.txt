@@ -1,0 +1,6 @@
+ERROS A SEREM EVITADOS:
+
+
+1. Manipulação de endereço(Utilizar endereços iguais caso possivel, se não criar um novo).
+2. Prestar atenção na hora de instanciar novas entidades para cadastrar de acordo com as 
+foreign keys

@@ -2,3 +2,19 @@
 1638030063203	Copy file
 1638030069561	Copy file
 1638030107400	Delete element
+1638033562545	Rename type 'Client'
+1638034264352	Rename type 'Config'
+1638034272919	Rename type 'Addres'
+1638034281599	Rename type 'Request'
+1638036323147	Rename type 'Storys'
+1638036408357	Copy compilation units
+1638036422596	Rename type 'AddresEntity'
+1638036429863	Rename type 'AdminEntity'
+1638036434942	Rename type 'ClientEntity'
+1638036439068	Rename type 'ConfigEntity'
+1638036443339	Rename type 'InventoryEntity'
+1638036449701	Rename type 'OfficeEntity'
+1638036454473	Rename type 'ProductEntity'
+1638036459712	Rename type 'RequestEntity'
+1638036480218	Rename type 'ServiceEntity'
+1638036485626	Rename type 'StorysEntity'

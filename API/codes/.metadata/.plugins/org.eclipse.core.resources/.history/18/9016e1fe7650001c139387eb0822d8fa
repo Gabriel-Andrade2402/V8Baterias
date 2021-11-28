@@ -1,0 +1,147 @@
+package com.apiGeneralV8.APIv8Baterias.entities;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.OneToMany;
+
+public class ClientEntity implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+	private Long idClient;
+	private String strName;
+	private String strCpf;
+	@OneToMany(mappedBy="address_id")
+	private List<AddressEntity> address=new ArrayList<>();
+	private String strTelephone;
+	@Column(unique=true)
+	private String strEmail;
+	private ConfigEntity config;
+	private String strPassword;
+	
+	public ClientEntity() {
+		
+	}
+	public ClientEntity(Long idClient, String strName, String strCpf, List<AddressEntity> address, String strTelephone,
+			String strEmail, ConfigEntity config, String strPassword) {
+		super();
+		this.idClient = idClient;
+		this.strName = strName;
+		this.strCpf = strCpf;
+		this.address = address;
+		this.strTelephone = strTelephone;
+		this.strEmail = strEmail;
+		this.config = config;
+		this.strPassword = strPassword;
+	}
+
+	public Long getIdClient() {
+		return idClient;
+	}
+
+	public void setIdClient(Long idClient) {
+		this.idClient = idClient;
+	}
+
+	public String getStrName() {
+		return strName;
+	}
+
+	public void setStrName(String strName) {
+		this.strName = strName;
+	}
+
+	public String getStrCpf() {
+		return strCpf;
+	}
+
+	public void setStrCpf(String strCpf) {
+		this.strCpf = strCpf;
+	}
+
+	public List<AddressEntity> getAddress() {
+		return address;
+	}
+	public void setAddress(List<AddressEntity> address) {
+		this.address = address;
+	}
+	public String getStrTelephone() {
+		return strTelephone;
+	}
+
+	public void setStrTelephone(String strTelephone) {
+		this.strTelephone = strTelephone;
+	}
+
+	public String getStrEmail() {
+		return strEmail;
+	}
+
+	public void setStrEmail(String strEmail) {
+		this.strEmail = strEmail;
+	}
+
+	public ConfigEntity getConfig() {
+		return config;
+	}
+
+	public void setConfig(ConfigEntity config) {
+		this.config = config;
+	}
+	
+	public String getStrPassword() {
+		return strPassword;
+	}
+
+	public void setStrPassword(String strPassword) {
+		this.strPassword = strPassword;
+	}
+
+
+
+
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(address, config, idClient, strCpf, strEmail, strName, strPassword, strTelephone);
+	}
+
+
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		ClientEntity other = (ClientEntity) obj;
+		return Objects.equals(address, other.address) && Objects.equals(config, other.config)
+				&& Objects.equals(idClient, other.idClient) && Objects.equals(strCpf, other.strCpf)
+				&& Objects.equals(strEmail, other.strEmail) && Objects.equals(strName, other.strName)
+				&& Objects.equals(strPassword, other.strPassword) && Objects.equals(strTelephone, other.strTelephone);
+	}
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "ClientEntity [idClient=" + idClient + ", strName=" + strName + ", strCpf=" + strCpf + ", address="
+				+ address + ", strTelephone=" + strTelephone + ", strEmail=" + strEmail + ", config=" + config
+				+ ", strPassword=" + strPassword + "]";
+	}
+
+	
+
+	
+	
+	
+}

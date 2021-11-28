@@ -1,0 +1,56 @@
+package com.apiGeneralV8.APIv8Baterias.entities;
+
+import java.util.List;
+import java.util.Objects;
+
+public class InventoryEntity {
+	
+	private Long idInventory;
+	
+	private List<ProductEntity> entProduct;
+	
+	public InventoryEntity() {
+		
+	}
+	
+	public InventoryEntity(Long idInventory, List<ProductEntity> entProduct) {
+		this.idInventory = idInventory;
+		this.entProduct = entProduct;
+	}
+
+	public Long getIdInventory() {
+		return idInventory;
+	}
+
+	public void setIdInventory(Long idInventory) {
+		this.idInventory = idInventory;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(entProduct, idInventory);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		InventoryEntity other = (InventoryEntity) obj;
+		return Objects.equals(entProduct, other.entProduct) && Objects.equals(idInventory, other.idInventory);
+	}
+
+	@Override
+	public String toString() {
+		return "InventoryEntity [idInventory=" + idInventory + ", entProduct=" + entProduct + "]";
+	}
+
+	
+	
+	
+	
+	
+}

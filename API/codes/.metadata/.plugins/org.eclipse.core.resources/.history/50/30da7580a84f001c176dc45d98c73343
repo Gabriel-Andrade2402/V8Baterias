@@ -1,0 +1,11 @@
+package com.apiGeneralV8.APIv8Baterias.entities;
+
+public class ServiceEntity {
+	private Long idService;
+	private String strNameService;
+	private Double numPrice;
+	private Boolean bolProductOperating;
+	private String strCodeService;
+	private String strInformations;
+	
+}

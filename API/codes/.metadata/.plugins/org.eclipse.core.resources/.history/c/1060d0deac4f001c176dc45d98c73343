@@ -1,0 +1,71 @@
+package com.apiGeneralV8.APIv8Baterias.dto;
+
+import java.util.Objects;
+
+public class InventoryEntity {
+	private Long idInventory;
+	private ProductEntity entProduct;
+	private Integer numQuantity;
+	
+	public InventoryEntity() {
+		
+	}
+
+	public InventoryEntity(Long idInventory, ProductEntity entProduct, Integer numQuantity) {
+		this.idInventory = idInventory;
+		this.entProduct = entProduct;
+		this.numQuantity = numQuantity;
+	}
+
+	public Long getIdInventory() {
+		return idInventory;
+	}
+
+	public void setIdInventory(Long idInventory) {
+		this.idInventory = idInventory;
+	}
+
+	public ProductEntity getEntProduct() {
+		return entProduct;
+	}
+
+	public void setEntProduct(ProductEntity entProduct) {
+		this.entProduct = entProduct;
+	}
+
+	public Integer getNumQuantity() {
+		return numQuantity;
+	}
+
+	public void setNumQuantity(Integer numQuantity) {
+		this.numQuantity = numQuantity;
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(entProduct, idInventory, numQuantity);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		InventoryEntity other = (InventoryEntity) obj;
+		return Objects.equals(entProduct, other.entProduct) && Objects.equals(idInventory, other.idInventory)
+				&& Objects.equals(numQuantity, other.numQuantity);
+	}
+
+	@Override
+	public String toString() {
+		return "InventoryEntity [idInventory=" + idInventory + ", entProduct=" + entProduct + ", numQuantity="
+				+ numQuantity + "]";
+	}
+	
+	
+	
+	
+}

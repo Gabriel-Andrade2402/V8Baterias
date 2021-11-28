@@ -1,0 +1,70 @@
+package com.apiGeneralV8.APIv8Baterias.entities;
+
+import java.util.Objects;
+
+public class Config {
+	private Long idConfig;
+	private Boolean bolReceivePromotions;
+	private Boolean bolReceiveUpdatingPrice;
+	
+	public Config() {
+		
+	}
+
+	public Config(Boolean bolReceivePromotions, Boolean bolReceiveUpdatingPrice) {
+		this.idConfig = idConfig;
+		this.bolReceivePromotions = bolReceivePromotions;
+		this.bolReceiveUpdatingPrice = bolReceiveUpdatingPrice;
+	}
+
+	public Long getIdConfig() {
+		return idConfig;
+	}
+
+	public void setIdConfig(Long idConfig) {
+		this.idConfig = idConfig;
+	}
+
+	public Boolean getBolReceivePromotions() {
+		return bolReceivePromotions;
+	}
+	
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(bolReceivePromotions, bolReceiveUpdatingPrice, idConfig);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Config other = (Config) obj;
+		return Objects.equals(bolReceivePromotions, other.bolReceivePromotions)
+				&& Objects.equals(bolReceiveUpdatingPrice, other.bolReceiveUpdatingPrice)
+				&& Objects.equals(idConfig, other.idConfig);
+	}
+
+	public void setBolReceivePromotions(Boolean bolReceivePromotions) {
+		this.bolReceivePromotions = bolReceivePromotions;
+	}
+
+	public Boolean getBolReceiveUpdatingPrice() {
+		return bolReceiveUpdatingPrice;
+	}
+
+	public void setBolReceiveUpdatingPrice(Boolean bolReceiveUpdatingPrice) {
+		this.bolReceiveUpdatingPrice = bolReceiveUpdatingPrice;
+	}
+
+	@Override
+	public String toString() {
+		return "Config [idConfig=" + idConfig + ", bolReceivePromotions=" + bolReceivePromotions
+				+ ", bolReceiveUpdatingPrice=" + bolReceiveUpdatingPrice + "]";
+	}
+	
+}

@@ -1,0 +1,12 @@
+package com.apiGeneralV8.APIv8Baterias.entities;
+
+public class ClientEntity {
+	private Long idClient;
+	private String strName;
+	private String strCpf;
+	private Addres adress;
+	private String strTelephone;
+	private String strEmail;
+	private Config config;
+
+}

@@ -1,0 +1,128 @@
+package com.apiGeneralV8.APIv8Baterias.entities;
+
+import java.sql.Date;
+
+public class RequestEntity {
+	private Long idRequest;
+	private ClientEntity entClient;
+	private ProductEntity entProduct;
+	private ServiceEntity entService;
+	private AddresEntity strAdress;
+	private Date dtRequest;
+	private String strCodeRequest;
+	private Boolean bolPaymentAproved;
+	private String strSituation;
+	private Date dtCanceled;
+	private String strReasonCancel;
+	
+	public RequestEntity() {
+		
+	}
+
+	public RequestEntity(Long idRequest, ClientEntity entClient, ProductEntity entProduct, ServiceEntity entService,
+			AddresEntity strAdress, Date dtRequest, String strCodeRequest, Boolean bolPaymentAproved,
+			String strSituation, Date dtCanceled, String strReasonCancel) {
+		this.idRequest = idRequest;
+		this.entClient = entClient;
+		this.entProduct = entProduct;
+		this.entService = entService;
+		this.strAdress = strAdress;
+		this.dtRequest = dtRequest;
+		this.strCodeRequest = strCodeRequest;
+		this.bolPaymentAproved = bolPaymentAproved;
+		this.strSituation = strSituation;
+		this.dtCanceled = dtCanceled;
+		this.strReasonCancel = strReasonCancel;
+	}
+
+	public Long getIdRequest() {
+		return idRequest;
+	}
+
+	public void setIdRequest(Long idRequest) {
+		this.idRequest = idRequest;
+	}
+
+	public ClientEntity getEntClient() {
+		return entClient;
+	}
+
+	public void setEntClient(ClientEntity entClient) {
+		this.entClient = entClient;
+	}
+
+	public ProductEntity getEntProduct() {
+		return entProduct;
+	}
+
+	public void setEntProduct(ProductEntity entProduct) {
+		this.entProduct = entProduct;
+	}
+
+	public ServiceEntity getEntService() {
+		return entService;
+	}
+
+	public void setEntService(ServiceEntity entService) {
+		this.entService = entService;
+	}
+
+	public AddresEntity getStrAdress() {
+		return strAdress;
+	}
+
+	public void setStrAdress(AddresEntity strAdress) {
+		this.strAdress = strAdress;
+	}
+
+	public Date getDtRequest() {
+		return dtRequest;
+	}
+
+	public void setDtRequest(Date dtRequest) {
+		this.dtRequest = dtRequest;
+	}
+
+	public String getStrCodeRequest() {
+		return strCodeRequest;
+	}
+
+	public void setStrCodeRequest(String strCodeRequest) {
+		this.strCodeRequest = strCodeRequest;
+	}
+
+	public Boolean getBolPaymentAproved() {
+		return bolPaymentAproved;
+	}
+
+	public void setBolPaymentAproved(Boolean bolPaymentAproved) {
+		this.bolPaymentAproved = bolPaymentAproved;
+	}
+
+	public String getStrSituation() {
+		return strSituation;
+	}
+
+	public void setStrSituation(String strSituation) {
+		this.strSituation = strSituation;
+	}
+
+	public Date getDtCanceled() {
+		return dtCanceled;
+	}
+
+	public void setDtCanceled(Date dtCanceled) {
+		this.dtCanceled = dtCanceled;
+	}
+
+	public String getStrReasonCancel() {
+		return strReasonCancel;
+	}
+
+	public void setStrReasonCancel(String strReasonCancel) {
+		this.strReasonCancel = strReasonCancel;
+	}
+	
+	
+	
+}

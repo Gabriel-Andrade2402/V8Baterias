@@ -1,0 +1,6 @@
+package com.apiGeneralV8.APIv8Baterias.entities;
+
+public class RequestEntity {
+	private Long idRequest;
+	private ClientEntity entClient;
+}
