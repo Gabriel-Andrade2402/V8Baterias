@@ -1,8 +1,0 @@
-package com.apiGeneralV8.APIv8Baterias.entities;
-
-public class Config {
-	private Long idConfig;
-	private Boolean bolReceivePromotions;
-	private Boolean bolReceiveUpdatingPrice;
-	
-}

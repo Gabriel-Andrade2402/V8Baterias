@@ -1,0 +1,6 @@
+package com.apiGeneralV8.APIv8Baterias.services;
+
+@Service
+public class AddressService {
+
+}

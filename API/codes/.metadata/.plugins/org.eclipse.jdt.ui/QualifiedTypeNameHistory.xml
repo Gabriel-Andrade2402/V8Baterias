@@ -10,10 +10,13 @@
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.entities.ClientEntity"/>
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.entities.AdminEntity"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
-    <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.entities.RequestEntity"/>
     <fullyQualifiedTypeName name="javax.persistence.Entity"/>
     <fullyQualifiedTypeName name="javax.persistence.Table"/>
     <fullyQualifiedTypeName name="java.util.Objects"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.entities.AddressEntity"/>
+    <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.entities.RequestEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 </qualifiedTypeNameHistroy>

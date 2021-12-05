@@ -1,6 +1,0 @@
-package com.apiGeneralV8.APIv8Baterias.entities;
-
-public class Request {
-	private Long idRequest;
-	private ClientEntity entClient;
-}
