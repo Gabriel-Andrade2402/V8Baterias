@@ -1,0 +1,42 @@
+package com.apiGeneralV8.APIv8Baterias.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.apiGeneralV8.APIv8Baterias.dto.ClientEntityDTO;
+import com.apiGeneralV8.APIv8Baterias.entities.ClientEntity;
+import com.apiGeneralV8.APIv8Baterias.repositorys.ClientRepository;
+
+@Service
+public class ClientService {
+	@Autowired
+	private ClientRepository repository;
+	
+	public ClientEntityDTO saveAddress(ClientEntity entity) {
+		repository.save(entity);
+		return new ClientEntityDTO().createInstance(entity);
+	}
+	
+	public void deleteAddress(ClientEntity entity) {
+		repository.delete(entity);
+	}
+	
+	private ClientEntity findAddress(ClientEntity entity) {
+		return repository.find(entity.getStrCpf(), entity.getStrCpf());
+	}
+	
+	public ClientEntityDTO updateAdress(ClientEntity lastEntity, ClientEntity newEntity) {
+		ClientEntity entity = findAddress(lastEntity);
+		if(entity!=null) {
+			entity =entity.updateAllData(newEntity);
+			repository.save(entity);
+			return new ClientEntityDTO().createInstance(entity);
+		}
+		return null;
+	}
+	public List<ClientEntity> findAll(){
+		return repository.findAll();
+	}
+}

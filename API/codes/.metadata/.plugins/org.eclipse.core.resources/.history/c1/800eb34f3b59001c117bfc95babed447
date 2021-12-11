@@ -1,0 +1,20 @@
+package com.apiGeneralV8.APIv8Baterias.ApiConsumer;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+public class ConsumerPerson {
+	private RestTemplate rest = new RestTemplate();
+	public ConsumerPerson() {
+	}
+	
+	public void getExample() {
+		RestTemplate restTemplate = new RestTemplate();
+		String fooResourceUrl
+		  = "http://localhost:8080/spring-rest/foos";
+		ResponseEntity<String> response
+		  = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);
+		System.out.println((response.getStatusCode() +" "+ equals(HttpStatus.OK)));
+	}
+}

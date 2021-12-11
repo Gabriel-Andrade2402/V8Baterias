@@ -36,4 +36,9 @@ public class StorysEntity implements Serializable{
 	@Getter @Setter private String strDescription;
 	@Column(name="str_title")
 	@Getter @Setter private String strTitle;	
+	
+	public StorysEntity updateAllData(StorysEntity newEntity) {
+		return new StorysEntity(newEntity.getIdStorys(), newEntity.getStrImageBase(),
+				newEntity.getStrDescription(), newEntity.getStrTitle());
+	}
 }

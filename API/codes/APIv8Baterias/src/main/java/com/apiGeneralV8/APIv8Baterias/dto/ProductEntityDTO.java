@@ -1,5 +1,9 @@
 package com.apiGeneralV8.APIv8Baterias.dto;
 
+import java.io.Serializable;
+
+import com.apiGeneralV8.APIv8Baterias.entities.ProductEntity;
+
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -10,7 +14,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @EqualsAndHashCode
 @ToString
-public class ProductEntityDTO {
+public class ProductEntityDTO implements Serializable{
+
+	private static final long serialVersionUID = 1L;
 	@Getter @Setter private Long idProduct;
 	@Getter @Setter private String strNameProduct;
 	@Getter @Setter private String strImageBase;
@@ -20,4 +26,11 @@ public class ProductEntityDTO {
 	@Getter @Setter private String strInformations;
 	@Getter @Setter private Integer numQuantity;
 	
+	public ProductEntityDTO createInstance(ProductEntity entity) {
+		ProductEntityDTO dto = new ProductEntityDTO(entity.getIdProduct(), 
+				entity.getStrNameProduct(), entity.getStrImageBase(), 
+				entity.getBolProductOperating(), entity.getNumPrice(), 
+				entity.getStrCodeProduct(), entity.getStrInformations(), entity.getNumQuantity());
+		return dto;
+	}
 }

@@ -43,4 +43,10 @@ public class ServiceEntity implements Serializable{
 	@Getter @Setter private String strInformations;
 	@OneToMany(mappedBy="service_id")
 	@Getter @Setter private List<RequestEntity> listRequests=new ArrayList<>();	
+	
+	public ServiceEntity updateAllData(ServiceEntity newEntity) {
+		return new ServiceEntity(newEntity.getIdService(), newEntity.getStrNameService(),
+				newEntity.getNumPrice(), newEntity.getBolProductOperating(), 
+				newEntity.getStrCodeService(), newEntity.getStrInformations(), newEntity.getListRequests());
+	}
 }

@@ -1,0 +1,50 @@
+package com.apiGeneralV8.APIv8Baterias.dto;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+
+import com.apiGeneralV8.APIv8Baterias.entities.AddressEntity;
+import com.apiGeneralV8.APIv8Baterias.entities.ClientEntity;
+import com.apiGeneralV8.APIv8Baterias.entities.ConfigEntity;
+import com.apiGeneralV8.APIv8Baterias.entities.RequestEntity;
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+@ToString
+public class ClientEntityDTO {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Getter @Setter private Long idClient;
+	@Getter @Setter private String strName;
+	@Getter @Setter private String strCpf;
+	@Getter @Setter private List<AddressEntity> listAddress=new ArrayList<>();
+	@Getter @Setter private String strTelephone;
+	@Getter @Setter private String strEmail;
+	@Getter @Setter private ConfigEntity config_id;
+	@Getter @Setter private String strPassword;
+	//@Getter @Setter private List<RequestEntity> listRequests=new ArrayList<>();
+	
+	public ClientEntityDTO createInstance(ClientEntity entity) {
+		ClientEntityDTO dto = new ClientEntityDTO(entity.getIdClient(), entity.getStrName(),
+				entity.getStrCpf(), entity.getListAddress(), entity.getStrTelephone(),
+				entity.getStrEmail(),new ConfigEntityDTO().createInstance(entity.getConfig_id()), entity.getStrPassword());
+		return dto;
+	}
+
+}

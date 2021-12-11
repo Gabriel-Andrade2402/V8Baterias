@@ -50,4 +50,11 @@ public class ClientEntity implements Serializable{
 	@Getter @Setter private String strPassword;
 	@OneToMany(mappedBy="client_id")
 	@Getter @Setter private List<RequestEntity> listRequests=new ArrayList<>();
+	
+	public ClientEntity updateAllData(ClientEntity newEntity) {
+		return new ClientEntity(newEntity.getIdClient(), newEntity.getStrName(), 
+				newEntity.getStrCpf(),newEntity.getListAddress(),
+				newEntity.getStrTelephone(),newEntity.getStrEmail(),
+				newEntity.getConfig_id(), newEntity.getStrPassword(), newEntity.getListRequests());
+	}
 }

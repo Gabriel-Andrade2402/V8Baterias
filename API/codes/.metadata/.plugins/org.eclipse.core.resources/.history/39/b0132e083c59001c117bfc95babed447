@@ -1,0 +1,28 @@
+package com.apiGeneralV8.APIv8Baterias.ApiConsumer;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
+
+import com.apiGeneralV8.APIv8Baterias.Pojo.PersonPojo;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+public class ConsumerPerson {
+	private RestTemplate rest = new RestTemplate();
+	public ConsumerPerson() {
+	}
+	
+	public void getExample() throws JsonMappingException, JsonProcessingException {
+		RestTemplate restTemplate = new RestTemplate();
+		String fooResourceUrl = "http://localhost:8080/spring-rest/foos";
+		ResponseEntity<String> response
+		  = restTemplate.getForEntity(fooResourceUrl + "/1", String.class);
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode root = mapper.readTree(response.getBody());
+		JsonNode name = root.path("name");
+		PersonPojo foo = restTemplate.getForObject(fooResourceUrl + "/1", PersonPojo.class);
+		
+	}
+}

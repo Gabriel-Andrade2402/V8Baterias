@@ -1,3 +1,6 @@
 1638668214340	Rename type 'ClientEntity'
 1638668315452	Rename type 'ProductRepositoru'
 1638668740089	Rename type 'StorysRespository'
+1639087250376	Rename type 'PersonJson'
+1639087262647	Rename package 'com.apiGeneralV8.APIv8Baterias.FormatJson'
+1639245804481	Rename type 'AddresEntityDTO'

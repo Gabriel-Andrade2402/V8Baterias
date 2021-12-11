@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="client_id"/>
+		<item key="selection" value="StorysEntity"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="address"/>
-			<item value="strAddress"/>
-			<item value="strAdress"/>
-			<item value="client_id"/>
+			<item value="ServiceEntity"/>
+			<item value="Service"/>
+			<item value="RequestEntity"/>
+			<item value="Request"/>
+			<item value="Product"/>
+			<item value="Office"/>
+			<item value="Config"/>
+			<item value="Client"/>
+			<item value="ClientEntity"/>
+			<item value="Admin"/>
+			<item value="Adress"/>
+			<item value="Address"/>
+			<item value="ServiceEntityDTO"/>
+			<item value="RequestEntityDTO"/>
+			<item value="ProductEntity"/>
 		</list>
 		<list key="replacehistory">
-			<item value="client_id"/>
-			<item value="entAddress"/>
-			<item value="strAddress"/>
-			<item value="clientId"/>
+			<item value="StorysEntity"/>
+			<item value="Storys"/>
+			<item value="ServiceEntity"/>
+			<item value="Service"/>
+			<item value="Request"/>
+			<item value="Product"/>
+			<item value="Office"/>
+			<item value="Config"/>
+			<item value="ConfigEntity"/>
+			<item value="Client"/>
+			<item value=""/>
+			<item value="Admin"/>
+			<item value="StorysEntityDTO"/>
+			<item value="ServiceEntityDTO"/>
+			<item value="RequestEntity"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="378"/>
-		<item key="DIALOG_Y_ORIGIN" value="112"/>
+		<item key="DIALOG_X_ORIGIN" value="530"/>
+		<item key="DIALOG_Y_ORIGIN" value="85"/>
 		<item key="DIALOG_WIDTH" value="284"/>
 		<item key="DIALOG_HEIGHT" value="391"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>

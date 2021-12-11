@@ -50,4 +50,11 @@ public class ProductEntity implements Serializable{
 	@OneToMany(mappedBy="product_id")
 	@Getter @Setter private List<RequestEntity> listRequests=new ArrayList<>();
 	
+	public ProductEntity updateAllData(ProductEntity newEntity) {
+		return new ProductEntity(newEntity.getIdProduct(),newEntity.getStrNameProduct(),
+				newEntity.getStrImageBase(), newEntity.getBolProductOperating(),
+				newEntity.getNumPrice(), newEntity.getStrCodeProduct(), newEntity.getStrInformations(),
+				newEntity.getNumQuantity(), newEntity.getListRequests());
+	}
+	
 }

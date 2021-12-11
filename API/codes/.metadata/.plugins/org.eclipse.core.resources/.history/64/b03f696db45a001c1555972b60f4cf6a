@@ -1,0 +1,44 @@
+package com.apiGeneralV8.APIv8Baterias.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.apiGeneralV8.APIv8Baterias.dto.AddressEntityDTO;
+import com.apiGeneralV8.APIv8Baterias.dto.AdminEntityDTO;
+import com.apiGeneralV8.APIv8Baterias.entities.AddressEntity;
+import com.apiGeneralV8.APIv8Baterias.entities.AdminEntity;
+import com.apiGeneralV8.APIv8Baterias.repositorys.AdminRepository;
+
+@Service
+public class AdminService {
+	@Autowired
+	private AdminRepository repositoryAdmin;
+	
+	public AdminEntityDTO saveAddress(AdminEntity entity) {
+		repositoryAdmin.save(entity);
+		return new AdminEntityDTO().createInstance(entity);
+	}
+	
+	public void deleteAddress(AdminEntity entity) {
+		repositoryAdmin.delete(entity);
+	}
+	
+	private AdminEntity findAddress(AdminEntity entity) {
+		return repositoryAdmin.find(entity.getStrRoad(), entity.getNumResidence(),entity.getStrCep());
+	}
+	
+	public AdminEntityDTO updateAdress(AdminEntity lastEntity, AdminEntity newEntity) {
+		AdminEntity entity = findAddress(lastEntity);
+		if(entity!=null) {
+			entity =entity.updateAllData(newEntity);
+			repositoryAdmin.save(entity);
+			return new AddressEntityDTO().createInstance(entity);
+		}
+		return null;
+	}
+	public List<AdminEntity> findAll(){
+		return repositoryAdmin.findAll();
+	}
+}

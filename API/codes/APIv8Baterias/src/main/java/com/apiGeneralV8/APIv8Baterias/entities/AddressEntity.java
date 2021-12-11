@@ -23,8 +23,8 @@ import lombok.ToString;
 
 @Entity
 @Table(name = "tb_address")
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @EqualsAndHashCode
 @ToString
 public class AddressEntity implements Serializable {
@@ -65,4 +65,10 @@ public class AddressEntity implements Serializable {
 	@JoinColumn(name = "client_id", nullable = false)
 	private ClientEntity client_id;
 	
+	public AddressEntity updateAllData(AddressEntity newEntity) {
+		return new AddressEntity(idAdress, newEntity.getStrRoad(),
+				newEntity.getNumResidence(), newEntity.getStrCep(), 
+				newEntity.getStrReferencePoint(),newEntity.getStrObservation(),
+				newEntity.getListRequests(), newEntity.getClient_id());
+	}
 }

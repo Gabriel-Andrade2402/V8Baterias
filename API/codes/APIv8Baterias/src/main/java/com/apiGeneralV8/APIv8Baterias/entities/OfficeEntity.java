@@ -35,4 +35,9 @@ public class OfficeEntity implements Serializable{
 	@Getter @Setter private String strNameOffice;
 	@OneToMany(mappedBy="office_id")
 	@Getter @Setter private List<AdminEntity> listAdmin=new ArrayList<>();
+	
+	public OfficeEntity updateAllData(OfficeEntity newEntity) {
+		return new OfficeEntity(newEntity.getIdOffice(), newEntity.getStrNameOffice(),
+				newEntity.getListAdmin());
+	}
 }

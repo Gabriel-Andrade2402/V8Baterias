@@ -43,4 +43,9 @@ public class ConfigEntity implements Serializable{
 	@OneToMany(mappedBy="config_id")
 	@Getter @Setter private List<ClientEntity> listClient=new ArrayList<>();
 	
+	public ConfigEntity updateAllData(ConfigEntity newEntity) {
+		return new ConfigEntity(newEntity.getIdConfig(), newEntity.getBolReceivePromotions(),
+				newEntity.getBolReceiveUpdatingPrice(), newEntity.getDtCreated(),
+				newEntity.getDtLastUpdated(), newEntity.getListClient());
+	}
 }

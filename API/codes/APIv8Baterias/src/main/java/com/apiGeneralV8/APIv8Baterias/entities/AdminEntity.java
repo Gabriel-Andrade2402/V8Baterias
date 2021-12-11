@@ -42,4 +42,10 @@ public class AdminEntity implements Serializable{
 	@JoinColumn(name = "office_id", nullable = false)
 	@Getter @Setter private OfficeEntity office_id;
 	
+	
+	public AdminEntity updateAllData(AdminEntity newEntity) {
+		return new AdminEntity(idAdmin,newEntity.getStrName(),
+				newEntity.getStrCpf(),newEntity.getStrMail(),
+				newEntity.getStrPassword(),newEntity.getOffice_id());
+	}
 }
