@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -33,6 +35,7 @@ public class OfficeEntity implements Serializable{
 	@Getter @Setter private Long idOffice;
 	@Column(name="str_name_office")
 	@Getter @Setter private String strNameOffice;
+	@JsonIgnore
 	@OneToMany(mappedBy="office_id")
 	@Getter @Setter private List<AdminEntity> listAdmin=new ArrayList<>();
 	

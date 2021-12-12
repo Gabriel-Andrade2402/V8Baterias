@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -37,7 +38,7 @@ public class ClientEntity implements Serializable{
 	@Getter @Setter private String strName;
 	@Column(name="str_cpf")
 	@Getter @Setter private String strCpf;
-	@OneToMany(mappedBy="client_id")
+	@ManyToMany
 	@Getter @Setter private List<AddressEntity> listAddress=new ArrayList<>();
 	@Column(name="str_telephone")
 	@Getter @Setter private String strTelephone;

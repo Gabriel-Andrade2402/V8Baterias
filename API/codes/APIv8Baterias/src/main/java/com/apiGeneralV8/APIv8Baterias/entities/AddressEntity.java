@@ -9,10 +9,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -56,19 +57,20 @@ public class AddressEntity implements Serializable {
 	@Setter
 	private String strObservation;
 	@OneToMany(mappedBy = "address_id")
+	@JsonIgnore
 	@Getter
 	@Setter
 	private List<RequestEntity> listRequests = new ArrayList<>();
 	@Getter
 	@Setter
-	@ManyToOne
-	@JoinColumn(name = "client_id", nullable = false)
-	private ClientEntity client_id;
+	@JsonIgnore
+	@ManyToMany
+	private List<ClientEntity> listClient;
 	
 	public AddressEntity updateAllData(AddressEntity newEntity) {
 		return new AddressEntity(idAdress, newEntity.getStrRoad(),
 				newEntity.getNumResidence(), newEntity.getStrCep(), 
 				newEntity.getStrReferencePoint(),newEntity.getStrObservation(),
-				newEntity.getListRequests(), newEntity.getClient_id());
+				newEntity.getListRequests(), newEntity.getListClient());
 	}
 }
