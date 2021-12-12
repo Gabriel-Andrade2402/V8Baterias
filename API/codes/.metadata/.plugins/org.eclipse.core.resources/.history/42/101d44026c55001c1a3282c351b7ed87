@@ -1,6 +1,0 @@
-package com.apiGeneralV8.APIv8Baterias.repositorys;
-
-@Repository
-public interface OfficeRepository {
-
-}

@@ -6,12 +6,15 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -47,11 +50,13 @@ public class ProductEntity implements Serializable{
 	@Getter @Setter private String strInformations;
 	@Column(name="num_quantity")
 	@Getter @Setter private Integer numQuantity;
-	@OneToMany(mappedBy="product_id")
+	@JsonIgnore
+	@OneToMany(mappedBy="product_id", fetch = FetchType.EAGER)
 	@Getter @Setter private List<RequestEntity> listRequests=new ArrayList<>();
 	
+	//Método usado para atualizar uma entidade a partir dos dados de outra
 	public ProductEntity updateAllData(ProductEntity newEntity) {
-		return new ProductEntity(newEntity.getIdProduct(),newEntity.getStrNameProduct(),
+		return new ProductEntity(idProduct,newEntity.getStrNameProduct(),
 				newEntity.getStrImageBase(), newEntity.getBolProductOperating(),
 				newEntity.getNumPrice(), newEntity.getStrCodeProduct(), newEntity.getStrInformations(),
 				newEntity.getNumQuantity(), newEntity.getListRequests());

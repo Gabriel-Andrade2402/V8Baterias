@@ -37,8 +37,9 @@ public class StorysEntity implements Serializable{
 	@Column(name="str_title")
 	@Getter @Setter private String strTitle;	
 	
+	//Método usado para atualizar uma entidade a partir dos dados de outra
 	public StorysEntity updateAllData(StorysEntity newEntity) {
-		return new StorysEntity(newEntity.getIdStorys(), newEntity.getStrImageBase(),
+		return new StorysEntity(idStorys, newEntity.getStrImageBase(),
 				newEntity.getStrDescription(), newEntity.getStrTitle());
 	}
 }

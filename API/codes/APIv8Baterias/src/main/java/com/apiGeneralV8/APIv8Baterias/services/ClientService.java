@@ -36,7 +36,7 @@ public class ClientService {
 		}
 		return null;
 	}
-	public List<ClientEntity> findAll(){
+	public List<ClientEntity> findAll(){ 
 		return repository.findAll();
 	}
 }

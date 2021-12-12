@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -36,11 +37,12 @@ public class OfficeEntity implements Serializable{
 	@Column(name="str_name_office")
 	@Getter @Setter private String strNameOffice;
 	@JsonIgnore
-	@OneToMany(mappedBy="office_id")
+	@OneToMany(mappedBy="office_id", fetch = FetchType.EAGER)
 	@Getter @Setter private List<AdminEntity> listAdmin=new ArrayList<>();
 	
+	//Método usado para atualizar uma entidade a partir dos dados de outra
 	public OfficeEntity updateAllData(OfficeEntity newEntity) {
-		return new OfficeEntity(newEntity.getIdOffice(), newEntity.getStrNameOffice(),
+		return new OfficeEntity(idOffice, newEntity.getStrNameOffice(),
 				newEntity.getListAdmin());
 	}
 }

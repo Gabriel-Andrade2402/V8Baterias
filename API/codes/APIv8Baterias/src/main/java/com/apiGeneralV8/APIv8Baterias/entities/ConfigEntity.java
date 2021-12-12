@@ -7,11 +7,14 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -34,17 +37,19 @@ public class ConfigEntity implements Serializable{
 	@Getter @Setter private Long idConfig;
 	@Column(name="bol_receive_promotions")
 	@Getter @Setter private Boolean bolReceivePromotions;
-	@Column(name="str_receive_updating_price")
+	@Column(name="bol_receive_updating_price")
 	@Getter @Setter private Boolean bolReceiveUpdatingPrice;
 	@Column(name="dt_created")
 	@Getter @Setter private Date dtCreated;
-	@Column(name="str_updated")
+	@Column(name="dt_updated")
 	@Getter @Setter private Date dtLastUpdated;
-	@OneToMany(mappedBy="config_id")
+	@JsonIgnore
+	@OneToMany(mappedBy="config_id", fetch = FetchType.EAGER)
 	@Getter @Setter private List<ClientEntity> listClient=new ArrayList<>();
 	
+	//Método usado para atualizar uma entidade a partir dos dados de outra
 	public ConfigEntity updateAllData(ConfigEntity newEntity) {
-		return new ConfigEntity(newEntity.getIdConfig(), newEntity.getBolReceivePromotions(),
+		return new ConfigEntity(idConfig, newEntity.getBolReceivePromotions(),
 				newEntity.getBolReceiveUpdatingPrice(), newEntity.getDtCreated(),
 				newEntity.getDtLastUpdated(), newEntity.getListClient());
 	}

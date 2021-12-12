@@ -42,7 +42,7 @@ public class AdminEntity implements Serializable{
 	@JoinColumn(name = "office_id", nullable = false)
 	@Getter @Setter private OfficeEntity office_id;
 	
-	
+	//Método usado para atualizar uma entidade a partir dos dados de outra
 	public AdminEntity updateAllData(AdminEntity newEntity) {
 		return new AdminEntity(idAdmin,newEntity.getStrName(),
 				newEntity.getStrCpf(),newEntity.getStrMail(),

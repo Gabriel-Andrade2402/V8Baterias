@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -56,7 +57,7 @@ public class AddressEntity implements Serializable {
 	@Getter
 	@Setter
 	private String strObservation;
-	@OneToMany(mappedBy = "address_id")
+	@OneToMany(mappedBy = "address_id", fetch = FetchType.EAGER)
 	@JsonIgnore
 	@Getter
 	@Setter
@@ -64,9 +65,10 @@ public class AddressEntity implements Serializable {
 	@Getter
 	@Setter
 	@JsonIgnore
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	private List<ClientEntity> listClient;
 	
+	//Método usado para atualizar uma entidade a partir dos dados de outra
 	public AddressEntity updateAllData(AddressEntity newEntity) {
 		return new AddressEntity(idAdress, newEntity.getStrRoad(),
 				newEntity.getNumResidence(), newEntity.getStrCep(), 

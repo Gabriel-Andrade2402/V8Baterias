@@ -45,8 +45,8 @@ INDEX VERSION 1.131+C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\
 1405647852.index
 784084716.index
 3732884216.index
-10826329.index
 656208439.index
+10826329.index
 4236602798.index
 2324168511.index
 51661143.index

@@ -27,7 +27,7 @@ public class ServiceEntityDTO implements Serializable{
 	public ServiceEntityDTO createInstance(ServiceEntity entity) {
 		ServiceEntityDTO dto = new ServiceEntityDTO(entity.getIdService(), 
 				entity.getStrNameService(), entity.getNumPrice(), 
-				entity.getBolProductOperating(), entity.getStrCodeService(), 
+				entity.getBolServiceOperating(), entity.getStrCodeService(), 
 				entity.getStrInformations());
 		return dto;
 	}

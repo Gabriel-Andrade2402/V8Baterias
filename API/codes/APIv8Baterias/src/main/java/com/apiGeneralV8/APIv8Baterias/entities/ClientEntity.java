@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,6 +15,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -38,7 +41,8 @@ public class ClientEntity implements Serializable{
 	@Getter @Setter private String strName;
 	@Column(name="str_cpf")
 	@Getter @Setter private String strCpf;
-	@ManyToMany
+	//@JsonIgnore
+	@ManyToMany(fetch = FetchType.EAGER)
 	@Getter @Setter private List<AddressEntity> listAddress=new ArrayList<>();
 	@Column(name="str_telephone")
 	@Getter @Setter private String strTelephone;
@@ -49,11 +53,13 @@ public class ClientEntity implements Serializable{
 	@Getter @Setter private ConfigEntity config_id;
 	@Column(name="str_password")
 	@Getter @Setter private String strPassword;
-	@OneToMany(mappedBy="client_id")
+	@JsonIgnore
+	@OneToMany(mappedBy="client_id", fetch = FetchType.EAGER)
 	@Getter @Setter private List<RequestEntity> listRequests=new ArrayList<>();
 	
+	//Método usado para atualizar uma entidade a partir dos dados de outra
 	public ClientEntity updateAllData(ClientEntity newEntity) {
-		return new ClientEntity(newEntity.getIdClient(), newEntity.getStrName(), 
+		return new ClientEntity(idClient, newEntity.getStrName(), 
 				newEntity.getStrCpf(),newEntity.getListAddress(),
 				newEntity.getStrTelephone(),newEntity.getStrEmail(),
 				newEntity.getConfig_id(), newEntity.getStrPassword(), newEntity.getListRequests());

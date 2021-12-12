@@ -1,5 +1,0 @@
-package com.apiGeneralV8.APIv8Baterias.repositorys;
-
-public interface AddressRepository {
-
-}
