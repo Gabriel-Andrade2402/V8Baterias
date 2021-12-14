@@ -54,7 +54,7 @@ public class ClientEntity implements Serializable{
 	@Column(name="str_password")
 	@Getter @Setter private String strPassword;
 	@JsonIgnore
-	@OneToMany(mappedBy="client_id", fetch = FetchType.EAGER)
+	@OneToMany(mappedBy="client_id", fetch =FetchType.EAGER)
 	@Getter @Setter private List<RequestEntity> listRequests=new ArrayList<>();
 	
 	//Método usado para atualizar uma entidade a partir dos dados de outra

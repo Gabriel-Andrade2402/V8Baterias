@@ -15,15 +15,23 @@ public class ProductService {
 	private ProductRepository repository;
 
 	public ProductEntityDTO saveProduct(ProductEntity entity) {
-		repository.save(entity);
-		return new ProductEntityDTO().createInstance(entity);
+		ProductEntity prod = findProduct(entity);
+		if(prod==null) {
+			repository.save(entity);
+			return new ProductEntityDTO().createInstance(entity);
+		}else {
+			return null;
+		}
 	}
 	
 	public void deleteProduct(ProductEntity entity) {
-		repository.delete(entity);
+		ProductEntity prod = findProduct(entity);
+		if(prod!=null) {
+			repository.delete(prod);
+		}
 	}
 	
-	private ProductEntity findProduct(ProductEntity entity) {
+	public ProductEntity findProduct(ProductEntity entity) {
 		return repository.find(entity.getStrNameProduct());
 	}
 	

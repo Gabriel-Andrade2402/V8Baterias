@@ -8,12 +8,12 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="Office"/>
 			<item value="ServiceEntity"/>
 			<item value="Service"/>
 			<item value="RequestEntity"/>
 			<item value="Request"/>
 			<item value="Product"/>
-			<item value="Office"/>
 			<item value="Config"/>
 			<item value="Client"/>
 			<item value="ClientEntity"/>

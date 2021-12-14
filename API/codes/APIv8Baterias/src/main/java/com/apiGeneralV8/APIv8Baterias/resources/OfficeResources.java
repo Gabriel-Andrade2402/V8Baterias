@@ -36,7 +36,9 @@ public class OfficeResources {
 		return ResponseEntity.ok().body("ok");
 	}
 	@PostMapping(value="/update")
-	public ResponseEntity<String> update(@RequestBody OfficeEntity lastOffice,@RequestBody OfficeEntity newOffice){
+	public ResponseEntity<String> update(@RequestBody List<OfficeEntity> listOffice){
+		OfficeEntity lastOffice = listOffice.get(0);
+		OfficeEntity newOffice = listOffice.get(1);
 		if(service.updateOffice(lastOffice,newOffice)!=null) {
 			return ResponseEntity.ok().body("ok");
 		}

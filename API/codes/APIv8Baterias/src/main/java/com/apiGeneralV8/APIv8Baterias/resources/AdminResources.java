@@ -36,7 +36,9 @@ public class AdminResources {
 		return ResponseEntity.ok().body("ok");
 	}
 	@PostMapping(value="/update")
-	public ResponseEntity<String> update(@RequestBody AdminEntity lastAdmin,@RequestBody AdminEntity newAdmin){
+	public ResponseEntity<String> update(@RequestBody List<AdminEntity> listAdmin){
+		AdminEntity lastAdmin = listAdmin.get(0);
+		AdminEntity newAdmin = listAdmin.get(1);
 		if(service.updateAdmin(lastAdmin,newAdmin)!=null) {
 			return ResponseEntity.ok().body("ok");
 		}

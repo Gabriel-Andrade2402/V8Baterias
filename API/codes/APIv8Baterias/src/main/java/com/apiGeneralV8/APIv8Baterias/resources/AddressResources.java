@@ -36,8 +36,10 @@ public class AddressResources {
 		return ResponseEntity.ok().body("ok");
 	}
 	@PostMapping(value="/update")
-	public ResponseEntity<String> update(@RequestBody AddressEntity lastAdress,@RequestBody AddressEntity newAddress){
-		if(service.updateAdress(lastAdress,newAddress)!=null) {
+	public ResponseEntity<String> update(@RequestBody List<AddressEntity> listAddress){
+		AddressEntity lastAddress = listAddress.get(0);
+		AddressEntity newAddress = listAddress.get(1);
+		if(service.updateAdress(lastAddress,newAddress)!=null) {
 			return ResponseEntity.ok().body("ok");
 		}
 		return null;

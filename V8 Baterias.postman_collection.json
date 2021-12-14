@@ -1,0 +1,972 @@
+{
+	"info": {
+		"_postman_id": "bc37f460-8835-4626-9f27-b02444c91652",
+		"name": "V8 Baterias",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[{\r\n        \"strRoad\": \"RUA 3\",\r\n        \"numResidence\": 300,\r\n        \"strCep\": \"45871234\",\r\n        \"strReferencePoint\": \"CASA 3\",\r\n        \"strObservation\": \"Observação 3\"\r\n},\r\n{\r\n        \"strRoad\": \"RUA 4\",\r\n        \"numResidence\": 400,\r\n        \"strCep\": \"54687834\",\r\n        \"strReferencePoint\": \"CASA 4\",\r\n        \"strObservation\": \"Observação 4\"\r\n}]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/address/update",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"address",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strRoad\": \"RUA 3\",\r\n        \"numResidence\": 300,\r\n        \"strCep\": \"45871234\",\r\n        \"strReferencePoint\": \"CASA 3\",\r\n        \"strObservation\": \"Observação 3\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/address/delete",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"address",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{enderecoBase}}/address/all",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"address",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strRoad\": \"RUA 3\",\r\n        \"numResidence\": 300,\r\n        \"strCep\": \"45871234\",\r\n        \"strReferencePoint\": \"CASA 3\",\r\n        \"strObservation\": \"Observação 3\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/address/save",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"address",
+								"save"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strName\": \"teste\",\r\n        \"strCpf\": \"1210218795\",\r\n        \"strMail\": \"gabriel2402@gmail.com\",\r\n        \"strPassword\": \"gabriel\",\r\n        \"office_id\": {\r\n            \"strNameOffice\": \"Gerente\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/admin/save",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"admin",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"strName\": \"teste\",\r\n        \"strCpf\": \"1210218795\",\r\n        \"strMail\": \"gabriel2402@gmail.com\",\r\n        \"strPassword\": \"gabriel\",\r\n        \"office_id\": {\r\n            \"strNameOffice\": \"Gerente\"\r\n        }\r\n    },\r\n    {\r\n        \"strName\": \"nome maior\",\r\n        \"strCpf\": \"1210218795\",\r\n        \"strMail\": \"empresario@gmail.com\",\r\n        \"strPassword\": \"gabriel\",\r\n        \"office_id\": {\r\n            \"strNameOffice\": \"Auxiliar\"\r\n        }\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/admin/update",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"admin",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{enderecoBase}}/admin/all",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"admin",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strName\": \"teste\",\r\n        \"strCpf\": \"1210218795\",\r\n        \"strMail\": \"gabriel2402@gmail.com\",\r\n        \"strPassword\": \"gabriel\",\r\n        \"office_id\": {\r\n            \"strNameOffice\": \"Gerente\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/admin/delete",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"admin",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{enderecoBase}}/client/all",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"client",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strName\": \"Gabriel\",\r\n        \"strCpf\": \"213549879784\",\r\n        \"listAddress\": [\r\n            {\r\n                \"strRoad\": \"RUA 3\",\r\n                \"numResidence\": 300,\r\n                \"strCep\": \"1057472\",\r\n                \"strReferencePoint\": \"CASA 3\",\r\n                \"strObservation\": \"Observação 3\"\r\n            }\r\n        ],\r\n        \"strTelephone\": \"115487213\",\r\n        \"strEmail\": \"sadfsa@gmail.br\",\r\n        \"config_id\": {\r\n            \"bolReceivePromotions\": true,\r\n            \"bolReceiveUpdatingPrice\": false,\r\n            \"dtCreated\": \"2021-12-20\",\r\n            \"dtLastUpdated\": null\r\n        },\r\n        \"strPassword\": \"sdsadmvi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/client/save",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"client",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strName\": \"Gabriel de Andrade Silva\",\r\n        \"strCpf\": \"213549879784\",\r\n        \"listAddress\": [\r\n            {\r\n                \"strRoad\": \"RUA 4\",\r\n                \"numResidence\": 400,\r\n                \"strCep\": \"548794156\",\r\n                \"strReferencePoint\": \"CASA 4\",\r\n                \"strObservation\": \"Observação 4\"\r\n            }\r\n        ],\r\n        \"strTelephone\": \"265689+8123\",\r\n        \"strEmail\": \"sadfsa@gmail.br.com\",\r\n        \"config_id\": {\r\n            \"bolReceivePromotions\": false,\r\n            \"bolReceiveUpdatingPrice\": false,\r\n            \"dtCreated\": \"2021-12-19\",\r\n            \"dtLastUpdated\": null\r\n        },\r\n        \"strPassword\": \"sadasdad\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/client/delete",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"client",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"strName\": \"Gabriel\",\r\n        \"strCpf\": \"213549879784\",\r\n        \"listAddress\": [\r\n            {\r\n                \"strRoad\": \"RUA 3\",\r\n                \"numResidence\": 300,\r\n                \"strCep\": \"1057472\",\r\n                \"strReferencePoint\": \"CASA 3\",\r\n                \"strObservation\": \"Observação 3\"\r\n            }\r\n        ],\r\n        \"strTelephone\": \"115487213\",\r\n        \"strEmail\": \"sadfsa@gmail.br\",\r\n        \"config_id\": {\r\n            \"bolReceivePromotions\": true,\r\n            \"bolReceiveUpdatingPrice\": false,\r\n            \"dtCreated\": \"2021-12-20\",\r\n            \"dtLastUpdated\": null\r\n        },\r\n        \"strPassword\": \"sdsadmvi\"\r\n    },\r\n    {\r\n        \"strName\": \"Gabriel de Andrade Silva\",\r\n        \"strCpf\": \"213549879784\",\r\n        \"listAddress\": [\r\n            {\r\n                \"strRoad\": \"RUA 4\",\r\n                \"numResidence\": 400,\r\n                \"strCep\": \"548794156\",\r\n                \"strReferencePoint\": \"CASA 4\",\r\n                \"strObservation\": \"Observação 4\"\r\n            }\r\n        ],\r\n        \"strTelephone\": \"265689+8123\",\r\n        \"strEmail\": \"sadfsa@gmail.br.com\",\r\n        \"config_id\": {\r\n            \"bolReceivePromotions\": false,\r\n            \"bolReceiveUpdatingPrice\": false,\r\n            \"dtCreated\": \"2021-12-20\",\r\n            \"dtLastUpdated\": null\r\n        },\r\n        \"strPassword\": \"sadasdad\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/client/update",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"client",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FindRequests",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strEmail\": \"SADA@gmail.com\",\r\n        \"strPassword\": \"sdsadmvi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/client/getRequests",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"client",
+								"getRequests"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Config",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{enderecoBase}}/config/all",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"config",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bolReceivePromotions\": false,\r\n    \"bolReceiveUpdatingPrice\": true,\r\n    \"dtCreated\": \"2021-12-14\",\r\n    \"dtLastUpdated\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/config/save",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"config",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"bolReceivePromotions\": false,\r\n    \"bolReceiveUpdatingPrice\": true,\r\n    \"dtCreated\": \"2021-12-14\",\r\n    \"dtLastUpdated\": null\r\n    },\r\n    {\r\n    \"bolReceivePromotions\": false,\r\n    \"bolReceiveUpdatingPrice\": false,\r\n    \"dtCreated\": \"2021-12-18\",\r\n    \"dtLastUpdated\": null\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/config/update",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"config",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bolReceivePromotions\": false,\r\n    \"bolReceiveUpdatingPrice\": false,\r\n    \"dtCreated\": \"2021-12-18\",\r\n    \"dtLastUpdated\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/config/delete",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"config",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{enderecoBase}}/product/all",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"product",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strNameProduct\": \"Produto 4\",\r\n        \"strImageBase\": \"asfakfrwerewofwji0vsdifoshfewa\",\r\n        \"bolProductOperating\": true,\r\n        \"numPrice\": 250.0,\r\n        \"strCodeProduct\": \"sadasmodoa\",\r\n        \"strInformations\": \"produto 2\",\r\n        \"numQuantity\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/product/save",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"product",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"strNameProduct\": \"Produto 4\",\r\n        \"strImageBase\": \"asfakfrwerewofwji0vsdifoshfewa\",\r\n        \"bolProductOperating\": true,\r\n        \"numPrice\": 250.0,\r\n        \"strCodeProduct\": \"sadasmodoa\",\r\n        \"strInformations\": \"produto 2\",\r\n        \"numQuantity\": 500\r\n    },\r\n    {\r\n        \"strNameProduct\": \"Produto 5\",\r\n        \"strImageBase\": \"sadafasdoasdnasidnaksncdaksd\",\r\n        \"bolProductOperating\": false,\r\n        \"numPrice\": 5000.0,\r\n        \"strCodeProduct\": \"safadada\",\r\n        \"strInformations\": \"produto 2\",\r\n        \"numQuantity\": 100\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/product/update",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"product",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strNameProduct\": \"Produto 4\",\r\n        \"strImageBase\": \"asfakfrwerewofwji0vsdifoshfewa\",\r\n        \"bolProductOperating\": true,\r\n        \"numPrice\": 250.0,\r\n        \"strCodeProduct\": \"sadasmodoa\",\r\n        \"strInformations\": \"produto 2\",\r\n        \"numQuantity\": 500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/product/delete",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"product",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Service",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"strNameService\": \"Serviço 2\",\r\n    \"numPrice\": 3500.0,\r\n    \"bolServiceOperating\": true,\r\n    \"strCodeService\": \"fsafasdqweqe\",\r\n    \"strInformations\": \"Serviço 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/service/save",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"service",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"strNameService\": \"Serviço 2\",\r\n    \"numPrice\": 3500.0,\r\n    \"bolServiceOperating\": true,\r\n    \"strCodeService\": \"fsafasdqweqe\",\r\n    \"strInformations\": \"Serviço 2\"\r\n    },\r\n    {\r\n    \"strNameService\": \"Serviço 3\",\r\n    \"numPrice\": 3500.0,\r\n    \"bolServiceOperating\": true,\r\n    \"strCodeService\": \"fsafasdqweqe\",\r\n    \"strInformations\": \"Serviço 3\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/service/update",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"service",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"strNameService\": \"Serviço 2\",\r\n    \"numPrice\": 3500.0,\r\n    \"bolServiceOperating\": true,\r\n    \"strCodeService\": \"fsafasdqweqe\",\r\n    \"strInformations\": \"Serviço 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/service/delete",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"service",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{enderecoBase}}/service/all",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"service",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Storys",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"strImageBase\": \"asfasfasf57safas87dsa1fasd489w7e8q94q1w5e156a1sf56a4f89asdf748qwe1q32we10sad64sa89d74afa1sf65qw1e8974wq98sad12da1fa65f4as89d7qwe1s2ad156asd4a89sd8qew1sad21sa65d4a8s4fsa85f4s9f+wse9+f7swr987qwe8qe4165qr41sa65as5d15\",\r\n        \"strDescription\": \"Descricao 2\",\r\n        \"strTitle\": \"Titulo 2\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/storys/save",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"storys",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{enderecoBase}}/storys/all",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"storys",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"strImageBase\": \"asfasfasf57safas87dsa1fasd489w7e8q94q1w5e156a1sf56a4f89asdf748qwe1q32we10sad64sa89d74afa1sf65qw1e8974wq98sad12da1fa65f4as89d7qwe1s2ad156asd4a89sd8qew1sad21sa65d4a8s4fsa85f4s9f+wse9+f7swr987qwe8qe4165qr41sa65as5d15\",\r\n        \"strDescription\": \"Descricao 2\",\r\n        \"strTitle\": \"Titulo 2\"\r\n    },\r\n    {\r\n        \"strImageBase\": \"asfasfasf57safas87dsa1fasd489w7e8q94q1w5e156a1sf56a4f89asdf748qwe1q32we10sad64sa89d74afa1sf65qw1e8974wq98sad12da1fa65f4as89d7qwe1s2ad156asd4a89sd8qew1sad21sa65d4a8s4fsa85f4s9f+wse9+f7swr987qwe8qe4165qr41sa65as5d15\",\r\n        \"strDescription\": \"Descricao 3\",\r\n        \"strTitle\": \"Titulo 3\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/storys/update",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"storys",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idStorys\": 2,\r\n    \"strImageBase\": \"asfasfasf57safas87dsa1fasd489w7e8q94q1w5e156a1sf56a4f89asdf748qwe1q32we10sad64sa89d74afa1sf65qw1e8974wq98sad12da1fa65f4as89d7qwe1s2ad156asd4a89sd8qew1sad21sa65d4a8s4fsa85f4s9f+wse9+f7swr987qwe8qe4165qr41sa65as5d15\",\r\n    \"strDescription\": \"Descricao 2\",\r\n    \"strTitle\": \"Titulo 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/storys/delete",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"storys",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Requests",
+			"item": [
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"product_id\": {\r\n            \"strNameProduct\": \"Produto 1\"\r\n        },\r\n        \"address_id\": {\r\n            \"strRoad\": \"RUA 1\",\r\n            \"numResidence\": 100,\r\n            \"strCep\": \"04213564\",\r\n            \"strReferencePoint\": \"CASA 1\",\r\n            \"strObservation\": \"Observação 1\"\r\n        },\r\n        \"service_id\": null,\r\n        \"dtRequest\": \"2021-12-12\",\r\n        \"strCodeRequest\": \"asdasd23a1dq65ew7qw8\",\r\n        \"bolPaymentAproved\": true,\r\n        \"strSituation\": \"Andamento\",\r\n        \"dtCanceled\": null,\r\n        \"strReasonCancel\": null,\r\n        \"client_id\": {\r\n            \"strName\": \"francisco\",\r\n            \"strCpf\": \"45123658741\",\r\n            \"strTelephone\": \"11986821781\",\r\n            \"strEmail\": \"SADA@gmail.com\",\r\n            \"strPassword\": \"sdsadmvi\"\r\n        }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/request/save",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"request",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"client_id\": {\r\n            \"strName\": \"francisco\",\r\n            \"strCpf\": \"45123658741\",\r\n            \"listAddress\": [\r\n                {\r\n                    \"strRoad\": \"RUA 1\",\r\n                    \"numResidence\": 100,\r\n                    \"strCep\": \"04213564\",\r\n                    \"strReferencePoint\": \"CASA 1\",\r\n                    \"strObservation\": \"Observação 1\"\r\n                },\r\n                {\r\n                    \"strRoad\": \"RUA 2\",\r\n                    \"numResidence\": 101,\r\n                    \"strCep\": \"13648779\",\r\n                    \"strReferencePoint\": \"CASA 2\",\r\n                    \"strObservation\": \"Observação 2\"\r\n                }\r\n            ],\r\n            \"strTelephone\": \"11986821781\",\r\n            \"strEmail\": \"SADA@gmail.com\",\r\n            \"config_id\": {\r\n                \"bolReceivePromotions\": true,\r\n                \"bolReceiveUpdatingPrice\": true,\r\n                \"dtCreated\": \"2021-12-13\",\r\n                \"dtLastUpdated\": null\r\n            },\r\n            \"strPassword\": \"sdsadmvi\"\r\n        },\r\n        \"product_id\": {\r\n            \"strNameProduct\": \"Produto 1\",\r\n            \"strImageBase\": \"Avcnkxvcnkvcnvxcnxkvcknsdfsdbcvbrteruytiyunbmbawewqeqethdfgffsgcxbxhbfurtyewewerwerwrfw4r65we4rwe98r7w987rwerf4s654g87hf8u7tyi897yuhi5h1l5hj41k8g4jfg9ht7erte9erxvcknxknxcvkvxckn\",\r\n            \"bolProductOperating\": true,\r\n            \"numPrice\": 500.0,\r\n            \"strCodeProduct\": \"SASD4A878812\",\r\n            \"strInformations\": \"produto\",\r\n            \"numQuantity\": 10\r\n        },\r\n        \"address_id\": {\r\n            \"strRoad\": \"RUA 1\",\r\n            \"numResidence\": 100,\r\n            \"strCep\": \"04213564\",\r\n            \"strReferencePoint\": \"CASA 1\",\r\n            \"strObservation\": \"Observação 1\"\r\n        },\r\n        \"service_id\": null,\r\n        \"dtRequest\": \"2021-12-13\",\r\n        \"strCodeRequest\": \"adadadwa46we40a2\",\r\n        \"bolPaymentAproved\": true,\r\n        \"strSituation\": \"Andamento\",\r\n        \"dtCanceled\": null,\r\n        \"strReasonCancel\": null\r\n    },\r\n    {\r\n        \"client_id\": {\r\n            \"strName\": \"francisco\",\r\n            \"strCpf\": \"45123658741\",\r\n            \"listAddress\": [\r\n                {\r\n                    \"strRoad\": \"RUA 1\",\r\n                    \"numResidence\": 100,\r\n                    \"strCep\": \"04213564\",\r\n                    \"strReferencePoint\": \"CASA 1\",\r\n                    \"strObservation\": \"Observação 1\"\r\n                },\r\n                {\r\n                    \"strRoad\": \"RUA 2\",\r\n                    \"numResidence\": 101,\r\n                    \"strCep\": \"13648779\",\r\n                    \"strReferencePoint\": \"CASA 2\",\r\n                    \"strObservation\": \"Observação 2\"\r\n                }\r\n            ],\r\n            \"strTelephone\": \"11986821781\",\r\n            \"strEmail\": \"SADA@gmail.com\",\r\n            \"config_id\": {\r\n                \"bolReceivePromotions\": true,\r\n                \"bolReceiveUpdatingPrice\": true,\r\n                \"dtCreated\": \"2021-12-13\",\r\n                \"dtLastUpdated\": null\r\n            },\r\n            \"strPassword\": \"sdsadmvi\"\r\n        },\r\n        \"product_id\": {\r\n            \"strNameProduct\": \"Produto 1\",\r\n            \"strImageBase\": \"Avcnkxvcnkvcnvxcnxkvcknsdfsdbcvbrteruytiyunbmbawewqeqethdfgffsgcxbxhbfurtyewewerwerwrfw4r65we4rwe98r7w987rwerf4s654g87hf8u7tyi897yuhi5h1l5hj41k8g4jfg9ht7erte9erxvcknxknxcvkvxckn\",\r\n            \"bolProductOperating\": true,\r\n            \"numPrice\": 500.0,\r\n            \"strCodeProduct\": \"SASD4A878812\",\r\n            \"strInformations\": \"produto\",\r\n            \"numQuantity\": 10\r\n        },\r\n        \"address_id\": {\r\n            \"strRoad\": \"RUA 1\",\r\n            \"numResidence\": 100,\r\n            \"strCep\": \"04213564\",\r\n            \"strReferencePoint\": \"CASA 1\",\r\n            \"strObservation\": \"Observação 1\"\r\n        },\r\n        \"service_id\": null,\r\n        \"dtRequest\": \"2021-12-18\",\r\n        \"strCodeRequest\": \"adadadwa46we40a2\",\r\n        \"bolPaymentAproved\": true,\r\n        \"strSituation\": \"FINALIZADO\",\r\n        \"dtCanceled\": null,\r\n        \"strReasonCancel\": null\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/request/update",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"request",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{enderecoBase}}/request/all",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"request",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"product_id\": {\r\n            \"strNameProduct\": \"Produto 1\"\r\n        },\r\n        \"address_id\": {\r\n            \"strRoad\": \"RUA 1\",\r\n            \"numResidence\": 100,\r\n            \"strCep\": \"04213564\",\r\n            \"strReferencePoint\": \"CASA 1\",\r\n            \"strObservation\": \"Observação 1\"\r\n        },\r\n        \"service_id\": null,\r\n        \"dtRequest\": \"2021-12-12\",\r\n        \"strCodeRequest\": \"asdasd23a1dq65ew7qw8\",\r\n        \"bolPaymentAproved\": true,\r\n        \"strSituation\": \"Andamento\",\r\n        \"dtCanceled\": null,\r\n        \"strReasonCancel\": null,\r\n        \"client_id\": {\r\n            \"strName\": \"francisco\",\r\n            \"strCpf\": \"45123658741\",\r\n            \"strTelephone\": \"11986821781\",\r\n            \"strEmail\": \"SADA@gmail.com\",\r\n            \"strPassword\": \"sdsadmvi\"\r\n        }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/request/delete",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"request",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Office",
+			"item": [
+				{
+					"name": "all",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{enderecoBase}}/office/all",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"office",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"strNameOffice\": \"Faxineiro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/office/save",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"office",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"strNameOffice\": \"Faxineiro\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/office/delete",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"office",
+								"delete"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n    \"strNameOffice\": \"Faxineiro\"\r\n    },\r\n    {\r\n    \"strNameOffice\": \"Atendente\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/office/update",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"office",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

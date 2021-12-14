@@ -36,7 +36,9 @@ public class ProductResources {
 		return ResponseEntity.ok().body("ok");
 	}
 	@PostMapping(value="/update")
-	public ResponseEntity<String> update(@RequestBody ProductEntity lastProduct,@RequestBody ProductEntity newProduct){
+	public ResponseEntity<String> update(@RequestBody List<ProductEntity> listProduct){
+		ProductEntity lastProduct = listProduct.get(0);
+		ProductEntity newProduct = listProduct.get(1);
 		if(service.updateProduct(lastProduct,newProduct)!=null) {
 			return ResponseEntity.ok().body("ok");
 		}

@@ -15,15 +15,23 @@ public class ServiceService {
 	private ServiceRepository repository;
 	
 	public ServiceEntityDTO saveService(ServiceEntity entity) {
-		repository.save(entity);
-		return new ServiceEntityDTO().createInstance(entity);
+		ServiceEntity service = findService(entity);
+		if(service==null) {
+			repository.save(entity);
+			return new ServiceEntityDTO().createInstance(entity);
+		}else {
+			return null;
+		}
 	}
 	
 	public void deleteService(ServiceEntity entity) {
-		repository.delete(entity);
+		ServiceEntity service = findService(entity);
+		if(service!=null) {
+			repository.delete(service);
+		}
 	}
 	
-	private ServiceEntity findService(ServiceEntity entity) {
+	public ServiceEntity findService(ServiceEntity entity) {
 		return repository.find(entity.getStrNameService());
 	}
 	

@@ -1,6 +1,8 @@
 package com.apiGeneralV8.APIv8Baterias.dto;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import com.apiGeneralV8.APIv8Baterias.entities.ServiceEntity;
 
@@ -24,11 +26,20 @@ public class ServiceEntityDTO implements Serializable{
 	@Getter @Setter private String strCodeService;
 	@Getter @Setter private String strInformations;
 	
+	//Método usado para criar uma instância de DTO a partir de uma entidade
 	public ServiceEntityDTO createInstance(ServiceEntity entity) {
 		ServiceEntityDTO dto = new ServiceEntityDTO(entity.getIdService(), 
 				entity.getStrNameService(), entity.getNumPrice(), 
 				entity.getBolServiceOperating(), entity.getStrCodeService(), 
 				entity.getStrInformations());
 		return dto;
+	}
+	//Método usado para criar uma instância de lista de DTO a partir de uma lista de entidade
+	public List<ServiceEntityDTO> createInstanceList(List<ServiceEntity> list) {
+		List<ServiceEntityDTO> listDto = new ArrayList<>();
+		for(ServiceEntity service:list) {
+			listDto.add(createInstance(service));
+		}
+		return listDto;
 	}
 }

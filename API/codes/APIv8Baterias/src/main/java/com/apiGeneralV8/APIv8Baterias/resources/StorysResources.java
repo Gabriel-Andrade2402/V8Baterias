@@ -36,8 +36,10 @@ public class StorysResources {
 		return ResponseEntity.ok().body("ok");
 	}
 	@PostMapping(value="/update")
-	public ResponseEntity<String> update(@RequestBody StorysEntity lastRequest,@RequestBody StorysEntity newRequest){
-		if(service.updateStorys(lastRequest,newRequest)!=null) {
+	public ResponseEntity<String> update(@RequestBody List<StorysEntity> listRequest){
+		StorysEntity lastStorys =listRequest.get(0);
+		StorysEntity newStorys =listRequest.get(1);
+		if(service.updateStorys(lastStorys,newStorys)!=null) {
 			return ResponseEntity.ok().body("ok");
 		}
 		return null;

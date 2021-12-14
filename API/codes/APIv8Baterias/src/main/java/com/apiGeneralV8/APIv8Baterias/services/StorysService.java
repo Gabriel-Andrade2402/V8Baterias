@@ -15,12 +15,20 @@ public class StorysService {
 	private StorysRepository repository;
 	
 	public StorysEntityDTO saveStorys(StorysEntity entity) {
-		repository.save(entity);
-		return new StorysEntityDTO().createInstance(entity);
+		StorysEntity storys = findStorys(entity);
+		if(storys==null) {
+			repository.save(entity);
+			return new StorysEntityDTO().createInstance(entity);
+		}else {
+			return null;
+		}
 	}
 	
 	public void deleteStorys(StorysEntity entity) {
-		repository.delete(entity);
+		StorysEntity storys = findStorys(entity);
+		if(storys!=null) {
+			repository.delete(entity);
+		}
 	}
 	
 	private StorysEntity findStorys(StorysEntity entity) {

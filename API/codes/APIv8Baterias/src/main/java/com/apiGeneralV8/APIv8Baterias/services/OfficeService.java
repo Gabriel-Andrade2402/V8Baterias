@@ -15,15 +15,21 @@ public class OfficeService {
 	private OfficeRepository repository;
 	
 	public OfficeEntityDTO saveOffice(OfficeEntity entity) {
-		repository.save(entity);
-		return new OfficeEntityDTO().createInstance(entity);
+		if(findOffice(entity)==null) {
+			repository.save(entity);
+			return new OfficeEntityDTO().createInstance(entity);
+		}
+		return null;
 	}
 	
 	public void deleteOffice(OfficeEntity entity) {
-		repository.delete(entity);
+		OfficeEntity office = findOffice(entity);
+		if(office!=null) {
+			repository.delete(office);
+		}
 	}
 	
-	private OfficeEntity findOffice(OfficeEntity entity) {
+	public OfficeEntity findOffice(OfficeEntity entity) {
 		return repository.find(entity.getStrNameOffice());
 	}
 	

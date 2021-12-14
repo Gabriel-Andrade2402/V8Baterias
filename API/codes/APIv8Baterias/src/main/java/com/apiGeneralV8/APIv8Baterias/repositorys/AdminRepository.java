@@ -11,7 +11,7 @@ import com.apiGeneralV8.APIv8Baterias.entities.AdminEntity;
 public interface AdminRepository extends JpaRepository<AdminEntity,Long>{
 	//Consulta de igualdade padrão, semelhante ao EQUALS.
 		@Query(value = "SELECT * FROM tb_admin WHERE str_cpf = :strCpf "
-				+ "AND str_mail = :strEmail", nativeQuery=true)
-		AdminEntity find(@Param("strCpf") String strRoad,
-				@Param("strEmail") String numResidence);
+				+ "OR str_mail = :strEmail", nativeQuery=true)
+		AdminEntity find(@Param("strCpf") String strCpf,
+				@Param("strEmail") String strMail);
 }

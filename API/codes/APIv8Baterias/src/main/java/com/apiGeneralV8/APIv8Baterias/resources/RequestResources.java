@@ -36,7 +36,9 @@ public class RequestResources {
 		return ResponseEntity.ok().body("ok");
 	}
 	@PostMapping(value="/update")
-	public ResponseEntity<String> update(@RequestBody RequestEntity lastRequest,@RequestBody RequestEntity newRequest){
+	public ResponseEntity<String> update(@RequestBody List<RequestEntity> listRequest){
+		RequestEntity lastRequest = listRequest.get(0);
+		RequestEntity newRequest = listRequest.get(1);
 		if(service.updateRequest(lastRequest,newRequest)!=null) {
 			return ResponseEntity.ok().body("ok");
 		}

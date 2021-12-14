@@ -36,7 +36,9 @@ public class ConfigResources {
 		return ResponseEntity.ok().body("ok");
 	}
 	@PostMapping(value="/update")
-	public ResponseEntity<String> update(@RequestBody ConfigEntity lastConfig,@RequestBody ConfigEntity newConfig){
+	public ResponseEntity<String> update(@RequestBody List<ConfigEntity> listConfig){
+		ConfigEntity lastConfig = listConfig.get(0);
+		ConfigEntity newConfig = listConfig.get(1);
 		if(service.updateConfig(lastConfig,newConfig)!=null) {
 			return ResponseEntity.ok().body("ok");
 		}
