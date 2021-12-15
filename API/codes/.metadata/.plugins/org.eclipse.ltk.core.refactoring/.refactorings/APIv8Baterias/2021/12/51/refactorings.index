@@ -10,3 +10,6 @@
 1639524868861	Delete element
 1639525276141	Delete element
 1639525395325	Delete element
+1639604062066	Rename type 'SecurityService'
+1639604138307	Rename type 'ConfigClientService'
+1639606664427	Rename type 'UserClientService'

@@ -1,0 +1,74 @@
+package com.apiGeneralV8.APIv8Baterias.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.apiGeneralV8.APIv8Baterias.config.repository.UserConfigRepository;
+import com.apiGeneralV8.APIv8Baterias.dto.AddressEntityDTO;
+import com.apiGeneralV8.APIv8Baterias.entities.AddressEntity;
+
+@Service
+public class UserClientService {
+	@Autowired
+	private UserConfigRepository userRepository;
+	
+	public AddressEntityDTO saveAddress(AddressEntity entity) {
+		if(findAddress(entity)==null) {
+			userRepository.save(entity);
+			return new AddressEntityDTO().createInstance(entity);
+		}else {
+			return null;
+		}
+	}
+	
+	public void deleteAddress(AddressEntity entity) {
+		//Validação de existencia dos critérios mínimos para busca.
+		if(entity.getStrRoad()!=null && entity.getNumResidence()!=null
+			&& entity.getStrCep()!=null) {
+			AddressEntity address= findAddress(entity);
+			if(address!=null) {
+				userRepository.delete(address);
+			}
+		}
+	}
+	
+	public AddressEntity findAddress(AddressEntity entity) {
+		return userRepository.find(entity.getStrRoad(), entity.getNumResidence(),entity.getStrCep());
+	}
+	
+	public AddressEntityDTO updateAdress(AddressEntity lastEntity, AddressEntity newEntity) {
+		//Validação de existencia dos critérios mínimos para busca.
+		if(lastEntity.getStrRoad()!=null && lastEntity.getNumResidence()!=null
+			&& lastEntity.getStrCep()!=null) {
+			AddressEntity entity = findAddress(lastEntity);
+			if(entity!=null) {
+				entity =entity.updateAllData(newEntity);
+				userRepository.save(entity);
+				return new AddressEntityDTO().createInstance(entity);
+			}
+		}
+		return null;
+	}
+	public List<AddressEntityDTO> findAll(){
+		return new AddressEntityDTO().createInstanceList(userRepository.findAll());
+	}
+	
+	//Método semelhante ao findAddress usado para pegar uma lista sem id e retornar com ID
+	//Caso algum endereço da lista não exista no banco ele é criado.
+	public List<AddressEntity> getListAddress(List<AddressEntity> list){
+		List<AddressEntity> listAddress = new ArrayList<>();
+		for(AddressEntity add:list) {
+			AddressEntity address =findAddress(add);
+			if(address!=null) {
+				listAddress.add(findAddress(address));
+			}else {
+				saveAddress(add);
+				listAddress.add(findAddress(add));
+			}
+		}
+		return listAddress;
+	}
+}

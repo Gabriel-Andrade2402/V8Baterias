@@ -45,7 +45,7 @@ public class StorysService {
 		}
 		return null;
 	}
-	public List<StorysEntity> findAll(){
-		return repository.findAll();
+	public List<StorysEntityDTO> findAll(){
+		return new StorysEntityDTO().createInstanceList(repository.findAll());
 	}
 }

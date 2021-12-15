@@ -1,0 +1,71 @@
+package com.apiGeneralV8.APIv8Baterias.services;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.apiGeneralV8.APIv8Baterias.config.entities.UserConfigEntity;
+import com.apiGeneralV8.APIv8Baterias.config.repository.UserConfigRepository;
+
+@Service
+public class UserClientService {
+	@Autowired
+	private UserConfigRepository userRepository;
+	
+	public UserConfigEntity saveUser(UserConfigEntity entity) {
+		if(findUser(entity)==null) {
+			userRepository.save(entity);
+			return entity;
+		}else {
+			return null;
+		}
+	}
+	
+	public void deleteUser(UserConfigEntity entity) {
+		//Validação de existencia dos critérios mínimos para busca.
+		if(entity.getEmail()!=null && entity.getPassword()!=null) {
+			UserConfigEntity User= findUser(entity);
+			if(User!=null) {
+				userRepository.delete(User);
+			}
+		}
+	}
+	
+	public UserConfigEntity findUser(UserConfigEntity entity) {
+		return userRepository.find(entity.getEmail(), entity.getPassword());
+	}
+	
+	public UserConfigEntity updateAdress(UserConfigEntity lastEntity, UserConfigEntity newEntity) {
+		//Validação de existencia dos critérios mínimos para busca.
+		if(lastEntity.getEmail()!=null && lastEntity.getPassword()!=null) {
+			UserConfigEntity entity = findUser(lastEntity);
+			if(entity!=null) {
+				entity =entity.updateAllData(newEntity);
+				userRepository.save(entity);
+				return entity;
+			}
+		}
+		return null;
+	}
+	public List<UserConfigEntityDTO> findAll(){
+		return new UserConfigEntityDTO().createInstanceList(userRepository.findAll());
+	}
+	
+	//Método semelhante ao findUser usado para pegar uma lista sem id e retornar com ID
+	//Caso algum endereço da lista não exista no banco ele é criado.
+	public List<UserConfigEntity> getListUser(List<UserConfigEntity> list){
+		List<UserConfigEntity> listUser = new ArrayList<>();
+		for(UserConfigEntity add:list) {
+			UserConfigEntity User =findUser(add);
+			if(User!=null) {
+				listUser.add(findUser(User));
+			}else {
+				saveUser(add);
+				listUser.add(findUser(add));
+			}
+		}
+		return listUser;
+	}
+}

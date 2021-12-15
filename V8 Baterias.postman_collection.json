@@ -66,7 +66,13 @@
 					"name": "all",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 50360105-65a7-4406-a6b4-f33cc0b6bbc2",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{enderecoBase}}/address/all",
 							"host": [
@@ -170,7 +176,13 @@
 					"name": "all",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 50360105-65a7-4406-a6b4-f33cc0b6bbc2",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{enderecoBase}}/admin/all",
 							"host": [
@@ -179,6 +191,13 @@
 							"path": [
 								"admin",
 								"all"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
 							]
 						}
 					},
@@ -220,7 +239,13 @@
 					"name": "all",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 50360105-65a7-4406-a6b4-f33cc0b6bbc2",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{enderecoBase}}/client/all",
 							"host": [
@@ -351,7 +376,13 @@
 					"name": "all",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 50360105-65a7-4406-a6b4-f33cc0b6bbc2",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{enderecoBase}}/config/all",
 							"host": [
@@ -455,7 +486,13 @@
 					"name": "all",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 50360105-65a7-4406-a6b4-f33cc0b6bbc2",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{enderecoBase}}/product/all",
 							"host": [
@@ -559,7 +596,13 @@
 					"name": "save",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 789fab2e-1d4c-406c-a8d1-e265dde5f933",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"strNameService\": \"Serviço 2\",\r\n    \"numPrice\": 3500.0,\r\n    \"bolServiceOperating\": true,\r\n    \"strCodeService\": \"fsafasdqweqe\",\r\n    \"strInformations\": \"Serviço 2\"\r\n}",
@@ -640,7 +683,13 @@
 					"name": "all",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 50360105-65a7-4406-a6b4-f33cc0b6bbc2",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{enderecoBase}}/service/all",
 							"host": [
@@ -690,7 +739,13 @@
 					"name": "all",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 50360105-65a7-4406-a6b4-f33cc0b6bbc2",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{enderecoBase}}/storys/all",
 							"host": [
@@ -824,7 +879,7 @@
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "bearer d05b1746-57e9-4000-b417-bafbe1b04daa",
+								"value": "bearer 50360105-65a7-4406-a6b4-f33cc0b6bbc2",
 								"type": "text"
 							}
 						],
@@ -877,7 +932,13 @@
 					"name": "all",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer 50360105-65a7-4406-a6b4-f33cc0b6bbc2",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{enderecoBase}}/office/all",
 							"host": [

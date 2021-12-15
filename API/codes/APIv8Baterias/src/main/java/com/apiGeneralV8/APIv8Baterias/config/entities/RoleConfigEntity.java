@@ -27,13 +27,21 @@ public class RoleConfigEntity implements GrantedAuthority {
     @GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "role_config_id")
     @Getter @Setter private Long id;
+	@Column(name="str_name")
 	@Getter @Setter private String name;
     
 	public RoleConfigEntity(String name) {
         this.name = name;
     }
+	public RoleConfigEntity(Long id,String name) {
+        this.name = name;
+        this.id = id;
+    }
 	@Override
 	public String getAuthority() {
 		return  this.name.toString();
+	}
+	public RoleConfigEntity updateAllData(RoleConfigEntity newEntity) {
+		return new RoleConfigEntity(id,newEntity.getName());
 	}
 }

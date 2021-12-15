@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.apiGeneralV8.APIv8Baterias.config.entities.UserConfigEntity;
 import com.apiGeneralV8.APIv8Baterias.dto.ClientEntityDTO;
 import com.apiGeneralV8.APIv8Baterias.dto.RequestEntityDTO;
 import com.apiGeneralV8.APIv8Baterias.entities.AddressEntity;
@@ -24,6 +25,8 @@ public class ClientService {
 	private ConfigService configService;
 	@Autowired
 	private RequestService requestService;
+	@Autowired
+	private UserConfigService userConfigService;
 	
 	public ClientEntityDTO saveClient(ClientEntity entity) {
 		List<AddressEntity> listAddress = new ArrayList<>();
@@ -54,7 +57,11 @@ public class ClientService {
 	public ClientEntity findClient(ClientEntity entity) {
 		return repository.find(entity.getStrCpf(),entity.getStrEmail());
 	}
-
+	
+	public ClientEntityDTO findClientDTO(ClientEntity entity) {
+		return new ClientEntityDTO().createInstance(repository.find(entity.getStrCpf(),entity.getStrEmail()));
+	}
+	
 	public ClientEntityDTO updateClient(ClientEntity lastEntity, ClientEntity newEntity) {
 		ClientEntity entity = findClient(lastEntity);
 		List<AddressEntity> listAddress = new ArrayList<>();
@@ -76,8 +83,8 @@ public class ClientService {
 		}
 		return null;
 	}
-	public List<ClientEntity> findAll(){ 
-		return repository.findAll();
+	public List<ClientEntityDTO> findAll(){ 
+		return new ClientEntityDTO().createInstanceList(repository.findAll());
 	}
 	
 	public List<RequestEntityDTO> findRequests(ClientEntity entity){

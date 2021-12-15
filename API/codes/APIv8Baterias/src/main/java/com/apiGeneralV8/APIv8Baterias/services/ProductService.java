@@ -13,7 +13,8 @@ import com.apiGeneralV8.APIv8Baterias.repositorys.ProductRepository;
 public class ProductService {
 	@Autowired
 	private ProductRepository repository;
-
+	
+	
 	public ProductEntityDTO saveProduct(ProductEntity entity) {
 		ProductEntity prod = findProduct(entity);
 		if(prod==null) {
@@ -44,7 +45,7 @@ public class ProductService {
 		}
 		return null;
 	}
-	public List<ProductEntity> findAll(){
-		return repository.findAll();
+	public List<ProductEntityDTO> findAll(){
+		return new ProductEntityDTO().createInstanceList(repository.findAll());
 	}
 }

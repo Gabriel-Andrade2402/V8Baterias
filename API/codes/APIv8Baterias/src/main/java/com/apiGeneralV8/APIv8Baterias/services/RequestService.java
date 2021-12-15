@@ -94,8 +94,8 @@ public class RequestService {
 		}
 		return null;
 	}
-	public List<RequestEntity> findAll(){
-		return repository.findAll();
+	public List<RequestEntityDTO> findAll(){
+		return new RequestEntityDTO().createInstanceList(repository.findAll());
 	}
 	public List<RequestEntity> findRequestsClient(Long id){
 		return repository.findRequestsClient(id);

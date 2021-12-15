@@ -41,7 +41,7 @@ public class AdminService {
 			repository.delete(findAdmin(entity));
 		}
 	}
-	
+	//Método usado como critério para execução de outros métodos
 	private AdminEntity findAdmin(AdminEntity entity) {
 		return repository.find(entity.getStrCpf(),entity.getStrCpf());
 	}
@@ -65,7 +65,7 @@ public class AdminService {
 		}
 		return null;
 	}
-	public List<AdminEntity> findAll(){
-		return repository.findAll();
+	public List<AdminEntityDTO> findAll(){
+		return new AdminEntityDTO().createInstanceList(repository.findAll());
 	}
 }

@@ -42,7 +42,7 @@ public class OfficeService {
 		}
 		return null;
 	}
-	public List<OfficeEntity> findAll(){
-		return repository.findAll();
+	public List<OfficeEntityDTO> findAll(){
+		return new OfficeEntityDTO().createInstanceList(repository.findAll());
 	}
 }

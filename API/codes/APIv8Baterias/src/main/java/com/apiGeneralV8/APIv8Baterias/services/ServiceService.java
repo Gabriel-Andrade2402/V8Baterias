@@ -44,8 +44,8 @@ public class ServiceService {
 		}
 		return null;
 	}
-	public List<ServiceEntity> findAll(){
-		return repository.findAll();
+	public List<ServiceEntityDTO> findAll(){
+		return new ServiceEntityDTO().createInstanceList(repository.findAll());
 	}
 		
 }

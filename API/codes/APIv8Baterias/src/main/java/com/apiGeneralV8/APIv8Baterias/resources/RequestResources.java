@@ -4,12 +4,15 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.apiGeneralV8.APIv8Baterias.dto.RequestEntityDTO;
 import com.apiGeneralV8.APIv8Baterias.entities.RequestEntity;
+import com.apiGeneralV8.APIv8Baterias.enums.RolesConfig;
 import com.apiGeneralV8.APIv8Baterias.services.RequestService;
 
 @RestController
@@ -18,6 +21,7 @@ public class RequestResources {
 	@Autowired
 	private RequestService service;
 	
+	@Secured({RolesConfig.ROLE_ADMIN})
 	@PostMapping(value="/save")
 	public ResponseEntity<String> save(@RequestBody RequestEntity Request){
 		if(service.saveRequest(Request)!=null) {
@@ -25,16 +29,22 @@ public class RequestResources {
 		}
 		return null;
 	}
+	
+	@Secured({RolesConfig.ROLE_ADMIN})
 	@PostMapping(value = "/all")
-	public ResponseEntity<List<RequestEntity>> findAll() {
-		List<RequestEntity> lista= service.findAll();
+	public ResponseEntity<List<RequestEntityDTO>> findAll() {
+		List<RequestEntityDTO> lista= service.findAll();
 		return ResponseEntity.ok().body(lista);
 	}
+	
+	@Secured({RolesConfig.ROLE_ADMIN})
 	@PostMapping(value="/delete")
 	public ResponseEntity<String> delete(@RequestBody RequestEntity Request){
 		service.deleteRequest(Request);
 		return ResponseEntity.ok().body("ok");
 	}
+	
+	@Secured({RolesConfig.ROLE_ADMIN})
 	@PostMapping(value="/update")
 	public ResponseEntity<String> update(@RequestBody List<RequestEntity> listRequest){
 		RequestEntity lastRequest = listRequest.get(0);

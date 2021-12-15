@@ -43,7 +43,7 @@ public class ConfigService {
 		}
 		return null;
 	}
-	public List<ConfigEntity> findAll(){
-		return repository.findAll();
+	public List<ConfigEntityDTO> findAll(){
+		return new ConfigEntityDTO().createInstanceList(repository.findAll());
 	}
 }

@@ -17,4 +17,5 @@ public interface AddressRepository extends JpaRepository<AddressEntity,Long>{
 	AddressEntity find(@Param("strRoad") String strRoad,
 			@Param("numResidence") Integer numResidence,
 			@Param("strCep") String strCep);
+	
 }

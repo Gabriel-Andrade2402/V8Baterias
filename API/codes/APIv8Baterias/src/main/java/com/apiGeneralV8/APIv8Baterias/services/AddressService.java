@@ -15,6 +15,7 @@ public class AddressService {
 	@Autowired
 	private AddressRepository repositoryAddress;
 	
+	
 	public AddressEntityDTO saveAddress(AddressEntity entity) {
 		if(findAddress(entity)==null) {
 			repositoryAddress.save(entity);
@@ -52,8 +53,8 @@ public class AddressService {
 		}
 		return null;
 	}
-	public List<AddressEntity> findAll(){
-		return repositoryAddress.findAll();
+	public List<AddressEntityDTO> findAll(){
+		return new AddressEntityDTO().createInstanceList(repositoryAddress.findAll());
 	}
 	
 	//Método semelhante ao findAddress usado para pegar uma lista sem id e retornar com ID

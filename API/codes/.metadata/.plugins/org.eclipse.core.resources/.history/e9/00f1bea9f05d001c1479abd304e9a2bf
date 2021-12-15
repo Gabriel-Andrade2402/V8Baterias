@@ -1,0 +1,54 @@
+package com.apiGeneralV8.APIv8Baterias.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.apiGeneralV8.APIv8Baterias.config.entities.RoleConfigEntity;
+import com.apiGeneralV8.APIv8Baterias.config.repository.RoleConfigRepository;
+
+@Service
+public class ConfigRoleService {
+	@Autowired
+	private RoleConfigRepository roleRepository;
+	
+	public RoleConfigEntity saveUser(RoleConfigEntity entity) {
+		if(findUser(entity)==null) {
+			roleRepository.save(entity);
+			return entity;
+		}else {
+			return null;
+		}
+	}
+	
+	public void deleteUser(RoleConfigEntity entity) {
+		//Validação de existencia dos critérios mínimos para busca.
+		if(entity.getEmail()!=null && entity.getPassword()!=null) {
+			RoleConfigEntity User= findUser(entity);
+			if(User!=null) {
+				roleRepository.delete(User);
+			}
+		}
+	}
+	
+	public RoleConfigEntity findUser(RoleConfigEntity entity) {
+		return roleRepository.find(entity.getEmail(), entity.getPassword());
+	}
+	
+	public RoleConfigEntity updateAdress(RoleConfigEntity lastEntity, RoleConfigEntity newEntity) {
+		//Validação de existencia dos critérios mínimos para busca.
+		if(lastEntity.getEmail()!=null && lastEntity.getPassword()!=null) {
+			RoleConfigEntity entity = findUser(lastEntity);
+			if(entity!=null) {
+				entity =entity.updateAllData(newEntity);
+				roleRepository.save(entity);
+				return entity;
+			}
+		}
+		return null;
+	}
+	public List<RoleConfigEntity> findAll(){
+		return roleRepository.findAll();
+	}
+}

@@ -32,9 +32,10 @@ public class UserConfigEntity {
 	@Column(name = "user_config_id")
     @Getter @Setter private Long id;
 	@Getter @Setter private String name;
-    @Column(unique = true)
+    @Column(unique = true,name="str_email")
     @Getter @Setter private String email;
     @JsonIgnore
+    @Column(name="str_password")
     @Getter @Setter private String password;
     
     @ManyToMany(fetch = FetchType.EAGER)
@@ -64,4 +65,15 @@ public class UserConfigEntity {
         this.roles = roles;
         this.password = password;
     }
+    public UserConfigEntity(Long id,String name, String email, String password, List<RoleConfigEntity> roles) {
+        super();
+        this.name = name;
+        this.email = email;
+        this.roles = roles;
+        this.password = password;
+    }
+	public UserConfigEntity updateAllData(UserConfigEntity newEntity) {
+		return new UserConfigEntity(id,newEntity.getName(),newEntity.getEmail(),
+				newEntity.getPassword(),newEntity.getRoles());
+	}
 }
