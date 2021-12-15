@@ -1,0 +1,30 @@
+package com.apiGeneralV8.APIv8Baterias.config.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Table(name = "tb_user_config")
+@EqualsAndHashCode
+@NoArgsConstructor
+@ToString
+public class UserConfigEntity {
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private String name;
+    @Column(unique = true)
+    private String email;
+    @JsonIgnore
+    private String password;
+}

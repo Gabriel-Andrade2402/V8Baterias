@@ -1,0 +1,8 @@
+package com.apiGeneralV8.APIv8Baterias.config.entities;
+
+public class RoleConfigEntity {
+	private String name;
+	public RoleConfigEntity(String name) {
+        this.name = name;
+    }
+}

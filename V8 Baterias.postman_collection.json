@@ -821,7 +821,13 @@
 					"name": "all",
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer d05b1746-57e9-4000-b417-bafbe1b04daa",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "{{enderecoBase}}/request/all",
 							"host": [
@@ -961,6 +967,81 @@
 							"path": [
 								"office",
 								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Oauth2",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "123",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "client",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "claudia@v8Baterias.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "v8claudia",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{enderecoBase}}/oauth/token",
+							"host": [
+								"{{enderecoBase}}"
+							],
+							"path": [
+								"oauth",
+								"token"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
 							]
 						}
 					},

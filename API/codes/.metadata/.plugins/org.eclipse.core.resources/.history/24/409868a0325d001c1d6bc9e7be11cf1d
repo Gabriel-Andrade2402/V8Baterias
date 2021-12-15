@@ -1,0 +1,18 @@
+package com.apiGeneralV8.APIv8Baterias.config.entities;
+
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@Entity
+@Table(name = "tb_address")
+@EqualsAndHashCode
+@NoArgsConstructor
+@ToString
+public class UserConfigEntity {
+
+}

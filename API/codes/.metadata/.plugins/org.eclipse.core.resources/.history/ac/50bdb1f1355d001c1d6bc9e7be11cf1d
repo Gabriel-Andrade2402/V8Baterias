@@ -1,0 +1,5 @@
+package com.apiGeneralV8.APIv8Baterias.config;
+
+public class OAuth2ServerConfiguration {
+
+}

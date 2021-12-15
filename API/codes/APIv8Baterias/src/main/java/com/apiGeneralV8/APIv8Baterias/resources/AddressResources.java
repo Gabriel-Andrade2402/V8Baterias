@@ -4,12 +4,14 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.apiGeneralV8.APIv8Baterias.entities.AddressEntity;
+import com.apiGeneralV8.APIv8Baterias.enums.RolesConfig;
 import com.apiGeneralV8.APIv8Baterias.services.AddressService;
 
 @RestController
@@ -25,6 +27,7 @@ public class AddressResources {
 		}
 		return null;
 	}
+	@Secured({RolesConfig.ROLE_ADMIN})
 	@PostMapping(value = "/all")
 	public ResponseEntity<List<AddressEntity>> findAll() {
 		List<AddressEntity> lista= service.findAll();
