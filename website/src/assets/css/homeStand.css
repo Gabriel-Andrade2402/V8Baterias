@@ -1,0 +1,8 @@
+.mouseOverStand{
+    border-radius:10px;
+    transition: box-shadow 1s,transform 1s;
+}
+.mouseOverStand:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}

@@ -2,18 +2,19 @@ import $ from 'jquery';
 import Logomarca from '../../assets/img/BV8_Logo.png';
 import 'bootstrap/dist/css/bootstrap.css';
 import { Link } from "react-router-dom";
+import '../../assets/css/homeHeader.css';
 
 const HomeHeader = () => {
     return (
-      <header className='container-flex position-flex'> 
-        <div className=" row shadow bg-white rounded">
+      <header className='container-flex position-flex bg-dark'> 
+        <div className=" row">
             <div className="col-sm-4">
                 <div className="col-sm-8 m-2">
-                    <label className="col-12 text-lowercase text-nowrap font-weight-bold mt-2" id='email'>Email</label>
+                    <label className="col-12 text-lowercase text-nowrap font-weight-bold mt-2 textLaranja" id='email'>Email</label>
                     <input type="text" name="email" id="email" className="col-12 ml-3"/>
                 </div>
                 <div className="col-sm-8 m-2">
-                    <label className="col-12 text-lowercase text-nowrap font-weight-bold mt-2">Password</label>
+                    <label className="col-12 text-lowercase text-nowrap font-weight-bold mt-2 textLaranja">Password</label>
                     <input type="password" name="senha" id="senha" className="col-12 ml-3"/>
                 </div>
                 <Link className="col-sm-3 m-2 btn btn-dark" to="/">
