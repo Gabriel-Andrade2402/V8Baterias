@@ -38,6 +38,7 @@ const HomeHeader = () => {
                 </Link>
             </div>
         </div>
+        <div className='col-12 linhaLaranja'></div>
       </header>
    );
 }

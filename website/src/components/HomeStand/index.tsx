@@ -12,9 +12,9 @@ import '../../assets/css/homeStand.css';
 
 const HomeStand = () => {
     return (
-      <section className='container'> 
+      <article className='container'> 
          <div className=' row'>
-         <div id="carouselExampleIndicators" className="carousel slide col-7" data-ride="carousel">
+         <div id="carouselExampleIndicators" className="carousel slide col-sm-7" data-ride="carousel">
             <ol className="carousel-indicators">
                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -44,7 +44,7 @@ const HomeStand = () => {
                <span className="sr-only">Next</span>
             </a>
             </div>
-            <div className='col-5'>
+            <div className='col-sm-5'>
                <div className='col-12 mouseOverStand'>
                   <img className="col-8 rounded mx-auto d-block" src={bateriMoura} />
                </div>
@@ -53,7 +53,7 @@ const HomeStand = () => {
                </div>
             </div>
          </div>
-      </section>
+      </article>
    );
 }
 

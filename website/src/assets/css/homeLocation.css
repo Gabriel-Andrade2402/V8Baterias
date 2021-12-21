@@ -1,0 +1,16 @@
+.text-ffa{
+    color:#FFFAFA;
+}
+.box-shadow-zoom-animate{
+    transition: box-shadow 1s,transform 1s;
+}
+.box-shadow-zoom-animate:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.max-lenght-100{
+    max-width: 250px;
+}
+.style-link-none{
+    text-decoration: none
+}
