@@ -7,7 +7,8 @@ import HomeFooter from '../../components/HomeFooter';
 import HomeComents from '../../components/HomeComents';
 import HomeAppMore from '../../components/HomeAppMore';
 import HomeSkills from '../../components/HomeSkills';
-
+import '../../assets/css/home.css';
+import $ from 'jquery';
 
 const Home = () => {
     return (
