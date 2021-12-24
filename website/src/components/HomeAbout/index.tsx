@@ -1,14 +1,21 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../assets/css/homeAbout.css';
+import iconRaio from '../../assets/img/utils/iconRaio.png';
 import $ from 'jquery';
 
 const HomeAbout = () => {
     return (
-      <article className='container'> 
+      <article className='container-flex position-flex' id='articleAbout'> 
         <div className='col-12'>
-            <div className='row col-sm-12 justify-content-center align-items-center'>
-                <h2 className='col-sm-5 row mt-4 offset-1'>Quem somos nós ?</h2>
-                <h6 className='col-sm-12 row mt-4 offset-1'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            <div className='row col-sm-12 col-12 justify-content-center align-items-center'>
+                <div className='col-sm-12 col-12 row mt-4 justify-content-center align-items-center'>
+                  <img src={iconRaio} className='col-2 col-sm-1'/>
+                  <h2 className='col-sm-4 col-8'>
+                    Quem somos nós ?
+                  </h2>
+                  <img src={iconRaio} className='col-2 col-sm-1'/>
+                </div>
+                <h6 className='col-sm-12 col-12 row offset-1 p-5'>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
                  type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
                  typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing

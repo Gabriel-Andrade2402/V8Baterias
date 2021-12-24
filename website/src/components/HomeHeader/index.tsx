@@ -25,7 +25,7 @@ const HomeHeader = () => {
                 </Link>
             </div>
             <div className="col-sm-4 m-3" >
-                <Link className="col-12 " to="/">
+                <Link className="col-12" to="/">
                 <img src={Logomarca} alt="V8 Baterias"/>
                 </Link>
             </div>
@@ -33,9 +33,9 @@ const HomeHeader = () => {
                 <Link className="btn btn-warning btn-lg col-12 m-2" to="/loja">
                     Loja
                 </Link>
-                <Link className="btn btn-dark btn-lg col-12 m-2" to="/loja">
+                <a className="btn btn-dark btn-lg col-12 m-2" href="#articleAbout">
                     Sobre
-                </Link>
+                </a>
             </div>
         </div>
         <div className='col-12 linhaLaranja'></div>

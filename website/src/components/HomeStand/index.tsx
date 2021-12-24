@@ -14,12 +14,12 @@ const HomeStand = () => {
     return (
       <article className='container'> 
          <div className=' row'>
-         <div id="carouselExampleIndicators" className="carousel slide col-sm-7" data-ride="carousel">
+         <div id="slide" className="carousel slide col-sm-7" data-ride="carousel">
             <ol className="carousel-indicators">
-               <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-               <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+               <li data-target="#slide" data-slide-to="0" className="active"></li>
+               <li data-target="#slide" data-slide-to="1"></li>
+               <li data-target="#slide" data-slide-to="2"></li>
+               <li data-target="#slide" data-slide-to="3"></li>
             </ol>
             <div className="carousel-inner">
                <div className="carousel-item active" id="bloco1">
@@ -35,11 +35,11 @@ const HomeStand = () => {
                   <img className="d-block w-100" src={arteStory4} alt="Fourth slide"/>
                </div>
             </div>
-            <a onClick={previousCarousel} className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <a onClick={previousCarousel} className="carousel-control-prev" href="#slide" role="button" data-slide="prev">
                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                <span className="sr-only">Previous</span>
             </a>
-            <a onClick={nextCarousel} className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <a onClick={nextCarousel} className="carousel-control-next" href="#slide" role="button" data-slide="next">
                <span className="carousel-control-next-icon" aria-hidden="true"></span>
                <span className="sr-only">Next</span>
             </a>
