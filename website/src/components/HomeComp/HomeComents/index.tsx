@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../assets/css/homeComents.css';
+import '../../../assets/css/homeComents.css';
 import $ from 'jquery';
-import comentario1 from '../../assets/img/coments/comentario1.png';
-import comentario2 from '../../assets/img/coments/comentario2.png';
-import comentario3 from '../../assets/img/coments/comentario3.png';
-import comentario4 from '../../assets/img/coments/comentario4.png';
-import comentario5 from '../../assets/img/coments/comentario5.png';
-import comentario6 from '../../assets/img/coments/comentario6.png';
+import comentario1 from '../../../assets/img/coments/comentario1.png';
+import comentario2 from '../../../assets/img/coments/comentario2.png';
+import comentario3 from '../../../assets/img/coments/comentario3.png';
+import comentario4 from '../../../assets/img/coments/comentario4.png';
+import comentario5 from '../../../assets/img/coments/comentario5.png';
+import comentario6 from '../../../assets/img/coments/comentario6.png';
 
 const HomeComents = () => {
     return (

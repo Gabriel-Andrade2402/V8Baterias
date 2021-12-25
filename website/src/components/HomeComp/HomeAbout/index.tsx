@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../assets/css/homeAbout.css';
-import iconRaio from '../../assets/img/utils/iconRaio.png';
+import '../../../assets/css/homeAbout.css';
+import iconRaio from '../../../assets/img/utils/iconRaio.png';
 import $ from 'jquery';
 
 const HomeAbout = () => {

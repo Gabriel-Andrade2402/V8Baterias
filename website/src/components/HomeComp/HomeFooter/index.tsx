@@ -1,9 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../assets/css/homeFooter.css';
-import iconInstagram from '../../assets/img/utils/iconInstagram.png';
-import iconFacebook from '../../assets/img/utils/iconFacebook.png';
-import iconYoutube from '../../assets/img/utils/iconYoutube.png';
-import imgRodape from '../../assets/img/rodape.png';
+import '../../../assets/css/homeFooter.css';
+import iconInstagram from '../../../assets/img/utils/iconInstagram.png';
+import iconFacebook from '../../../assets/img/utils/iconFacebook.png';
+import iconYoutube from '../../../assets/img/utils/iconYoutube.png';
+import imgRodape from '../../../assets/img/rodape.png';
 import $ from 'jquery';
 
 const HomeFooter = () => {

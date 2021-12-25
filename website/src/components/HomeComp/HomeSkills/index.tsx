@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../assets/css/homeSkills.css';
-import iconChecked from '../../assets/img/utils/iconCheck.png';
+import '../../../assets/css/homeSkills.css';
+import iconChecked from '../../../assets/img/utils/iconCheck.png';
 import $ from 'jquery';
 
 const HomeSkills = () => {
@@ -9,7 +9,7 @@ const HomeSkills = () => {
         <div className='row col-12 col-sm-12 px-5 mt-5'>
             <div className='col-12 col-sm-6'>
                 <div className='col-12'>
-                    <div className='bg-warning col-12 text-center arredonded-40'>
+                    <div className='bg-warning col-12 text-center arredonded-40 p-2 mb-4'>
                         <h3>Serviços</h3>
                     </div>
                     <div className='col-12 col-sm-12 row'>
@@ -22,7 +22,7 @@ const HomeSkills = () => {
                     </div>
                 </div>
                 <div className='col-12'>
-                    <div className='bg-warning col-12 text-center arredonded-40'>
+                    <div className='bg-warning col-12 text-center arredonded-40 p-2 mb-4'>
                         <h3>Auto-elétrica</h3>
                     </div>
                     <div className='col-12 col-sm-12 row'>
@@ -45,7 +45,7 @@ const HomeSkills = () => {
             </div>
             <div className='col-12 col-sm-6'>
                 <div className='col-12 col-sm-12'>
-                    <div className='bg-warning col-12 text-center arredonded-40'>
+                    <div className='bg-warning col-12 text-center arredonded-40 p-2 mb-4'>
                         <h3 className='col-12 col-sm-12 '>Baterias</h3>
                     </div>
                     <div className='col-12 col-sm-12'>

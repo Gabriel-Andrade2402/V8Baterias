@@ -1,10 +1,10 @@
 import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../assets/css/homeLocation.css';
-import lojaItaqua from '../../assets/img/location/lojaItaqua.jpg';
-import lojaItaim from '../../assets/img/location/lojaItaim.jpg';
-import lojaGuarulhos from '../../assets/img/location/lojaGuarulhos.jpg';
-import locationIcon from '../../assets/img/utils/esbocoLocalizacao.png';
+import '../../../assets/css/homeLocation.css';
+import lojaItaqua from '../../../assets/img/location/lojaItaqua.jpg';
+import lojaItaim from '../../../assets/img/location/lojaItaim.jpg';
+import lojaGuarulhos from '../../../assets/img/location/lojaGuarulhos.jpg';
+import locationIcon from '../../../assets/img/utils/esbocoLocalizacao.png';
 import { Link } from 'react-router-dom';
 
 const HomeLocation = () => {

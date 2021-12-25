@@ -1,13 +1,13 @@
 import $ from 'jquery';
 //Imagens do story
-import arteStory1 from '../../assets/img/storys/arteStory1.jpg'
-import arteStory2 from '../../assets/img/storys/arteStory2.jpg'
-import arteStory3 from '../../assets/img/storys/arteStory3.jpg'
-import arteStory4 from '../../assets/img/storys/arteStory4.jpg'
-import ferramentas from '../../assets/img/storys/ferramentas.png'
-import bateriMoura from '../../assets/img/storys/bateriaMoura.png'
+import arteStory1 from '../../../assets/img/storys/arteStory1.jpg'
+import arteStory2 from '../../../assets/img/storys/arteStory2.jpg'
+import arteStory3 from '../../../assets/img/storys/arteStory3.jpg'
+import arteStory4 from '../../../assets/img/storys/arteStory4.jpg'
+import ferramentas from '../../../assets/img/storys/ferramentas.png'
+import bateriMoura from '../../../assets/img/storys/bateriaMoura.png'
 import 'bootstrap/dist/css/bootstrap.css';
-import '../../assets/css/homeStand.css';
+import '../../../assets/css/homeStand.css';
 
 
 const HomeStand = () => {

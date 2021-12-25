@@ -1,0 +1,17 @@
+.rounded-bottom{
+    border-bottom-left-radius:30px;
+    border-bottom-right-radius: 30px;
+}
+.bg-ffa{
+    background:#FFFAFA;
+}
+.rounded-30{
+
+}
+.text-center{
+    text-align: center;
+}
+.margin-auto{
+    margin-left:auto;
+    margin-right:auto;
+}
