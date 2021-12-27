@@ -118,7 +118,7 @@ const StoreCommerce = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 mt-4'>
+                    <div className='col-12 col-sm-4 mt-sm-5 mb-4 mt-3'>
                         <div className='col-12 col-sm-12'>
                             <h4>R$ XX,xx</h4>
                         </div>
@@ -149,6 +149,9 @@ const StoreCommerce = () => {
                         </div>
                     </div>
                 </article>
+                <div className='col-12 col-sm-12'>
+                    <div className='linhaDark rounded-30'></div>
+                </div>
                 <article className='col-12 col-sm-12 row rounded'>
                     <div className='col-12 col-sm-4'>
                         <img src={imgBateriaHeliar} className='col-12 col-sm-12'/>
@@ -196,7 +199,7 @@ const StoreCommerce = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 mt-4'>
+                    <div className='col-12 col-sm-4 mt-sm-5 mb-4 mt-3'>
                         <div className='col-12 col-sm-12'>
                             <h4>R$ XX,xx</h4>
                         </div>
@@ -227,6 +230,9 @@ const StoreCommerce = () => {
                         </div>
                     </div>
                 </article>
+                <div className='col-12 col-sm-12'>
+                    <div className='linhaDark rounded-30'></div>
+                </div>
                 <article className='col-12 col-sm-12 row rounded'>
                     <div className='col-12 col-sm-4'>
                         <img src={imgBateriaCral} className='col-12 col-sm-12'/>
@@ -274,7 +280,7 @@ const StoreCommerce = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 mt-4'>
+                    <div className='col-12 col-sm-4 mt-sm-5 mb-4 mt-3'>
                         <div className='col-12 col-sm-12'>
                             <h4>R$ XX,xx</h4>
                         </div>
@@ -305,6 +311,9 @@ const StoreCommerce = () => {
                         </div>
                     </div>
                 </article>
+                <div className='col-12 col-sm-12'>
+                    <div className='linhaDark rounded-30'></div>
+                </div>
                 <article className='col-12 col-sm-12 row rounded'>
                     <div className='col-12 col-sm-4'>
                         <img src={imgBateriaCral} className='col-12 col-sm-12'/>
@@ -352,7 +361,7 @@ const StoreCommerce = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 mt-4'>
+                    <div className='col-12 col-sm-4 mt-sm-5 mb-4 mt-3'>
                         <div className='col-12 col-sm-12'>
                             <h4>R$ XX,xx</h4>
                         </div>
@@ -383,6 +392,9 @@ const StoreCommerce = () => {
                         </div>
                     </div>
                 </article>
+                <div className='col-12 col-sm-12'>
+                    <div className='linhaDark rounded-30'></div>
+                </div>
                 <article className='col-12 col-sm-12 row rounded'>
                     <div className='col-12 col-sm-4'>
                         <img src={imgBateriaMoura} className='col-12 col-sm-12'/>
@@ -430,7 +442,7 @@ const StoreCommerce = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='col-12 col-sm-4 mt-4'>
+                    <div className='col-12 col-sm-4 mt-sm-5 mb-4 mt-3'>
                         <div className='col-12 col-sm-12'>
                             <h4 className='col-12 col-sm-12'>R$ XX,xx</h4>
                         </div>

@@ -6,7 +6,7 @@
     background:#FFFAFA;
 }
 .rounded-30{
-
+    border-radius:30px;
 }
 .text-center{
     text-align: center;
@@ -14,4 +14,8 @@
 .margin-auto{
     margin-left:auto;
     margin-right:auto;
+}
+.linhaDark{
+    height:5px;
+    background:#FF8C00;
 }
