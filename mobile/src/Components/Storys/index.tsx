@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import {Text} from 'react-native-elements';
 import { Dimensions,ScrollView,View,Image,StyleSheet } from 'react-native';
+import StylesStory from '../../assets/css/StylesStorys';
 
 const imagesStorys = [
     require("../../assets/imgV8/arteTeste1.png"),
@@ -22,30 +23,28 @@ const Storys =()=>{
 
     return (
         <>
-            <View styles={{width:widthTela,height:200}}>
+            <View styles={{width:widthTela,height:150}}>
                 <ScrollView pagingEnabled 
                 showsHorizontalScrollIndicator={false}
                 horizontal
                 onScroll={changeStory} 
-                style={{width:widthTela,height:200}}>
+                style={{width:widthTela,height:150}}>
                     {
                     imagesStorys.map((value,index)=>(
                         <Image
                             key={index}
                             source={value}
-                            style ={{width:widthTela,height:200,resizeMode:"contain"}}
+                            style ={{width:widthTela,height:150,resizeMode:"cover"}}
                         />
                     ))
                     }
                 </ScrollView>
-                <View style={{flexDirection:"row",
-                position:"absolute",
-                bottom:15,alignSelf:"center"}}>
+                <View style={StylesStory.viewButtons}>
                     {
                         imagesStorys.map((i,k)=>(
                             <Text
                                 key={k} 
-                                style={k==active ? style.ballStoryactive : style.ballStory}>
+                                style={k==active ? StylesStory.ballStoryactive : StylesStory.ballStory}>
                                 ⬤
                             </Text>
                         ))
@@ -57,14 +56,7 @@ const Storys =()=>{
 
 };
 const style = StyleSheet.create({
-    ballStory:{
-        color:"#888",
-        margin:3
-    },
-    ballStoryactive:{
-        color:"white",
-        margin:3
-    },
+    
 });
 
 export default Storys;

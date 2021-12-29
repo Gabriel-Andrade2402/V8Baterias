@@ -28,17 +28,6 @@ const HeaderV8 = () => {
                     source={require("../../assets/icons/iconCarrinho.png")}/>
             </View>
         </View>
-        <View style={StylesHeaderV8.navHeader}>
-            <View style={StylesHeaderV8.searchContainer}>
-            <Input placeholder='Faça uma busca aqui...' 
-                leftIcon={
-                    <Icon
-                        name = 'search'
-                        size ={20}
-                    />
-                }/>
-            </View>
-        </View>
         </>
     );
 }

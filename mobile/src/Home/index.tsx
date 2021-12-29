@@ -8,6 +8,7 @@ import {
   } from 'react-native';
 import HeaderV8 from '../Components/HeaderV8';
 import Storys from '../Components/Storys';
+import Commerce from '../Components/Commerce';
 
 
 const Home  = () => {
@@ -17,6 +18,7 @@ const Home  = () => {
             <ScrollView>
                 <HeaderV8/>
                 <Storys/>
+                <Commerce/>
             </ScrollView>
         </SafeAreaView>
         </>
