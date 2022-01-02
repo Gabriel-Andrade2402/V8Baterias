@@ -1,9 +1,0 @@
-package com.apiGeneralV8.APIv8Baterias.ApiConsumer;
-
-import org.springframework.web.client.RestTemplate;
-
-public class ConsumerPerson {
-	public ConsumerPerson() {
-		RestTemplate rest = new RestTemplate();
-	}
-}

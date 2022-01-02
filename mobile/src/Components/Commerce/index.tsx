@@ -2,6 +2,7 @@ import React,{useState} from 'react';
 import {View,Image,Text, ScrollView,Dimensions,Button,StyleSheet} from 'react-native';
 import StylesCommerce from '../../assets/css/StylesCommerce';
 import {Input,Icon,CheckBox} from "react-native-elements";
+import FooterNavigation from '../FooterNavigation';
 
 const Commerce = () => {
     const listMarca = [
@@ -9,18 +10,13 @@ const Commerce = () => {
         { value: 'Heliar', label: 'Heliar' },
         { value: 'Cral', label: 'Cral' }
     ];
-    const [isSelected,setIsSelected] = useState(false);
+    const [isSelectedMoura,setIsSelectedMoura] = useState(false);
+    const [isSelectedHeliar,setIsSelectedHeliar] = useState(false);
+    const [isSelectedCral,setIsSelectedCral] = useState(false);
     const dimensions = Dimensions.get("window"); 
     const widthTela = dimensions.width;
     const heightTela = dimensions.height;
 
-    function inputCheck(){
-        if(isSelected){
-            setIsSelected(false);
-        }else{
-            setIsSelected(true);
-        }
-    }
     return (
         <>
         <View style={StylesCommerce.navHeader}>
@@ -36,12 +32,40 @@ const Commerce = () => {
                 />
             </View>
         </View>
-        <View style={{flex:1,flexDirection:"row"}}>
-            <CheckBox
-                checked={isSelected}
-                onPress={inputCheck}
-            />
-            <Text>Aqui vai algum tipo de filtro</Text>
+        <View style={{flex:1,flexDirection:"row",backgroundColor:"#f2f2f2"}}>
+            <View style={style.blocoFilter}>
+                <CheckBox
+                    checked={isSelectedMoura}
+                    onPress={(e)=>{if(isSelectedMoura){
+                        setIsSelectedMoura(false);
+                    }else{
+                        setIsSelectedMoura(true);
+                    }}}
+                />
+                <Text style={style.titleFilter}>Moura</Text>
+            </View>
+            <View style={style.blocoFilter}>
+                <CheckBox
+                    checked={isSelectedHeliar}
+                    onPress={(e)=>{if(isSelectedHeliar){
+                        setIsSelectedHeliar(false);
+                    }else{
+                        setIsSelectedHeliar(true);
+                    }}}
+                />
+                <Text style={style.titleFilter}>Heliar</Text>
+            </View>
+            <View style={style.blocoFilter}>
+                <CheckBox
+                    checked={isSelectedCral}
+                    onPress={(e)=>{if(isSelectedCral){
+                        setIsSelectedCral(false);
+                    }else{
+                        setIsSelectedCral(true);
+                    }}}
+                />
+                <Text style={style.titleFilter}>Cral</Text>
+            </View>
         </View>
         <ScrollView style={{flex:1}}>
             <View style={{flex:1,
@@ -295,7 +319,16 @@ const style = StyleSheet.create({
     },
     linhaLaranja:{
         height:5,
-        backgroundColor:"#ffa333"}
+        backgroundColor:"#ffa333"
+    },
+    titleFilter:{
+        fontSize:17,
+        fontWeight:"bold"
+    },
+    blocoFilter:{
+        flex:1,
+        flexDirection:"row",
+        alignItems:"center"}
 
 });
 

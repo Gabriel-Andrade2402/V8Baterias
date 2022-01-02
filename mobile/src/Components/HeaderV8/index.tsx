@@ -3,7 +3,7 @@ import {View,Image,Text,TextInput} from 'react-native';
 import StylesHeaderV8 from '../../assets/css/StylesHeaderV8';
 import {Input,Icon} from "react-native-elements";
 
-const HeaderV8 = () => {
+const HeaderV8 = ({navigation}) => {
     return (
         <>
         <View style={StylesHeaderV8.headerV8}>
@@ -14,6 +14,7 @@ const HeaderV8 = () => {
                     name = 'view-headline'
                     color="white"
                     size = {50}
+                    onPress={()=>navigation.navigate('Menu')}
                 />
             </View>
             <View
