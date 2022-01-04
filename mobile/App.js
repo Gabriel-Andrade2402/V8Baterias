@@ -7,6 +7,7 @@ import Menu from './src/Screens/Menu';
 import Help from './src/Screens/Help';
 import Login from './src/Screens/Login';
 import Registry from './src/Screens/Registry';
+import Location from './src/Screens/Location';
 
 const Stack = createNativeStackNavigator();
 
@@ -40,6 +41,12 @@ const App: () => Node = () => {
               name = "Registry"
               title = "Cadastrar-se"
               component = {Registry}
+              
+          />
+          <Stack.Screen 
+              name = "Location"
+              title = "Localizações"
+              component = {Location}
               
           />
         </Stack.Navigator>

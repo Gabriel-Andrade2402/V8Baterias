@@ -1,5 +1,6 @@
 import React,{useEffect, useState} from "react";
-import {Text,StyleSheet,FlatList,View,TouchableOpacity,ScrollView,Image,Dimensions} from 'react-native';
+import {Text,StyleSheet,View,TouchableOpacity,Image,Dimensions} from 'react-native';
+import { FlatList,ScrollView} from 'react-native-gesture-handler';
 import { Icon,Input,CheckBox} from "react-native-elements";
 
 const widthView = Dimensions.get("window").width;
@@ -9,33 +10,29 @@ const Registry = () =>{
     const [isSelectedReceiveUpdates,setIsSelectedReceiveUpdates] = useState(false);
     const [isSelectedReceiveTerms,setIsSelectedReceiveTerms] = useState(false);
     const [listDataAddress,setListDataAddress] = useState([{
-        key:"1",
+        key:1,
         road:"",
         number:10,
         cep:"",
         referencePoint:"",
         obs:""
     }]);
-    const [dataAddress,setDataAddress] = useState({
-        key:"1",
-        road:"",
-        number:10,
-        cep:"",
-        referencePoint:"",
-        obs:""
-    });
     const handleAddAddress = () => {
-        setListDataAddress([...listDataAddress,{key:"2",road:"",number:11,cep:"",referencePoint:"",obs:""}]);
-        setDataAddress({
-            key:"3",
-            road:"",
-            number:10,
-            cep:"",
-            referencePoint:"",
-            obs:""
-        });
+        const newId = listDataAddress.length+1;
+        setListDataAddress([...listDataAddress,{key:newId,road:"",number:15,cep:"",referencePoint:"",obs:""}]);
     };
-    const handleRenderAddress = ({key}) => <View key={key}>
+    const renderDeleteIcon = (listDataAddress) => {
+        if(listDataAddress.lenght>1){
+            return <View><TouchableOpacity><Icon name="delete-forever" color="#808080"/></TouchableOpacity></View>;
+        }else{
+            return <View></View>;
+        }
+    }
+    const iconDelete = renderDeleteIcon(listDataAddress);
+
+    const handleRenderAddress = ({key}) => {
+        return (<View key={key}>
+            <View>{iconDelete}</View>
             <View>
             <Text style={style.titleSubInput}>Rua</Text>
             <Input placeholder='rua...' 
@@ -96,7 +93,8 @@ const Registry = () =>{
                 }
                 />
             </View>
-        </View>;
+        </View>);
+    }
     return(
         <>
             
@@ -157,8 +155,12 @@ const Registry = () =>{
                             <Text style={style.titleInput}>Endereço</Text>
                             
                             <View style={style.subContainer}>
-                                <FlatList data={listDataAddress} keyExtractor={item => item.key}
-                                renderItem={handleRenderAddress}/>
+                                <ScrollView horizontal style={{width:widthView}}>
+                                    <FlatList 
+                                    style={{width:0.7*widthView}}
+                                    data={listDataAddress} keyExtractor={item => item.key}
+                                    renderItem={handleRenderAddress}/>
+                                </ScrollView>
                                 <TouchableOpacity onPress={handleAddAddress}>
                                     <View style={style.buttonAddAddress}>
                                         <Text style={style.textButton}>Adicionar novo endereço</Text>
