@@ -21,7 +21,7 @@ const Menu = ({navigation}) => {
                     </View>
                 </View>
                 <View style={style.optionMenu}>
-                    <TouchableNativeFeedback>
+                    <TouchableNativeFeedback onPress={()=>{navigation.navigate("EditProfile")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
                                 <Icon name="edit" color="#fdbb53" size={30}/>
@@ -33,7 +33,19 @@ const Menu = ({navigation}) => {
                     </TouchableNativeFeedback>
                 </View>
                 <View style={style.optionMenu}>
-                    <TouchableNativeFeedback>
+                    <TouchableNativeFeedback onPress={()=>{navigation.navigate("EditPassword")}}>
+                        <View style={style.optionMenu}>
+                            <View style={{flex:1}}>
+                                <Icon name="security" color="#fdbb53" size={30}/>
+                            </View>
+                            <View style={{flex:3}}>
+                                <Text>Trocar senha</Text>
+                            </View>
+                        </View>
+                    </TouchableNativeFeedback>
+                </View>
+                <View style={style.optionMenu}>
+                    <TouchableNativeFeedback onPress={()=>{navigation.navigate("PaymentForm")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
                                 <Icon name="credit-card" color="#fdbb53" size={30}/>

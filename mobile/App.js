@@ -8,6 +8,9 @@ import Help from './src/Screens/Help';
 import Login from './src/Screens/Login';
 import Registry from './src/Screens/Registry';
 import Location from './src/Screens/Location';
+import EditProfile from './src/Screens/EditProfile';
+import EditPassword from './src/Screens/EditPassword';
+import PaymentForm from './src/Screens/PaymentForm';
 
 const Stack = createNativeStackNavigator();
 
@@ -47,6 +50,23 @@ const App: () => Node = () => {
               name = "Location"
               title = "Localizações"
               component = {Location}
+              
+          />
+          <Stack.Screen 
+              name = "EditProfile"
+              title = "EditProfile"
+              component = {EditProfile}
+              
+          />
+          <Stack.Screen 
+              name = "EditPassword"
+              title = "EditPassword"
+              component = {EditPassword}
+          />
+          <Stack.Screen 
+              name = "PaymentForm"
+              title = "PaymentForm"
+              component = {PaymentForm}
               
           />
         </Stack.Navigator>

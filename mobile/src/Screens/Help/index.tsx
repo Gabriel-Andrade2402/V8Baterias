@@ -6,7 +6,7 @@ const Help = () => {
     return (
         <>
         <ScrollView>
-            <View style={{flex:1,backgroundColor:"#ffe8c3",paddingRight:30,elevation:10}}>
+            <View style={{flex:1,backgroundColor:"#FFFAFA",paddingRight:30,elevation:10}}>
                 <View><Text style={{fontWeight:"bold",fontSize:25,paddingLeft:15}}>Contatos e redes</Text></View>
                 <View style={{flex:1,flexDirection:"row",maxHeight:60,justifyContent:"center"}}>
                     <View style={{flex:1,flexDirection:"row",justifyContent:"center",paddingRight:10,alignItems:"center",borderRightColor:"#4F4F4F",borderRightWidth:2}}>

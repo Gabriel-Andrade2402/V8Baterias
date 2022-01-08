@@ -68,7 +68,7 @@ const style = StyleSheet.create({
         borderRadius:30,
         alignItems:"center",
         justifyContent:"center",
-        backgroundColor:"#FF8C00",
+        backgroundColor:"#fcbf5f",
         elevation:5,
     },
     buttonRegistry:{

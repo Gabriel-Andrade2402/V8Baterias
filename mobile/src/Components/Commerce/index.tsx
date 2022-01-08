@@ -319,7 +319,7 @@ const style = StyleSheet.create({
     },
     linhaLaranja:{
         height:5,
-        backgroundColor:"#ffa333"
+        backgroundColor:"#fcbf5f"
     },
     titleFilter:{
         fontSize:17,

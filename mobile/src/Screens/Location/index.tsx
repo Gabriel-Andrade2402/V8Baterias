@@ -1,5 +1,5 @@
 import React from 'react';
-import {View,Text,ScrollView,StyleSheet,Image,TouchableNativeFeedback} from 'react-native';
+import {View,Text,ScrollView,StyleSheet,Image,TouchableOpacity} from 'react-native';
 import {Icon} from 'react-native-elements';
 
 const Location = () => {
@@ -27,9 +27,9 @@ const Location = () => {
                             </View>
                         </View>
                         <View style={style.containerButtonGps}>
-                            <TouchableNativeFeedback>
+                            <TouchableOpacity>
                                 <Text style={style.textButton}>Adicionar rota ao GPS</Text>
-                            </TouchableNativeFeedback>
+                            </TouchableOpacity>
                         </View>
                     </View>
                     <View style={style.containerLocation}>
@@ -52,9 +52,9 @@ const Location = () => {
                             </View>
                         </View>
                         <View style={style.containerButtonGps}>
-                            <TouchableNativeFeedback>
+                            <TouchableOpacity>
                                 <Text style={style.textButton}>Adicionar rota ao GPS</Text>
-                            </TouchableNativeFeedback>
+                            </TouchableOpacity>
                         </View>
                     </View>
                     <View style={style.containerLocation}>
@@ -68,7 +68,7 @@ const Location = () => {
                             <View>
                                 <View style={style.containerSubTitle}>
                                     <Text style={style.subTitle}>Descrição:</Text>
-                                    <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</Text>
+                                    <Text style={style.containerDescriptionLocation}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</Text>
                                 </View>
                                 <View style={style.containerSubTitle}>
                                     <Text style={style.subTitle}>Serviços:</Text>
@@ -77,9 +77,9 @@ const Location = () => {
                             </View>
                         </View>
                         <View style={style.containerButtonGps}>
-                            <TouchableNativeFeedback>
+                            <TouchableOpacity>
                                 <Text style={style.textButton}>Adicionar rota ao GPS</Text>
-                            </TouchableNativeFeedback>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>

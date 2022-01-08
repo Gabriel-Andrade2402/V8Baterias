@@ -151,7 +151,7 @@ const Registry = () =>{
                             }
                             />
                         </View>
-                        <View >
+                        <View style={{marginTop:15}}>
                             <Text style={style.titleInput}>Endereço</Text>
                             
                             <View style={style.subContainer}>
@@ -167,69 +167,111 @@ const Registry = () =>{
                                     </View>
                                 </TouchableOpacity>
                             </View>
-                            <View style={{marginTop:15}}>
-                                <Text style={style.titleInput}>Senha</Text>
-                                <Input placeholder='senha forte...' 
-                                leftIcon={
-                                    <Icon
-                                        name = 'security'
-                                        size ={20}
-                                        color = "#FF8C00"
-                                    />
-                                }
-                                />
+                        </View>
+                        <View style={{marginTop:20,backgroundColor:"#FFFAFA",padding:10,borderRadius:15}}>
+                            <Text style={style.titleInput}>Cadastrar cartão</Text>
+                            <View style={{width:widthView}}>
+                                <Image style={{resizeMode:"contain",maxWidth:widthView,height:70}} source={require('../../assets/icons/iconPaymentTypes.png')}/>
                             </View>
                             <View >
-                                <Text style={style.titleInput}>Confirme a senha</Text>
-                                <Input placeholder='confirmar senha' 
-                                leftIcon={
-                                    <Icon
-                                        name = 'security'
-                                        size ={20}
-                                        color = "#FF8C00"
-                                    />
-                                }
-                                />
-                            </View>
-                            <View style={style.lineAndAlignJusti}>
-                                <CheckBox
-                                    checked={isSelectedReceivePromotions}
-                                    onPress={(e)=>{if(isSelectedReceivePromotions){
-                                        setIsSelectedReceivePromotions(false);
-                                    }else{
-                                        setIsSelectedReceivePromotions(true);
-                                    }}}
-                                />
-                                <Text>Receber promoções por email</Text>
-                            </View>
-                            <View style={style.lineAndAlignJusti}>
-                                <CheckBox
-                                    checked={isSelectedReceiveUpdates}
-                                    onPress={(e)=>{if(isSelectedReceiveUpdates){
-                                        setIsSelectedReceiveUpdates(false);
-                                    }else{
-                                        setIsSelectedReceiveUpdates(true);
-                                    }}}
-                                />
-                                <Text>Receber atualizações de preços por email</Text>
-                            </View>
-                            <View style={style.lineAndAlignJusti}>
-                                <CheckBox
-                                    checked={isSelectedReceiveTerms}
-                                    onPress={(e)=>{if(isSelectedReceiveTerms){
-                                        setIsSelectedReceiveTerms(false);
-                                    }else{
-                                        setIsSelectedReceiveTerms(true);
-                                    }}}
-                                />
-                                <Text>Concordo com os termos descritos</Text>
-                            </View>                      
-                            <TouchableOpacity style={{marginBottom:5}}>
-                                <View style={style.buttonLogin}>
-                                    <Text style={style.textButton}>Registrar-se</Text>
+                                <View>
+                                    <View style={{flex:1}}>
+                                        <Text>Número do cartão</Text>
+                                        <View style={{flex:1,flexDirection:"row",width:"60%"}}>
+                                            <Input placeholder='número do cartão' />
+                                        </View>
+                                    </View>
+                                    <View style={{flex:1}}>
+                                        <Text>Nome no cartão</Text>
+                                        <View style={{flex:1,flexDirection:"row",width:"60%"}}>
+                                            <Input placeholder='nome completo' />
+                                        </View>
+                                    </View>
+                                    <View style={{flex:1}}>
+                                        <View style={{flex:1}}>
+                                            <Text>Data de expiração</Text>
+                                            <View style={{flex:1,flexDirection:"row",padding:10}}>
+                                                <View style={{flex:3}}>        
+                                                    <Input placeholder='mes'/>
+                                                </View>
+                                                <Text style={{flex:0.5,fontSize:40}}>/</Text>
+                                                <View style={{flex:3}}>        
+                                                    <Input placeholder='ano'/>
+                                                </View>
+                                            </View>
+                                        </View>
+                                        <View style={{flex:1}}>
+                                            <Text>Código de segurança(CVV)</Text>
+                                            <View style={{flex:1,flexDirection:"row",width:"60%"}}>
+                                                <Input placeholder='código' />
+                                            </View>
+                                        </View>
+                                    </View>
                                 </View>
-                            </TouchableOpacity>
+                            </View>
                         </View>
+                        <View style={{marginTop:20}}>
+                            <Text style={style.titleInput}>Senha</Text>
+                            <Input placeholder='senha forte...' 
+                            leftIcon={
+                                <Icon
+                                    name = 'security'
+                                    size ={20}
+                                    color = "#FF8C00"
+                                />
+                            }
+                            />
+                        </View>
+                        <View >
+                            <Text style={style.titleInput}>Confirme a senha</Text>
+                            <Input placeholder='confirmar senha' 
+                            leftIcon={
+                                <Icon
+                                    name = 'security'
+                                    size ={20}
+                                    color = "#FF8C00"
+                                />
+                            }
+                            />
+                        </View>
+                        <View style={style.lineAndAlignJusti}>
+                            <CheckBox
+                                checked={isSelectedReceivePromotions}
+                                onPress={(e)=>{if(isSelectedReceivePromotions){
+                                    setIsSelectedReceivePromotions(false);
+                                }else{
+                                    setIsSelectedReceivePromotions(true);
+                                }}}
+                            />
+                            <Text>Receber promoções por email</Text>
+                        </View>
+                        <View style={style.lineAndAlignJusti}>
+                            <CheckBox
+                                checked={isSelectedReceiveUpdates}
+                                onPress={(e)=>{if(isSelectedReceiveUpdates){
+                                    setIsSelectedReceiveUpdates(false);
+                                }else{
+                                    setIsSelectedReceiveUpdates(true);
+                                }}}
+                            />
+                            <Text>Receber atualizações de preços por email</Text>
+                        </View>
+                        <View style={style.lineAndAlignJusti}>
+                            <CheckBox
+                                checked={isSelectedReceiveTerms}
+                                onPress={(e)=>{if(isSelectedReceiveTerms){
+                                    setIsSelectedReceiveTerms(false);
+                                }else{
+                                    setIsSelectedReceiveTerms(true);
+                                }}}
+                            />
+                            <Text>Concordo com os termos descritos</Text>
+                        </View>                      
+                        <TouchableOpacity style={{marginBottom:5}}>
+                            <View style={style.buttonRegistry}>
+                                <Text style={style.textButton}>Registrar-se</Text>
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </ScrollView>
@@ -267,12 +309,12 @@ const style = StyleSheet.create({
         paddingLeft:15,
         paddingRight:15
     },
-    buttonLogin:{
+    buttonRegistry:{
         height:40,
         borderRadius:30,
         alignItems:"center",
         justifyContent:"center",
-        backgroundColor:"#FF8C00",
+        backgroundColor:"#fcbf5f",
         elevation:5,
     },
     buttonAddAddress:{
