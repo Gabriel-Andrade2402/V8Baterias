@@ -4,13 +4,15 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import type {Node} from 'react';
 import Home from './src/Screens/Home';
 import Menu from './src/Screens/Menu';
-import Help from './src/Screens/Help';
+import About from './src/Screens/About';
 import Login from './src/Screens/Login';
 import Registry from './src/Screens/Registry';
 import Location from './src/Screens/Location';
 import EditProfile from './src/Screens/EditProfile';
 import EditPassword from './src/Screens/EditPassword';
 import PaymentForm from './src/Screens/PaymentForm';
+import Address from './src/Screens/Address';
+import Requests from './src/Screens/Requests';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,8 +33,8 @@ const App: () => Node = () => {
               component = {Menu}
           />
           <Stack.Screen 
-              name = "Help"
-              component = {Help}
+              name = "About"
+              component = {About}
               
           />
           <Stack.Screen 
@@ -67,6 +69,18 @@ const App: () => Node = () => {
               name = "PaymentForm"
               title = "PaymentForm"
               component = {PaymentForm}
+              
+          />
+          <Stack.Screen 
+              name = "Address"
+              title = "Address"
+              component = {Address}
+              
+          />
+          <Stack.Screen 
+              name = "Requests"
+              title = "Requests"
+              component = {Requests}
               
           />
         </Stack.Navigator>

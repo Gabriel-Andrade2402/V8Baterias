@@ -57,6 +57,18 @@ const Menu = ({navigation}) => {
                     </TouchableNativeFeedback>
                 </View>
                 <View style={style.optionMenu}>
+                    <TouchableNativeFeedback onPress={()=>{navigation.navigate("Address")}}>
+                        <View style={style.optionMenu}>
+                            <View style={{flex:1}}>
+                                <Icon name="home" color="#fdbb53" size={30}/>
+                            </View>
+                            <View style={{flex:3}}>
+                                <Text>Endereços</Text>
+                            </View>
+                        </View>
+                    </TouchableNativeFeedback>
+                </View>
+                <View style={style.optionMenu}>
                     <TouchableNativeFeedback onPress={()=>{navigation.navigate("Location")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
@@ -69,13 +81,13 @@ const Menu = ({navigation}) => {
                     </TouchableNativeFeedback>
                 </View>
                 <View style={style.optionMenu}>
-                    <TouchableNativeFeedback onPress={()=>{navigation.navigate("Help")}}>
+                    <TouchableNativeFeedback onPress={()=>{navigation.navigate("About")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
-                                <Icon name="help" color="#fdbb53" size={30}/>
+                                <Icon name="local-library" color="#fdbb53" size={30}/>
                             </View>
                             <View style={{flex:3}}>
-                                <Text>Ajuda</Text>
+                                <Text>Sobre</Text>
                             </View>
                         </View>
                     </TouchableNativeFeedback>
@@ -97,7 +109,7 @@ const Menu = ({navigation}) => {
                 <Text style={{fontSize:7,opacity:0.6,color:"#1C1C1C"}}>By Gabriel (gabriel.andrade2402@gmail.com)</Text>
             </View>
             <View style={{flex:1}}>
-                    <FooterNavigation/>
+                    <FooterNavigation navigation={navigation}/>
             </View>
         </>
     );

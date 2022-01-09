@@ -28,7 +28,7 @@ const Home  = ({navigation}) => {
                     </ScrollView>
                 </View>
                 <View style={{flex:1}}>
-                    <FooterNavigation/>
+                    <FooterNavigation navigation={navigation}/>
                 </View>
             </View>
         </SafeAreaView>
