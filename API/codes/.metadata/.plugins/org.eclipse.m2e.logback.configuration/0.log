@@ -9018,3 +9018,13 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2021-12-31 10:34:41,439 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2022-01-01 20:39:31,048 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2022-01-01 21:09:31,178 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-01-09 09:38:22,218 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-01-09 10:30:00,002 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-01-09 15:06:42,470 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-01-09 15:11:11,619 [Worker-0: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-09 15:11:11,621 [Worker-0: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-09 15:11:11,627 [Worker-0: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-01-09 15:11:11,671 [Worker-0: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-01-09 15:11:11,684 [Worker-0: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-09 15:11:11,684 [Worker-0: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-09 15:11:11,684 [Worker-0: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources

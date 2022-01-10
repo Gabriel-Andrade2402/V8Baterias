@@ -13,6 +13,7 @@ import EditPassword from './src/Screens/EditPassword';
 import PaymentForm from './src/Screens/PaymentForm';
 import Address from './src/Screens/Address';
 import Requests from './src/Screens/Requests';
+import Cart from './src/Screens/Cart';
 
 const Stack = createNativeStackNavigator();
 
@@ -81,6 +82,12 @@ const App: () => Node = () => {
               name = "Requests"
               title = "Requests"
               component = {Requests}
+              
+          />
+          <Stack.Screen 
+              name = "Cart"
+              title = "Cart"
+              component = {Cart}
               
           />
         </Stack.Navigator>

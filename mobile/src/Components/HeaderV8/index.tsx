@@ -13,7 +13,7 @@ const HeaderV8 = ({navigation}) => {
                 <Icon
                     name = 'view-headline'
                     color="white"
-                    size = {50}
+                    size = {45}
                     onPress={()=>navigation.navigate('Menu')}
                 />
             </View>
@@ -24,9 +24,12 @@ const HeaderV8 = ({navigation}) => {
                     source={require("../../assets/utils/BV8_Logo.png")}/>
             </View>
             <View style={StylesHeaderV8.iconCart}>
-                <Image style={{resizeMode:"contain",maxWidth:"80%",maxHeight:"80%",flex:1,
-                justifyContent:"center",alignItems:"center"}}
-                    source={require("../../assets/icons/iconCarrinho.png")}/>
+                <Icon
+                    name = 'shopping-basket'
+                    color="white"
+                    size = {45}
+                    onPress={()=>navigation.navigate('Cart')}
+                />
             </View>
         </View>
         </>

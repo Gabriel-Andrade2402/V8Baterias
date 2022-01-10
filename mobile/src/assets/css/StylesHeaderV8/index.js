@@ -6,6 +6,7 @@ const StylesHeaderV8 = StyleSheet.create({
         display:"flex",
         flex:1,
         height:70,
+        padding:10,
         width:"100%",
         flexDirection:"row",
         backgroundColor:"#fcbf5f",
