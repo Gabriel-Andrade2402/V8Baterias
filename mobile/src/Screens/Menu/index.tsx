@@ -24,7 +24,7 @@ const Menu = ({navigation}) => {
                     <TouchableNativeFeedback onPress={()=>{navigation.navigate("EditProfile")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
-                                <Icon name="edit" color="#fdbb53" size={30}/>
+                                <Icon name="edit" color="#ffaa23" size={30}/>
                             </View>
                             <View style={{flex:3}}>
                                 <Text>Editar perfil</Text>
@@ -36,7 +36,7 @@ const Menu = ({navigation}) => {
                     <TouchableNativeFeedback onPress={()=>{navigation.navigate("EditPassword")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
-                                <Icon name="security" color="#fdbb53" size={30}/>
+                                <Icon name="security" color="#ffaa23" size={30}/>
                             </View>
                             <View style={{flex:3}}>
                                 <Text>Trocar senha</Text>
@@ -48,7 +48,7 @@ const Menu = ({navigation}) => {
                     <TouchableNativeFeedback onPress={()=>{navigation.navigate("PaymentForm")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
-                                <Icon name="credit-card" color="#fdbb53" size={30}/>
+                                <Icon name="credit-card" color="#ffaa23" size={30}/>
                             </View>
                             <View style={{flex:3}}>
                                 <Text>Formas de pagamento</Text>
@@ -60,7 +60,7 @@ const Menu = ({navigation}) => {
                     <TouchableNativeFeedback onPress={()=>{navigation.navigate("Address")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
-                                <Icon name="home" color="#fdbb53" size={30}/>
+                                <Icon name="home" color="#ffaa23" size={30}/>
                             </View>
                             <View style={{flex:3}}>
                                 <Text>Endereços</Text>
@@ -72,7 +72,7 @@ const Menu = ({navigation}) => {
                     <TouchableNativeFeedback onPress={()=>{navigation.navigate("Location")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
-                                <Icon name="location-pin" color="#fdbb53" size={30}/>
+                                <Icon name="location-pin" color="#ffaa23" size={30}/>
                             </View>
                             <View style={{flex:3}}>
                                 <Text>Localizações</Text>
@@ -84,7 +84,7 @@ const Menu = ({navigation}) => {
                     <TouchableNativeFeedback onPress={()=>{navigation.navigate("About")}}>
                         <View style={style.optionMenu}>
                             <View style={{flex:1}}>
-                                <Icon name="local-library" color="#fdbb53" size={30}/>
+                                <Icon name="local-library" color="#ffaa23" size={30}/>
                             </View>
                             <View style={{flex:3}}>
                                 <Text>Sobre</Text>
@@ -93,7 +93,7 @@ const Menu = ({navigation}) => {
                     </TouchableNativeFeedback>
                 </View>
                 <View style={{flex:1}}>
-                    <TouchableOpacity style={{backgroundColor:"#fdbb53",justifyContent:"center",
+                    <TouchableOpacity style={{backgroundColor:"#ffaa23",justifyContent:"center",
                     alignItems:"center",padding:10,marginBottom:5,borderRadius:10}}
                     onPress={()=>{navigation.navigate("Login")}}>
                         <Text style={{fontSize:25,color:"#FFFAFA"}}>Login</Text>

@@ -27,7 +27,7 @@ const Home  = ({navigation}) => {
                         <Commerce/>
                     </ScrollView>
                 </View>
-                <View style={{flex:1}}>
+                <View style={{flex:1,marginBottom:25}}>
                     <FooterNavigation navigation={navigation}/>
                 </View>
             </View>

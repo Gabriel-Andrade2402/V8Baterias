@@ -62,7 +62,7 @@ const Requests = () => {
                     </View>
                 </View>
             </View>
-            <View style={{width:widthView,height:15,backgroundColor:"#fdbb53"}}></View>
+            <View style={{width:widthView,height:5,backgroundColor:"#ffaa23"}}></View>
             <View>
                 <View style={{padding:15}}>
                     <Text style={{fontSize:20,fontWeight:"bold",color:"#1C1C1C"}}>Histórico de pedidos</Text>

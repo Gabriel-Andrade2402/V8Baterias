@@ -9,7 +9,7 @@ const StylesHeaderV8 = StyleSheet.create({
         padding:10,
         width:"100%",
         flexDirection:"row",
-        backgroundColor:"#fcbf5f",
+        backgroundColor:"#ffaa23",
     },
     containerImg: {
         flex:3,

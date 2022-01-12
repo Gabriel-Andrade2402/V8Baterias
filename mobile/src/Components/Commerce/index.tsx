@@ -32,7 +32,7 @@ const Commerce = () => {
                 />
             </View>
         </View>
-        <View style={{flex:1,flexDirection:"row",backgroundColor:"#f2f2f2"}}>
+        <View style={{flex:1,flexDirection:"row",backgroundColor:"#ffaa23"}}>
             <View style={style.blocoFilter}>
                 <CheckBox
                     checked={isSelectedMoura}
@@ -46,6 +46,7 @@ const Commerce = () => {
             </View>
             <View style={style.blocoFilter}>
                 <CheckBox
+                    tintColors={{ true: '#FC8F00' }}
                     checked={isSelectedHeliar}
                     onPress={(e)=>{if(isSelectedHeliar){
                         setIsSelectedHeliar(false);
@@ -73,7 +74,7 @@ const Commerce = () => {
                 width:widthTela,
                 backgroundColor:"#FFFAFA",
                 padding:10}}>
-                <View style={{flex:2,flexDirection:"row"}}>
+                <View style={{flex:2,flexDirection:"row",backgroundColor:"#faba53",borderRadius:20}}>
                     <Image source={require("../../assets/imgV8/bateriaMoura.png")}
                     style={style.imgProduct}/>
                     <View style={style.blocoDescription}>
@@ -115,7 +116,7 @@ const Commerce = () => {
                 width:widthTela,
                 backgroundColor:"#FFFAFA",
                 padding:10}}>
-                <View style={{flex:2,flexDirection:"row"}}>
+                <View style={{flex:2,flexDirection:"row",backgroundColor:"#faba53",borderRadius:20}}>
                     <Image source={require("../../assets/imgV8/bateriaHeliar.png")}
                     style={style.imgProduct}/>
                     <View style={style.blocoDescription}>
@@ -157,7 +158,7 @@ const Commerce = () => {
                 width:widthTela,
                 backgroundColor:"#FFFAFA",
                 padding:10}}>
-                <View style={{flex:2,flexDirection:"row"}}>
+                <View style={{flex:2,flexDirection:"row",backgroundColor:"#faba53",borderRadius:20}}>
                     <Image source={require("../../assets/imgV8/bateriaCral.png")}
                     style={style.imgProduct}/>
                     <View style={style.blocoDescription}>
@@ -199,7 +200,7 @@ const Commerce = () => {
                 width:widthTela,
                 backgroundColor:"#FFFAFA",
                 padding:10}}>
-                <View style={{flex:2,flexDirection:"row"}}>
+                <View style={{flex:2,flexDirection:"row",backgroundColor:"#faba53",borderRadius:20}}>
                     <Image source={require("../../assets/imgV8/bateriaCral.png")}
                     style={style.imgProduct}/>
                     <View style={style.blocoDescription}>
@@ -241,7 +242,7 @@ const Commerce = () => {
                 width:widthTela,
                 backgroundColor:"#FFFAFA",
                 padding:10}}>
-                <View style={{flex:2,flexDirection:"row"}}>
+                <View style={{flex:2,flexDirection:"row",backgroundColor:"#faba53",borderRadius:20}}>
                     <Image source={require("../../assets/imgV8/bateriaMoura.png")}
                     style={style.imgProduct}/>
                     <View style={style.blocoDescription}>
@@ -323,7 +324,8 @@ const style = StyleSheet.create({
     },
     titleFilter:{
         fontSize:17,
-        fontWeight:"bold"
+        fontWeight:"bold",
+        color:"#FFFAFA",
     },
     blocoFilter:{
         flex:1,

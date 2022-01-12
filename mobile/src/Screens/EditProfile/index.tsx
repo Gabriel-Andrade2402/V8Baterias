@@ -114,7 +114,7 @@ const style = StyleSheet.create({
         borderRadius:15,
         alignItems:"center",
         justifyContent:"center",
-        backgroundColor:"#fcbf5f",
+        backgroundColor:"#ffaa23",
         elevation:2,
     },
     textButton:{

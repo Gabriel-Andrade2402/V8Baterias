@@ -122,7 +122,7 @@ const style = StyleSheet.create({
         borderRadius:30,
         alignItems:"center",
         justifyContent:"center",
-        backgroundColor:"#fcbf5f",
+        backgroundColor:"#ffaa23",
         elevation:5,
     },
     textButton:{

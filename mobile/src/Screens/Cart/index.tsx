@@ -251,7 +251,7 @@ const Cart = () =>{
         </View>
         <View style={{marginTop:15}}>
             <TouchableNativeFeedback>
-                <View style={{alignItems:"center",borderRadius:20,backgroundColor:"#fdbb53",padding:10}}>
+                <View style={{alignItems:"center",borderRadius:20,backgroundColor:"#ffaa23",padding:10}}>
                     <Text style={{fontSize:20}}>Confirmar pedido total R$ 750,00</Text>
                 </View>
             </TouchableNativeFeedback>

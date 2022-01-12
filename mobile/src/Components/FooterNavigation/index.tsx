@@ -45,7 +45,7 @@ const style = StyleSheet.create({
         height:50,
         justifyContent:"center",
         alignItems:"center",
-        backgroundColor:"#fcbf5f",
+        backgroundColor:"#ffaa23",
     },
     containerButtonFooter:{
         flex:1,
