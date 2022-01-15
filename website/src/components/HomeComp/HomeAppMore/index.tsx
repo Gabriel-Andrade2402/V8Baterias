@@ -7,7 +7,7 @@ import textBaixeJa from '../../../assets/img/utils/baixeJa.png';
 
 const HomeAppMore = () => {
     return (
-      <article className='container-flex position-flex bg-orange'> 
+      <article className='container-flex position-flex bg-orange' style={{overflowX:"hidden"}}> 
         <div className='row justify-content-center align-items-center'>
             <div className='col-12 col-sm-6 p-5 row'>
                 <div className='col-12 row'>

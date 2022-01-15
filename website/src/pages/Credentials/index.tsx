@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../../assets/css/Credentials.css';
 import iconRaio from '../../assets/img/utils/iconRaio.png';
 import iconHome from '../../assets/img/utils/iconHome.png';
-import iconStore from '../../assets/img/utils/iconStore.png';
+import iconStore from '../../assets/img/utils/iconStoreWhite.png';
 import iconRegistry from '../../assets/img/utils/iconRegistry.png';
 import iconPerson from '../../assets/img/utils/login.png';
 import { Link } from "react-router-dom";
@@ -19,26 +19,26 @@ const Credentials = () => {
         <header>
             <div className='col-12 col-sm-12 mx-0 bg-dark px-5 py-2'>
                 <Link className="col-12 mx-4" to="/">
-                    <img src={logomarca} alt="V8 Baterias" className="col-4 col-sm-1 offset-5"/>
+                    <img src={logomarca} alt="V8 Baterias" className="col-4 col-sm-1 offset-sm-5 offset-3"/>
                 </Link>
             </div>
             <div className="col-sm-12 col-12 p-2 row bg-dark m-0">
-                <div className="col-12 col-sm-6 px-5">
-                    <Link className="col-12 col-sm-11 btn-light btn-lg row justify-content-center" to="/">
+                <div className="col-12 col-sm-6 px-5 mt-2">
+                    <Link className="col-12 col-sm-11 btn-light btn-lg row justify-content-center textDecorationNone" to="/">
                         <div className="col-1 col-sm-1">
                             <img src={iconHome} alt="home" style={{height:30,width:30}} className="col-12 col-sm-12"/>
                         </div>
-                        <div className="col-3 col-sm-3">
+                        <div className="col-3 col-sm-3 marginLeft10 textSize23">
                             Home
                         </div>
                     </Link>
                 </div>
-                <div className="col-12 col-sm-6 px-5">
-                    <Link className="col-12 col-sm-11 btn-warning btn-lg row justify-content-center" to="/loja">
+                <div className="col-12 col-sm-6 px-5 mt-2">
+                    <Link className="col-12 col-sm-11 btn-warning btn-lg row justify-content-center textDecorationNone" to="/loja">
                         <div className="col-1 col-sm-1">
-                            <img src={iconStore} alt="home" style={{height:30,width:30}} className="col-12 col-sm-12"/>
+                            <img src={iconStore} alt="home" style={{height:35,width:35}} className="col-12 col-sm-12"/>
                         </div>
-                        <div className="col-3 col-sm-3">
+                        <div className="col-3 col-sm-3 marginLeft10 textSize23 colorTextWhite">
                             Loja
                         </div>
                     </Link>
@@ -55,7 +55,7 @@ const Credentials = () => {
             <article className='col-12 col-sm-6 articleLogin p-4'>
                 <div className='col-12 col-sm-12 p-3'>
                     <div className='col-12 col-sm-12'>
-                        <h3 className='fontColorOrange offset-4 textSize48' >Entrar</h3>
+                        <h3 className='fontColorOrange offset-sm-4 textSize48' >Entrar</h3>
                     </div>
                     <div className='mx-4'>
                         <div className='col-12 col-sm-12 flexColumn my-3'>
@@ -78,7 +78,7 @@ const Credentials = () => {
             <article className='col-12 col-sm-6 articleRegistry p-4'>
                 <div className='col-12 col-sm-12 p-3'>
                     <div className='col-12 col-sm-12'>
-                        <h3 className='fontColorOrange offset-3 textSize48' >Registrar-se</h3>
+                        <h3 className='fontColorOrange offset-sm-3 textSize48' >Registrar-se</h3>
                     </div>
                     <div className='mx-4'>
                         <div className='col-12 col-sm-12 flexColumn my-1'>
@@ -111,7 +111,7 @@ const Credentials = () => {
                 </div>
             </article>
         </section>
-        <footer className='mx-0 col-12'>
+        <footer className='mx-0 col-12' id='footer' style={{overflowX:"hidden"}}>
             <div className='col-12 col-sm-12'>
                 <img src={imgRodape}/>
             </div> 
@@ -138,4 +138,5 @@ const Credentials = () => {
       </>
    );
 }
+
 export default Credentials;

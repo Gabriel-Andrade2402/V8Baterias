@@ -8,7 +8,7 @@ import $ from 'jquery';
 
 const HomeFooter = () => {
     return (
-      <footer className='container-flex position-flex'>
+      <footer className='container-flex position-flex' id='footer' style={{overflowX:"hidden"}}>
         <div className='col-12 col-sm-12'>
             <img src={imgRodape}/>
         </div> 
