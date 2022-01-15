@@ -14,11 +14,11 @@ const HomeSkills = () => {
                     </div>
                     <div className='col-12 col-sm-12 row'>
                         <h4 className='col-8 col-sm-8'>Alinhamento</h4>
-                        <img src={iconChecked} className='col-2 col-sm-2'/>
+                        <img src={iconChecked} className='col-4 col-sm-2'/>
                     </div>
                     <div className='col-12 col-sm-12 row'>
                         <h4 className='col-8 col-sm-8'>Balanceamento</h4>
-                        <img src={iconChecked} className='col-2 col-sm-2'/>
+                        <img src={iconChecked} className='col-4 col-sm-2'/>
                     </div>
                 </div>
                 <div className='col-12'>
@@ -27,19 +27,19 @@ const HomeSkills = () => {
                     </div>
                     <div className='col-12 col-sm-12 row'>
                         <h4 className='col-8 col-sm-8'>Sistema de iluminação</h4>
-                        <img src={iconChecked} className='col-2 col-sm-2'/>
+                        <img src={iconChecked} className='col-4 col-sm-2'/>
                     </div>
                     <div className='col-12 col-sm-12 row'>
                         <h4 className='col-8 col-sm-8'>Alternador de bateria</h4>
-                        <img src={iconChecked} className='col-2 col-sm-2'/>
+                        <img src={iconChecked} className='col-4 col-sm-2'/>
                     </div>
                     <div className='col-12 col-sm-12 row'>
                         <h4 className='col-8 col-sm-8'>Motor de arranque</h4>
-                        <img src={iconChecked} className='col-2 col-sm-2'/>
+                        <img src={iconChecked} className='col-4 col-sm-2'/>
                     </div>
                     <div className='col-12 col-sm-12 row'>
                         <h4 className='col-8 col-sm-8'>Troca de bateria</h4>
-                        <img src={iconChecked} className='col-2 col-sm-2'/>
+                        <img src={iconChecked} className='col-4 col-sm-2'/>
                     </div>
                 </div>
             </div>

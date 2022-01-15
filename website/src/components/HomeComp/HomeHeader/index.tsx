@@ -9,10 +9,10 @@ const HomeHeader = () => {
       <header className='container-flex position-flex bg-dark'> 
         <div className=" row px-4">
             <div className="col-sm-4 mt-5 ml-5">
-                <Link className="col-sm-12 btn btn-dark col-12 m-2 p-2" to="/">
+                <Link className="col-sm-12 btn btn-dark col-12 m-2 p-2" to="/login">
                     Login
                 </Link>
-                <Link className="col-sm-12 btn btn-light col-12 m-2 p-2" to="/">
+                <Link className="col-sm-12 btn btn-light col-12 m-2 p-2" to="/login">
                     Cadastrar-se
                 </Link>
             </div>
