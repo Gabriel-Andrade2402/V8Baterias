@@ -5,7 +5,7 @@ import $ from 'jquery';
 
 const HomeSkills = () => {
     return (
-      <article className='container-flex position-flex'> 
+      <article className='container-flex position-flex' id='skills'> 
         <div className='row col-12 col-sm-12 px-5 mt-5'>
             <div className='col-12 col-sm-6'>
                 <div className='col-12'>

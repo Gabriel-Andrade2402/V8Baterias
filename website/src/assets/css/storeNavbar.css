@@ -15,10 +15,15 @@
     border:1px solid black;
 }
 .bg-shadow{
-    transition:transform 0.2s,color 0.2s,background 0.2s;
+    transition:font-size 0.2s,transform 0.2s,color 0.2s,background 0.2s;
 }
 .bg-shadow:hover{
     background:#ff9c00;
     transform: scale(1.1);
     color:#FFFAFA;
+    font-size:18px;
+    font-weight:bold;
+}
+.border-right{
+    border-right: 1px solid #3333;
 }

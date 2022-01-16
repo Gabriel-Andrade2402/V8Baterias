@@ -1,4 +1,5 @@
 {
   "name": "mobile",
-  "displayName": "mobile"
+  "icon":"./src/assets/utils/logoIcon.png",
+  "displayName": "V8 Baterias"
 }

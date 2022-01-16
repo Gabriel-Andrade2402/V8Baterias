@@ -19,3 +19,16 @@
     height:5px;
     background:#FF8C00;
 }
+.bg-quantity-product{
+    border-radius: 10px;
+    transition:transform 0.1s,color 0.1s,background 0.1s;
+}
+.bg-quantity-product:hover{
+    cursor: pointer;
+    background:#1C1C1C;
+    transform: scale(1.1);
+    color:#FFFAFA;
+}
+.border-bottom{
+    border-bottom: 1px solid #3333;
+}

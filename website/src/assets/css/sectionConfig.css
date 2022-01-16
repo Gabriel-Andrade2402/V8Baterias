@@ -1,0 +1,32 @@
+.titlePage{
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.divTitle{
+    border-bottom: 1px solid #3333;
+    background:#FFFAFA;
+}
+.titleAside{
+    font-size: 20px;
+}
+.titleAside:hover{
+    cursor: pointer;
+}
+.blocoAside{
+    margin-top:8px;
+    padding:5px;   
+    transition:background 0.2s;
+}
+.blocoAsideChecked{
+    background:#fbae35;
+    color:#FFFAFA;
+}
+.blocoAside:hover{
+    cursor: pointer;
+    background: #fbae35;
+    color:#FFFAFA;
+}
+.border-right{
+    border-right: 1px solid #3333;
+}

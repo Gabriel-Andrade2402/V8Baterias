@@ -1,0 +1,36 @@
+.titleArticle{
+    font-size: 27px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+}
+.labelInput{
+    font-size: 17px;
+    font-family:arial;
+}
+.subtitleArticle{
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.btn-add-address{
+    background: #bcbcbc;
+}
+.btn-add-address:hover{
+    cursor: pointer;
+    background: #323232;
+    color:#FFFAFA;
+}
+.margin-left-8{
+    margin-left: 8px;
+}
+.border-bottom{
+    border-bottom: 1px solid #3333;
+}
+.margin-top-15{
+    margin-top: 15px;
+}
+.btn-confirm{
+    font-size: 19px;
+}
+.btn-confirm:hover{
+    cursor: pointer;
+}

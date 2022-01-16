@@ -4,13 +4,15 @@ import $ from 'jquery';
 import StoreHeader from '../../components/StoreComp/StoreHeader';
 import StoreNavBar from '../../components/StoreComp/StoreNavbar';
 import StoreCommerce from '../../components/StoreComp/StoreCommerce';
+import Footer from '../../components/Footer';
 
 const Store = () => {
     return (
         <>
-        <StoreHeader/>
+        <StoreHeader exists={true}/>
         <StoreNavBar/>
         <StoreCommerce/>
+        <Footer/>
         </>
     );
 }

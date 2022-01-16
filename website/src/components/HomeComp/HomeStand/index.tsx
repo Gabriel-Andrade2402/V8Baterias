@@ -6,6 +6,7 @@ import arteStory3 from '../../../assets/img/storys/arteStory3.jpg'
 import arteStory4 from '../../../assets/img/storys/arteStory4.jpg'
 import ferramentas from '../../../assets/img/storys/ferramentas.png'
 import bateriMoura from '../../../assets/img/storys/bateriaMoura.png'
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../../assets/css/homeStand.css';
 
@@ -45,12 +46,16 @@ const HomeStand = () => {
             </a>
             </div>
             <div className='col-sm-5'>
-               <div className='col-12 mouseOverStand'>
-                  <img className="col-8 rounded mx-auto d-block" src={bateriMoura} />
-               </div>
-               <div className='col-12 mouseOverStand'>
-                  <img className="col-9 rounded mx-auto d-block" src={ferramentas}/>
-               </div>
+               <Link to="/loja">
+                  <div className='col-12 mouseOverStand' onClick={()=>{window.location.href='http://localhost:3000/#articleAbout'}}>
+                     <img className="col-8 rounded mx-auto d-block" src={bateriMoura} />
+                  </div>
+               </Link>
+               <a href='#skills'>
+                  <div className='col-12 mouseOverStand'>
+                     <img className="col-9 rounded mx-auto d-block" src={ferramentas}/>
+                  </div>
+               </a>
             </div>
          </div>
       </article>

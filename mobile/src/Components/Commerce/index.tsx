@@ -32,7 +32,7 @@ const Commerce = () => {
                 />
             </View>
         </View>
-        <View style={{flex:1,flexDirection:"row",backgroundColor:"#ffaa23"}}>
+        <View style={{flex:1,flexDirection:"row",backgroundColor:"#696969"}}>
             <View style={style.blocoFilter}>
                 <CheckBox
                     checked={isSelectedMoura}

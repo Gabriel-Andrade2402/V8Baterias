@@ -7,7 +7,7 @@ import textBaixeJa from '../../../assets/img/utils/baixeJa.png';
 
 const HomeAppMore = () => {
     return (
-      <article className='container-flex position-flex bg-orange' style={{overflowX:"hidden"}}> 
+      <article className='container-flex position-flex bg-orange'> 
         <div className='row justify-content-center align-items-center'>
             <div className='col-12 col-sm-6 p-5 row'>
                 <div className='col-12 row'>
@@ -20,7 +20,7 @@ const HomeAppMore = () => {
                 ou você pode enviar uma mensagem por whatsapp.
                 </div>
             </div>
-            <div className='col-12 col-sm-6 p-5 row bg-dark box-shadow-zoom-animate'>
+            <div className='col-12 col-sm-6 p-5 row bg-dark box-shadow-zoom-animate' style={{overflowX:"hidden",overflowY:"hidden"}}>
                 <img src={celphoneHand} className='col-12 col-sm-8  offset-sm-2'/>
             </div>
         </div>
