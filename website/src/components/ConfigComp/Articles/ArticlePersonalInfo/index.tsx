@@ -14,7 +14,7 @@ const ArticlePersonInfo = () =>{
                 </div>
                 <div className="col-12 col-sm-12 mt-3">
                     <div className="col-12 col-sm-12"><label className="labelInput">E-mail</label></div>
-                    <div className="col-12 col-sm-12 mt-1"><input type='text' className="col-7 col-sm-7"/></div>
+                    <div className="col-12 col-sm-12 mt-1"><input type='text' readOnly={true} className="col-7 col-sm-7"/></div>
                 </div>
                 <div className="col-12 col-sm-12 mt-3">
                     <div className="col-12 col-sm-12"><label className="labelInput">Celular</label></div>
@@ -22,7 +22,7 @@ const ArticlePersonInfo = () =>{
                 </div>
                 <div className="col-12 col-sm-12 mt-3">
                     <div className="col-12 col-sm-12"><label className="labelInput">Cpf</label></div>
-                    <div className="col-12 col-sm-12 mt-1"><input type='text' className="col-7 col-sm-7"/></div>
+                    <div className="col-12 col-sm-12 mt-1"><input type='text' readOnly={true} className="col-7 col-sm-7"/></div>
                 </div>
                 <div className="col-12 col-sm-12 mt-3">
                     <label className="subtitleArticle">Endereços</label>
