@@ -21,7 +21,7 @@ const storeHeader = ({exists}:props) => {
                 </Link>
             </div>
             <div className="col-sm-3 align-self-center mx-sm-4">
-                <Link className="col-sm-12 btn btn-dark col-12 p-2" to="/">
+                <Link className="col-sm-12 btn btn-light col-12 p-2" to="/">
                     Home
                 </Link>
             </div>

@@ -20,7 +20,7 @@ const SectionConfig = () => {
                     <label className="titlePage">Conta</label>
                 </div>
             </div>
-            <aside className="col-3 col-sm-3 border-right">
+            <aside className="col-12 col-sm-3 border-right">
                 <div id='blocoAsidePersonInfo' className="col-12 col-sm-12 blocoAside d-flex justify-content-center blocoAsideChecked" onClick={()=>{
                     setArticle(<ArticlePersonInfo/>);
                     $(".blocoAsideChecked").toggleClass('blocoAsideChecked');
@@ -64,7 +64,7 @@ const SectionConfig = () => {
                     <label className="titleAside">Ajuda</label>
                 </div>
             </aside>
-            <section className="col-9 col-sm-9">
+            <section className="col-12 col-sm-9 p-0">
                 {article}
             </section>
         </div>

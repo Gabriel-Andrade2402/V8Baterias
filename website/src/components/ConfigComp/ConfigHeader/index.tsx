@@ -6,10 +6,10 @@ import '../../../assets/css/ConfigHeader.css';
 
 const ConfigHeader = () => {
     return (
-      <header className='container-flex position-flex bg-light'> 
+      <header className='container-flex position-flex bg-dark'> 
         <div className=" row px-4">
             <div className="col-sm-4 mt-5 ml-5">
-                <Link className="btn btn-dark btn-lg col-12 col-sm-12 m-2" to="/">
+                <Link className="btn btn-light btn-lg col-12 col-sm-12 m-2" to="/">
                     Home
                 </Link>
             </div>

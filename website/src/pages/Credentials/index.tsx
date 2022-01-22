@@ -59,7 +59,7 @@ const Credentials = () => {
                     </div>
                     <div className='mx-4'>
                         <div className='col-12 col-sm-12 flexColumn my-3'>
-                            <label htmlFor='email' className='textSize18 fontBold'>Email/Cpf</label>
+                            <label htmlFor='email' className='textSize18 fontBold'>Email/CPF</label>
                             <input name='email' placeholder="* Email ou cpf" className='inputData px-3' type="text"/>
                         </div>
                         <div className='col-12 col-sm-12 flexColumn'>
@@ -82,7 +82,7 @@ const Credentials = () => {
                     </div>
                     <div className='mx-4'>
                         <div className='col-12 col-sm-12 flexColumn my-1'>
-                            <label htmlFor='email' className='textSize18 fontBold'>Email/Cpf</label>
+                            <label htmlFor='email' className='textSize18 fontBold'>Email/CPF</label>
                             <input name='email' placeholder="* Email ou cpf" className='inputDataSmall px-3' type="text"/>
                         </div>
                         <div className='col-12 col-sm-12 flexColumn'>
@@ -90,7 +90,7 @@ const Credentials = () => {
                             <input name='email' placeholder="* Nome" className='inputDataSmall px-3 ' type="text"/>
                         </div>
                         <div className='col-12 col-sm-12 flexColumn'>
-                            <label htmlFor='email' className='textSize18 fontBold'>Cpf</label>
+                            <label htmlFor='email' className='textSize18 fontBold'>CPF</label>
                             <input name='email' placeholder="* CPF" className='inputDataSmall px-3 ' type="text"/>
                         </div>
                         <div className='col-12 col-sm-12 flexColumn'>

@@ -2,10 +2,19 @@
     font-size: 27px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
+    color:#FFFAFA;
+}
+.backgroun-3d3d{
+    background:#3d3d3d;
 }
 .labelInput{
     font-size: 17px;
     font-family:arial;
+}
+.label-title-sub-group{
+    font-size:17px;
+    color: #1C1C1C;
+    font-weight: 100;
 }
 .subtitleArticle{
     font-size: 20px;
@@ -39,6 +48,9 @@
 }
 .font-size-25{
     font-size: 25px;
+}
+.font-size-20{
+    font-size: 22px;
 }
 .titleRequest{
     font-size: 25px;
@@ -74,4 +86,81 @@
 .checkBox-25{
     width: 25px;
     height: 25px;
+}
+.bloco-address{
+    box-shadow: 1px 1px 5px #6d6d6d;
+    transition: background 0.5s,color 0.5s;
+}
+.bloco-address:hover{
+    cursor: pointer;
+    background: #ffc63e;
+    color: #FFFAFA;
+}
+.bloco-address-clicked{
+    background: #ffc63e;
+    color: #FFFAFA;
+}
+.bloco-card{
+    box-shadow: 1px 1px 5px #6d6d6d;
+    transition: background 0.5s,color 0.5s;
+}
+.bloco-card:hover{
+    cursor: pointer;
+    background: #ffc63e;
+    color: #FFFAFA;
+}
+.bloco-card-clicked{
+    background: #ffc63e;
+    color: #FFFAFA;
+}
+.bloco-payment-form{
+    box-shadow: 1px 1px 5px #6d6d6d;
+    border-radius: 20px;
+    filter: grayscale(80%);
+    transition: background 0.5s,filter 0.6s,color 0.5s;
+}
+.bloco-payment-form:hover{
+    cursor: pointer;
+    filter: grayscale(0%);
+    color: #FFFAFA;
+}
+.bloco-payment-form-clicked{
+    filter: grayscale(0%);
+}
+.font-size-24{
+    font-size: 24px;
+}
+.bg-orange-clear{
+    background: #ffc63e;
+}
+.titleFinish{
+    font-size: 28px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: #929292;
+}
+.subTitleFinish{
+    color: #adadad;
+    font-size: 17px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 50;
+}
+.bold-100{
+    font-weight: bold;
+}
+.bold-80{
+    font-weight: 400;
+}
+.bg-cinza{
+    background: #dfdfdf;
+}
+.sale-title{
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.bg-shadow-gray{
+    box-shadow: 1px 1px 4px rgb(92, 92, 92);
+}
+.margin-left-8{
+    margin-left: 8px;
 }

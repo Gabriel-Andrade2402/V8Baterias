@@ -32,7 +32,7 @@ const HomeLocation = () => {
           <a title='Ir para o maps' target='blank' href='https://www.google.com/maps?ll=-23.494851,-46.409289&z=17&t=m&hl=pt-BR&gl=BR&mapclient=embed&cid=6997639485909189440' className='col-sm-3 col-6 row m-2 box-shadow-zoom-animate style-link-none' id='blocoLocationGuarulhos'>     
               <img src={locationIcon} className='col-11 max-lenght-100'/>
               <h3>
-                Itaim paulista
+                Itaim Paulista
               </h3>
               <h5 className='text-ffa'>
               in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla

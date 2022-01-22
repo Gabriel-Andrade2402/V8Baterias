@@ -7,15 +7,15 @@ import imgBateriaHeliar from '../../../../assets/img/baterias/bateriaHeliar.png'
 const ArticleRequests = () =>{
     return (
         <>
-            <div className="col-12 col-sm-12 p-3">
+            <div className="col-12 backgroun-3d3d col-sm-12 p-3">
                 <label className="titleArticle">Pedidos</label>
             </div>
-            <div className="col-12 col-sm-12 py-3">
+            <div className="col-12 col-sm-12 py-3 px-3">
                 <div className="col-12 col-sm-12 mt-3 border-bottom">
                     <label className="subtitleArticle">Pedidos em andamento</label>
                     <div className="col-12 col-sm-12">
-                        <div className="col-12 col-sm-12 p-2 mb-2 row background-ffa">
-                            <div className="col-3 col-sm-3">
+                        <div className="col-12 col-sm-12 p-2 mb-2 row d-flex justify-content-center background-ffa">
+                            <div className="col-8 col-sm-3">
                                 <img src={imgBateriaMoura} className='col-12 col-sm-12'/>
                             </div>
                             <div className="col-sm-9 col-9 p-3">
@@ -23,7 +23,7 @@ const ArticleRequests = () =>{
                                     <label className="titleRequest">NUASDAD87Q9WE45QEQW</label>
                                 </div>
                                 <div className="col-12 col-sm-12 row mt-3">
-                                    <div className="col-6 col-sm-6">
+                                    <div className="col-12 col-sm-6">
                                         <div className="col-12 col-sm-12 row d-flex align-items-center"> 
                                             <label className="col-sm-3 col-6 subtitle-description">Marca:</label>
                                             <label className="col-sm-4 col-6">Moura</label>
@@ -37,7 +37,7 @@ const ArticleRequests = () =>{
                                             <label className="col-sm-4 col-6">40 Ah</label>
                                         </div> 
                                     </div>
-                                    <div className="col-6 col-sm-6">
+                                    <div className="col-12 col-sm-6">
                                         <div className="col-12 col-sm-12 row d-flex align-items-center"> 
                                             <label className="col-sm-9 col-6 subtitle-description">Tempo estimado de vida:</label>
                                             <label className="col-sm-3 col-6">2 anos</label>
@@ -57,8 +57,8 @@ const ArticleRequests = () =>{
                                 </div>
                             </div>
                         </div>
-                        <div className="col-12 col-sm-12 p-2 mb-2 row background-ffa">
-                                <div className="col-3 col-sm-3">
+                        <div className="col-12 col-sm-12 d-flex justify-content-center p-2 mb-2 row background-ffa">
+                                <div className="col-8 col-sm-3">
                                     <img src={imgBateriaHeliar} className='col-12 col-sm-12'/>
                                 </div>
                                 <div className="col-sm-9 col-9 p-3">
@@ -66,7 +66,7 @@ const ArticleRequests = () =>{
                                         <label className="titleRequest">ASDJAIW48EASD98</label>
                                     </div>
                                     <div className="col-12 col-sm-12 row mt-3">
-                                        <div className="col-6 col-sm-6">
+                                        <div className="col-12 col-sm-6">
                                             <div className="col-12 col-sm-12 row d-flex align-items-center"> 
                                                 <label className="col-sm-3 col-6 subtitle-description">Marca:</label>
                                                 <label className="col-sm-4 col-6">Heliar</label>
@@ -80,7 +80,7 @@ const ArticleRequests = () =>{
                                                 <label className="col-sm-4 col-6">70 Ah</label>
                                             </div> 
                                         </div>
-                                        <div className="col-6 col-sm-6">
+                                        <div className="col-12 col-sm-6">
                                             <div className="col-12 col-sm-12 row d-flex align-items-center"> 
                                                 <label className="col-sm-9 col-6 subtitle-description">Tempo estimado de vida:</label>
                                                 <label className="col-sm-3 col-6">5 anos</label>
@@ -105,8 +105,8 @@ const ArticleRequests = () =>{
                 <div className="col-12 col-sm-12 mt-3 border-bottom">
                     <label className="subtitleArticle">Pedidos finalizados</label>
                     <div className="col-12 col-sm-12">
-                    <div className="col-12 col-sm-12 p-2 mb-2 row background-fefe">
-                            <div className="col-3 col-sm-3">
+                    <div className="col-12 col-sm-12 d-flex justify-content-center p-2 mb-2 row background-fefe">
+                            <div className="col-8 col-sm-3">
                                 <img src={imgBateriaMoura} className='col-12 col-sm-12'/>
                             </div>
                             <div className="col-sm-9 col-9 p-3">
@@ -114,7 +114,7 @@ const ArticleRequests = () =>{
                                     <label className="titleRequest">NUASDAD87Q9WE45QEQW</label>
                                 </div>
                                 <div className="col-12 col-sm-12 row mt-3">
-                                    <div className="col-6 col-sm-6">
+                                    <div className="col-12 col-sm-6">
                                         <div className="col-12 col-sm-12 row d-flex align-items-center"> 
                                             <label className="col-sm-3 col-6 subtitle-description">Marca:</label>
                                             <label className="col-sm-4 col-6">Moura</label>
@@ -125,7 +125,7 @@ const ArticleRequests = () =>{
                                         </div> 
                                         
                                     </div>
-                                    <div className="col-6 col-sm-6">
+                                    <div className="col-12 col-sm-6">
                                         <div className="col-12 col-sm-12 row d-flex align-items-center"> 
                                             <label className="col-sm-9 col-6 subtitle-description">Tempo estimado de vida:</label>
                                             <label className="col-sm-3 col-6">2 anos</label>
@@ -164,8 +164,8 @@ const ArticleRequests = () =>{
                                     </div>
                             </div>
                         </div>
-                        <div className="col-12 col-sm-12 p-2 mb-2 row background-fefe">
-                                <div className="col-3 col-sm-3">
+                        <div className="col-12 col-sm-12 d-flex justify-content-center p-2 mb-2 row background-fefe">
+                                <div className="col-8 col-sm-3">
                                     <img src={imgBateriaHeliar} className='col-12 col-sm-12'/>
                                 </div>
                                 <div className="col-sm-9 col-9 p-3">
@@ -173,7 +173,7 @@ const ArticleRequests = () =>{
                                         <label className="titleRequest">ASDJAIW48EASD98</label>
                                     </div>
                                     <div className="col-12 col-sm-12 row mt-3">
-                                        <div className="col-6 col-sm-6">
+                                        <div className="col-12 col-sm-6">
                                             <div className="col-12 col-sm-12 row d-flex align-items-center"> 
                                                 <label className="col-sm-3 col-6 subtitle-description">Marca:</label>
                                                 <label className="col-sm-4 col-6">Heliar</label>
@@ -183,7 +183,7 @@ const ArticleRequests = () =>{
                                                 <label className="col-sm-4 col-6">Caminhão</label>
                                             </div> 
                                         </div>
-                                        <div className="col-6 col-sm-6">
+                                        <div className="col-12 col-sm-6">
                                             <div className="col-12 col-sm-12 row d-flex align-items-center"> 
                                                 <label className="col-sm-9 col-6 subtitle-description">Tempo estimado de vida:</label>
                                                 <label className="col-sm-3 col-6">5 anos</label>

@@ -11,7 +11,7 @@ const HomeAbout = () => {
                 <div className='col-sm-12 col-12 row mt-4 justify-content-center align-items-center'>
                   <img src={iconRaio} className='col-2 col-sm-1'/>
                   <h2 className='col-sm-4 col-8'>
-                    Quem somos nós ?
+                    <label className='col-12 col-sm-12 d-flex justify-content-center'>Quem somos nós ?</label>
                   </h2>
                   <img src={iconRaio} className='col-2 col-sm-1'/>
                 </div>
