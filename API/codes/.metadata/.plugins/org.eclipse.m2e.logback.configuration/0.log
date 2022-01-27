@@ -9298,3 +9298,11 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2022-01-23 19:04:07,610 [Worker-22: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
 2022-01-24 18:53:03,317 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2022-01-24 19:07:01,458 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-01-27 18:58:41,309 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-01-27 19:00:48,905 [Worker-7: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-27 19:00:48,907 [Worker-7: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-27 19:00:48,913 [Worker-7: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-01-27 19:00:48,957 [Worker-7: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-01-27 19:00:48,970 [Worker-7: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-01-27 19:00:48,970 [Worker-7: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-01-27 19:00:48,970 [Worker-7: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources

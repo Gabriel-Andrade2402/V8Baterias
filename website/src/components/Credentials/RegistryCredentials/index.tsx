@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState,useEffect} from "react";
 import axios from "axios";
 import $ from 'jquery';
 import { BASE_URL } from "../../../utils/requests";
@@ -193,8 +193,8 @@ const RegistryCredentials = () => {
                 strTelephone: '',
                 strEmail: '',
                 config_id: {
-                    bolReceivePromotions: null,
-                    bolReceiveUpdatingPrice: null,
+                    bolReceivePromotions: false,
+                    bolReceiveUpdatingPrice: false,
                 },
                 strPassword: ''
         }
@@ -510,6 +510,8 @@ const RegistryCredentials = () => {
         }
         var user = userJson;
         user.strPassword=$("#inputNomeRegistry").val()+"";
+        user.config_id.bolReceivePromotions = ($("#inputReceivePromotionRegistry").prop("checked"))?true:false;
+        user.config_id.bolReceiveUpdatingPrice = ($("#inputReceiveUpdatingPriceRegistry").prop("checked"))?true:false;
         setUserJson(user);
         return bool;
     }
@@ -524,19 +526,7 @@ const RegistryCredentials = () => {
         axios({
             method: "post",
             url: BASE_URL+"/client/registry",
-            data: {
-                strName: $("#inputNomeRegistry").val(),
-                strCpf: $("#inputCpfRegistry").val(),
-                strTelephone: "115487213",
-                strEmail: $("#inputEmailRegistry").val(),
-                config_id: {
-                    bolReceivePromotions: true,
-                    bolReceiveUpdatingPrice: false,
-                    dtCreated: "2021-12-20",
-                    dtLastUpdated: null
-                },
-                strPassword: $("#inputSenhaRegistry").val()
-            },
+            data: userJson,
             headers: {
             "Authorization": token,
             },
@@ -544,11 +534,15 @@ const RegistryCredentials = () => {
         .then(function (response) {
           token = response.data.token_type + " " + response.data.access_token;
           console.log(response);
+          alert("Salvou!");
         })
         .catch(function (response) {
           console.log(response);
         });
     }
+    useEffect(() => {
+        hideInitial();
+      }, []);
     return (
         <>
         <div className='col-12 col-sm-12 p-3'>
@@ -635,6 +629,7 @@ const RegistryCredentials = () => {
                                         $("#btnSkipStep").hide();
                                         $("#btnNextStep").hide();
                                         $("#labelEtapa").text("5");
+                                        $("#blockConfigPromotions").show();
                                     }
                                 }
                             }}
@@ -675,11 +670,24 @@ const RegistryCredentials = () => {
                                         $("#btnSkipStep").hide();
                                         $("#btnNextStep").hide();
                                         $("#btnRegistry").show();
+                                        $("#blockConfigPromotions").show();
                                     }
                                 }
                             }}
                             className="btn-warning btnRegistry p-1 mx-2 mt-1 col-12 col-sm-3 col-lg-3">
                                 <label className="cursorPointerHover col-12 col-sm-12 col-lg-12 d-flex justify-content-center">Avançar</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-12 col-sm-12 col-lg-12" id='blockConfigPromotions'>
+                        <div className='col-12 col-sm-12 d-flex row justify-content-center'>
+                            <div className="col-12 col-sm-12 d-flex justify-content-center">    
+                                <input name='receivePromotions' id='inputReceivePromotionRegistry' className='checkBox-25 col-2 col-sm-2 col-lg-2 m-2' type="checkbox"/>
+                                <label htmlFor='receivePromotions' className='textSize18 font-bold-300 col-8 col-sm-8 col-lg-8 m-2'>Receber promoções</label>
+                            </div>
+                            <div className="col-12 col-sm-12 d-flex justify-content-center">    
+                                <input name='receivePromotions' id='inputReceiveUpdatingPriceRegistry' className='checkBox-25 col-2 col-sm-2 col-lg-2 m-2' type="checkbox"/>
+                                <label htmlFor='receivePromotions' className='textSize18 font-bold-300 col-8 col-sm-8 col-lg-8 m-2'>Receber atualizações de preços</label>
                             </div>
                         </div>
                     </div>
@@ -689,10 +697,9 @@ const RegistryCredentials = () => {
                         <div 
                         onClick={()=>{
                             if(validityInfoPassword()){
-                                alert('Cadastro realizado')
-                                // if($("#labelEtapa").text()=='5'){
-                                //     authRegistry();
-                                // }
+                                 if($("#labelEtapa").text()=='5'){
+                                     authRegistry();
+                                 }
                             }
                         }}
                         className='col-12 col-sm-12 justify-content-center align-items-center row'>
@@ -705,11 +712,11 @@ const RegistryCredentials = () => {
         </>
     );
 
-    
+    function hideInitial(){
+        $("#blockConfigPromotions").hide();
+        $("#btnRegistry").hide();
+        $("#btnSkipStep").hide();
+        $("#btnBackStep").hide();
+    }
 }
-$(document).ready(function(){
-    $("#btnRegistry").hide();
-    $("#btnSkipStep").hide();
-    $("#btnBackStep").hide();
-});
 export default RegistryCredentials;

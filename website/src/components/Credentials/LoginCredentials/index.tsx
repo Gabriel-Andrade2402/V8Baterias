@@ -77,6 +77,7 @@ const LoginCredentials = () => {
         })
         .then(function (response) {
             console.log(response);
+            alert(response.data)
         })
         .catch(function (response) {
             console.log(response);
