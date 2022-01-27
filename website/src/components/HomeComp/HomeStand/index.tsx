@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import axios from "axios";
+import React,{ useEffect,useState } from 'react';
 //Imagens do story
 import arteStory1 from '../../../assets/img/storys/arteStory1.jpg'
 import arteStory2 from '../../../assets/img/storys/arteStory2.jpg'
@@ -9,9 +11,56 @@ import bateriMoura from '../../../assets/img/storys/bateriaMoura.png'
 import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.css';
 import '../../../assets/css/homeStand.css';
+import { BASE_URL } from "../../../utils/requests";
+
 
 
 const HomeStand = () => {
+   var imgStory1;
+   var imgStory2;
+   var imgStory3;
+   var imgStory4;
+   var token = "";
+   var bodyFormData = new FormData();
+   bodyFormData.append("grant_type","password");
+   bodyFormData.append("username","cliente");
+   bodyFormData.append("password","123456");
+   //auth();
+   function auth(){
+      axios({
+         method: "post",
+         url: {BASE_URL}+"/oauth/token",
+         data: bodyFormData,
+         auth: {
+            username:"client",
+            password:"123"
+         },
+         headers: {
+            "Content-Type": "multipart/form-data",
+         },
+       })
+         .then(function (response) {
+           token = response.data.token_type + " " + response.data.access_token;
+           fillStorys();
+         })
+         .catch(function (response) {
+           console.log(response);
+         });
+   }
+
+   function fillStorys(){
+      axios({
+         method: "post",
+         url: "http://localhost:8080/storys/all",
+         headers: {
+            "Authorization": token,
+         },
+       })
+         .then(function (response) {
+           console.log(response);
+         })
+   }
+
     return (
       <article className='container'> 
          <div className=' row'>

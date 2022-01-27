@@ -26,9 +26,9 @@ public class ClientResources {
 	@PostMapping(value="/save")
 	public ResponseEntity<String> save(@RequestBody ClientEntity Client){
 		if(service.saveClient(Client)!=null) {
-			return ResponseEntity.ok().body("ok");
+			return ResponseEntity.ok().body("Salvou!");
 		}else {
-			return ResponseEntity.ok().body("exists");
+			return ResponseEntity.ok().body("Não salvou!");
 		}
 	}
 	@Secured({RolesConfig.ROLE_ADMIN})
@@ -65,4 +65,25 @@ public class ClientResources {
 			return ResponseEntity.ok().body(null);
 		}
 	}
+	@Secured({RolesConfig.ROLE_ADMIN,RolesConfig.ROLE_CLIENT})
+	@PostMapping(value="/login")
+	public ResponseEntity<ClientEntityDTO> login(@RequestBody ClientEntity entity){
+		ClientEntityDTO client = service.login(entity);
+		if(client!=null) {
+			return ResponseEntity.ok().body(client);
+		}else {
+			return ResponseEntity.ok().body(null);
+		}
+	}
+	@Secured({RolesConfig.ROLE_ADMIN,RolesConfig.ROLE_CLIENT})
+	@PostMapping(value="/registry")
+	public ResponseEntity<ClientEntityDTO> registry(@RequestBody ClientEntity entity){
+		ClientEntityDTO client = service.saveClient(entity);
+		if(client!=null) {
+			return ResponseEntity.ok().body(client);
+		}else {
+			return ResponseEntity.ok().body(null);
+		}
+	}
+	
 }

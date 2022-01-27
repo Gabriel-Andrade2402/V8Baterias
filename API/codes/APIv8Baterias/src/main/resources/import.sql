@@ -21,15 +21,16 @@ INSERT INTO tb_product (bol_product_operating,num_price,num_quantity,str_code_pr
 --Tabela de Serviços
 INSERT INTO tb_service (bol_service_operating,num_price,str_code_service,str_informations,str_name_service) VALUES (true,2400,'CASD4AS785241','Serviço','Serviço 1');
 
+
 --Tabela de Storys
-INSERT INTO tb_storys (str_description,str_image_base,str_title) VALUES ('Descricao','asfasfasf57safas87dsa1fasd489w7e8q94q1w5e156a1sf56a4f89asdf748qwe1q32we10sad64sa89d74afa1sf65qw1e8974wq98sad12da1fa65f4as89d7qwe1s2ad156asd4a89sd8qew1sad21sa65d4a8s4fsa85f4s9f+wse9+f7swr987qwe8qe4165qr41sa65as5d15','Titul')
+INSERT INTO tb_storys (str_description,str_image_base,str_title) VALUES ('Compre uma bateria e concorra a capacete','teste','Promocao')
 
 --Tabela de requisições
 INSERT INTO tb_request (bol_payment_aproved,dt_canceled,dt_request,str_code_request,str_reason_cancel,str_situation,address_id,client_id,product_id,service_id) VALUES (true,null,SYSDATE,'adadadwa46we40a2',null,'Andamento',1,1,1,null);
 INSERT INTO tb_request (bol_payment_aproved,dt_canceled,dt_request,str_code_request,str_reason_cancel,str_situation,address_id,client_id,product_id,service_id) VALUES (true,null,SYSDATE,'sadasdasdfwqeq2weqetf',null,'Andamento',1,1,null,1);
 
 --Tabelas criadas por hibernate para relacionamento
---CLIENTE/ENDEREÇOS
+--CLIENTE ENDEREÇOS
 INSERT INTO tb_client_list_address (client_entity_id_client, list_address_id_adress) VALUES (1,1);
 --INSERT INTO tb_address_list_client (address_entity_id_adress,list_client_id_client) VALUES (1,1);
 INSERT INTO tb_client_list_address (client_entity_id_client, list_address_id_adress) VALUES (1,2);

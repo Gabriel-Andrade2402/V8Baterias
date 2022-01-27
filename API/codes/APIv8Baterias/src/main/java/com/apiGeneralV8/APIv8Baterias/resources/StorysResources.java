@@ -30,7 +30,7 @@ public class StorysResources {
 		return null;
 	}
 	
-	@Secured({RolesConfig.ROLE_ADMIN})
+	@Secured({RolesConfig.ROLE_ADMIN,RolesConfig.ROLE_CLIENT})
 	@PostMapping(value = "/all")
 	public ResponseEntity<List<StorysEntityDTO>> findAll() {
 		List<StorysEntityDTO> lista= service.findAll();
@@ -54,4 +54,6 @@ public class StorysResources {
 		}
 		return null;
 	}
+	
+	
 }

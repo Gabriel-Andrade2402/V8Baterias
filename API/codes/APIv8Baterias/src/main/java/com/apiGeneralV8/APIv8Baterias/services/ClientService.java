@@ -98,4 +98,14 @@ public class ClientService {
 		}
 		return null;
 	}
+
+	public ClientEntityDTO login(ClientEntity entity) {
+		ClientEntity clientEntity = repository.login(entity.getStrPassword(),entity.getStrEmail());
+		if(clientEntity!=null) {
+			return new ClientEntityDTO().createInstance(clientEntity);
+		}else {
+			return null;
+		}
+		
+	}
 }

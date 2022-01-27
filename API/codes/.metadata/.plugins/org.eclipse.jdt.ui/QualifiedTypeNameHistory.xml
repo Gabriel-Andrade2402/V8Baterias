@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.entities.AddresEntity"/>
-    <fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
-    <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.entities.InventoryEntity"/>
-    <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
-    <fullyQualifiedTypeName name="javax.persistence.Table"/>
-    <fullyQualifiedTypeName name="java.util.Objects"/>
     <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
@@ -45,10 +39,8 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Collection"/>
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.enums.RolesConfigEnum"/>
-    <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.enums.RolesConfig"/>
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.dto.AddressEntityDTO"/>
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.dto.AdminEntityDTO"/>
-    <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.dto.ClientEntityDTO"/>
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.dto.ConfigEntityDTO"/>
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.dto.OfficeEntityDTO"/>
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.dto.ProductEntityDTO"/>
@@ -60,4 +52,12 @@
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.config.repository.UserConfigRepository"/>
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.config.entities.RoleConfigEntity"/>
     <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.config.entities.UserConfigEntity"/>
+    <fullyQualifiedTypeName name="org.springframework.web.cors.UrlBasedCorsConfigurationSource"/>
+    <fullyQualifiedTypeName name="org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource"/>
+    <fullyQualifiedTypeName name="org.hibernate.cfg.Environment"/>
+    <fullyQualifiedTypeName name="org.springframework.web.cors.CorsConfigurationSource"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="javax.servlet.Filter"/>
+    <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.enums.RolesConfig"/>
+    <fullyQualifiedTypeName name="com.apiGeneralV8.APIv8Baterias.dto.ClientEntityDTO"/>
 </qualifiedTypeNameHistroy>
