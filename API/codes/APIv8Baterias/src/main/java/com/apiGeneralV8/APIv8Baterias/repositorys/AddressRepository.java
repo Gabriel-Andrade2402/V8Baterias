@@ -13,9 +13,9 @@ public interface AddressRepository extends JpaRepository<AddressEntity,Long>{
 	//Consulta de igualdade padrão, semelhante ao EQUALS.
 	@Query(value = "SELECT * FROM tb_address WHERE str_road = :strRoad "
 			+ "AND num_residence = :numResidence "
-			+ "AND str_cep = :strCep", nativeQuery=true)
+			+ "AND str_cep = :strCep AND str_reference_point = :strReference", nativeQuery=true)
 	AddressEntity find(@Param("strRoad") String strRoad,
 			@Param("numResidence") Integer numResidence,
-			@Param("strCep") String strCep);
+			@Param("strCep") String strCep, @Param("strReference") String strReference);
 	
 }

@@ -7,9 +7,10 @@ import StoreCommerce from '../../components/StoreComp/StoreCommerce';
 import Footer from '../../components/Footer';
 
 const Store = () => {
+    const userExist = (sessionStorage.getItem("userJson")!=null || sessionStorage.getItem("userJson")!=undefined)?true:false;
     return (
         <>
-        <StoreHeader exists={true}/>
+        <StoreHeader exists={userExist}/>
         <StoreNavBar/>
         <StoreCommerce/>
         <Footer/>

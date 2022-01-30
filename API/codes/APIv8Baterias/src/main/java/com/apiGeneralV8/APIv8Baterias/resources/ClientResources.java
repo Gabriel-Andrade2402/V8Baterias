@@ -45,16 +45,19 @@ public class ClientResources {
 		return ResponseEntity.ok().body("ok");
 	}
 	
-	@Secured({RolesConfig.ROLE_ADMIN})
+	@Secured({RolesConfig.ROLE_ADMIN,RolesConfig.ROLE_CLIENT})
 	@PostMapping(value="/update")
-	public ResponseEntity<String> update(@RequestBody List<ClientEntity> listClient){
+	public ResponseEntity<ClientEntityDTO> update(@RequestBody List<ClientEntity> listClient){
 		ClientEntity lastClient = listClient.get(0);
 		ClientEntity newClient = listClient.get(1);
-		if(service.updateClient(lastClient,newClient)!=null) {
-			return ResponseEntity.ok().body("ok");
+		System.out.println(lastClient.toString());
+		ClientEntityDTO dto =service.updateClient(lastClient,newClient); 
+		if(dto!=null) {
+			return ResponseEntity.ok().body(dto);
 		}
 		return null;
 	}
+	
 	@Secured({RolesConfig.ROLE_ADMIN})
 	@PostMapping(value="/getRequests")
 	public ResponseEntity<List<RequestEntityDTO>> findRequests(@RequestBody ClientEntity entity){

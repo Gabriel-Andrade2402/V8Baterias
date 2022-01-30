@@ -244,7 +244,7 @@ const RegistryCredentials = () => {
         var cpf = $("#inputCpfRegistry");
         var textNameComplet = $(nameComplet).val()+"";
         var textCpf = $(cpf).val()+"";
-        if(textNameComplet.match("--")!=null || textNameComplet.match("[a-zA-Z]+\\s[a-zA-Z]+")==null){
+        if(!checkMatcher("inputNomeRegistry") || textNameComplet.match("[a-zA-Z]+\\s[a-zA-Z]+")==null){
             nameComplet.addClass("inputDanger");
             $("#textAlertNameRegistry").text("O nome precisa conter nome e sobrenome. Apenas com letras");
             bool = false;   
@@ -282,7 +282,7 @@ const RegistryCredentials = () => {
         var celular = $("#inputCelularRegistry");
         var textEmail = $(email).val()+"";
         var textCelular = $(celular).val()+"";
-        if(textEmail.match("--")!=null || textEmail.match(".+@.+")==null){
+        if(!checkMatcher("inputEmailRegistry") || textEmail.match(".+@.+")==null){
             email.addClass("inputDanger");
             $("#textAlertEmailRegistry").text("O E-mail não possui um formato permitido");
             bool = false;   
@@ -328,7 +328,7 @@ const RegistryCredentials = () => {
         var textObs = $(obs).val()+"";
         if(textRoad!='' || numberResidence !='' || textCep !='' || textReferencePoint !='' || textObs !=''){
 
-            if(textRoad.match("--")!=null || textRoad.match("[a-zA-Z]+")==null){
+            if(!checkMatcher("inputRoadRegistry") || textRoad.match("[a-zA-Z]+")==null){
                 road.addClass("inputDanger");
                 $("#textAlertRoadegistry").text("O nome da rua não possui um formato permitido utilize apenas letras");
                 bool = false;   
@@ -336,7 +336,7 @@ const RegistryCredentials = () => {
                 road.removeClass("inputDanger");
                 $("#textAlertRoadegistry").text("");
             }
-            if(numberResidence.match("--")!=null || numberResidence.match("[0-9]+")==null){
+            if(!checkMatcher("inputNumberHomeRegistry") || numberResidence.match("[0-9]+")==null){
                 numResidence.addClass("inputDanger");
                 $("#textAlertNumberHomeRegistry").text("Apenas números");
                 bool = false;   
@@ -428,7 +428,7 @@ const RegistryCredentials = () => {
                 dtYearExpiration.removeClass("inputDanger");
                 $("#textAlertDtExpirationRegistry").text("");
             }
-            if(textNameHolderCard.match("--")!=null || textNameHolderCard.match("[a-zA-Z]+\\s[a-zA-Z]+")==null){
+            if(!checkMatcher("inputHolderNameRegistry") || textNameHolderCard.match("[a-zA-Z]+\\s[a-zA-Z]+")==null){
                 nameHolderCard.addClass("inputDanger");
                 $("#textAlertNameHolderRegistry").text("Utilize apenas letras nesse campo com nome e sobrenome");
                 bool = false;   
@@ -464,7 +464,6 @@ const RegistryCredentials = () => {
             $("#inputSecurityCodeRegistry").val(newCard.codeSecurity);
         },50);
     }
-
     //Método que valida as informações vindas da etapa de nome e Senha
     //o método a baixo recupera as informações
     function validityInfoPassword(){
@@ -490,7 +489,7 @@ const RegistryCredentials = () => {
                 password1.removeClass("inputDanger");
                 password2.removeClass("inputDanger");
                 $("#textAlertPasswordRegistry").text("");
-                if(textPassword1.match("--")!=null){
+                if(!checkMatcher("inputSenhaRegistry")){
                     password1.addClass("inputDanger");
                     $("#textAlertPasswordRegistry").text("A senha possui um formato não permitido");
                     bool = false;   
@@ -498,7 +497,7 @@ const RegistryCredentials = () => {
                     password1.removeClass("inputDanger");
                     $("#textAlertPasswordRegistry").text("");
                 }
-                if(textPassword2.match("--")!=null){
+                if(!checkMatcher("inputConfirmSenhaRegistry")){
                     password2.addClass("inputDanger");
                     $("#textAlertPasswordRegistry").text("A senha possui um formato não permitido");
                     bool = false;
@@ -521,7 +520,15 @@ const RegistryCredentials = () => {
             $("#inputSenhaRegistry").val(user.strPassword);
         },50);
     }
-
+    function checkMatcher(nameInput:any){
+        var bool = true;
+        var textInput = $("#"+nameInput).val()+"";
+        if(textInput.match("--")!=null || textInput.match("[0-9]*=[0-9]*")!=null
+        || textInput.match("\\s(OR|Or|oR|or)\\s")!=null){
+            bool = false;   
+        }
+        return bool;
+    }
     function registryRequest(){
         axios({
             method: "post",
@@ -532,9 +539,11 @@ const RegistryCredentials = () => {
             },
         })
         .then(function (response) {
-          token = response.data.token_type + " " + response.data.access_token;
-          console.log(response);
-          alert("Salvou!");
+            token = response.data.token_type + " " + response.data.access_token;
+            sessionStorage.setItem("userJson",JSON.stringify(response.data));
+            //var userJson = JSON.parse(sessionStorage.getItem("userJson")+"");
+            //console.log(userJson.strEmail);
+            window.location.href="http://localhost:3000/";
         })
         .catch(function (response) {
           console.log(response);

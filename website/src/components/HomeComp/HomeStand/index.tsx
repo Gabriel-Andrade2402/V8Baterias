@@ -96,7 +96,7 @@ const HomeStand = () => {
             </div>
             <div className='col-sm-5'>
                <Link to="/loja">
-                  <div className='col-12 mouseOverStand' onClick={()=>{window.location.href='http://localhost:3000/#articleAbout'}}>
+                  <div className='col-12 mouseOverStand'>
                      <img className="col-8 rounded mx-auto d-block" src={bateriMoura} />
                   </div>
                </Link>

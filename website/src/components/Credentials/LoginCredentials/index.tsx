@@ -39,11 +39,11 @@ const LoginCredentials = () => {
             $("#textAlertFinal").text("");
            var textEmail =$("#emailInputLogin").val()+"";
            var textPasswd =$("#passwordInputLogin").val()+"";
-           if(textEmail.match(".+@.+")==null || textEmail.match("--")!=null){
+           if(textEmail.match(".+@.+")==null || !checkMatcher("emailInputLogin")){
             $("#emailInputLogin").addClass("inputDanger");
             $("#textAlertEmail").text("O e-mail possui um formato não permitido.");
             return false;
-           }else if(textPasswd.match("--")!=null){
+           }else if(!checkMatcher("passwordInputLogin")){
             $("#emailInputLogin").removeClass("inputDanger");
             $("#textAlertEmail").text("");
             $("#passwordInputLogin").addClass("inputDanger");
@@ -76,14 +76,26 @@ const LoginCredentials = () => {
             },
         })
         .then(function (response) {
-            console.log(response);
-            alert(response.data)
+            if(response.data!=''){
+                sessionStorage.setItem("userJson",JSON.stringify(response.data));
+                window.location.href="http://localhost:3000/";
+            }else{
+                $("#textAlertFinal").text("Usuario ou senha inexistente. Confira as informações e tente novamente!");
+            }
         })
         .catch(function (response) {
-            console.log(response);
+            alert("Ocorreu um erro inesperado.")
         });
    }
-
+   function checkMatcher(nameInput:any){
+        var bool = true;
+        var textInput = $("#"+nameInput).val()+"";
+        if(textInput.match("--")!=null || textInput.match("[0-9]*=[0-9]*")!=null
+        || textInput.match("\\s(OR|Or|oR|or)\\s")!=null){
+            bool = false;   
+        }
+        return bool;
+    }
     return (
         <>
             <div className='col-12 col-sm-12 p-3'>
@@ -95,9 +107,9 @@ const LoginCredentials = () => {
                             <label className="textSize18 fontBold">Faça login</label>
                         </div>
                         <div className='col-12 col-sm-12 flexColumn my-3'>
-                            <label htmlFor='email' className='textSize15 font-bold-300'>Email/CPF</label>
+                            <label htmlFor='email' className='textSize15 font-bold-300'>Email</label>
                             <label className='text-danger' id="textAlertEmail"></label>
-                            <input name='email' id='emailInputLogin' placeholder="* Email ou cpf" className='inputData px-3' type="text"/>
+                            <input name='email' id='emailInputLogin' placeholder="* Email" className='inputData px-3' type="text"/>
                         </div>
                         <div className='col-12 col-sm-12 flexColumn'>
                             <label htmlFor='email' className='textSize15 font-bold-300'>Senha</label>

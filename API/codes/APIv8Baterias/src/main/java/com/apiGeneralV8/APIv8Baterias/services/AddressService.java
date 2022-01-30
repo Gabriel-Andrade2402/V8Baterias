@@ -37,7 +37,7 @@ public class AddressService {
 	}
 	
 	public AddressEntity findAddress(AddressEntity entity) {
-		return repositoryAddress.find(entity.getStrRoad(), entity.getNumResidence(),entity.getStrCep());
+		return repositoryAddress.find(entity.getStrRoad(), entity.getNumResidence(),entity.getStrCep(),entity.getStrReferencePoint());
 	}
 	
 	public AddressEntityDTO updateAdress(AddressEntity lastEntity, AddressEntity newEntity) {
