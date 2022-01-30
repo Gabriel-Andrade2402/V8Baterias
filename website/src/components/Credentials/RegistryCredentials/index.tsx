@@ -261,8 +261,9 @@ const RegistryCredentials = () => {
             $("#textAlertCpfRegistry").text("");
         }
         var user = userJson;
+        var noMaskCpf = $("#inputCpfRegistry").val()+"";
         user.strName=$("#inputNomeRegistry").val()+"";
-        user.strCpf=$("#inputCpfRegistry").val()+"";
+        user.strCpf=noMaskCpf.replaceAll("\.","").replace("-","");
         setUserJson(user);
         return bool;
     }
@@ -271,6 +272,15 @@ const RegistryCredentials = () => {
             var user = userJson;
             $("#inputNomeRegistry").val(user.strName);
             $("#inputCpfRegistry").val(user.strCpf);
+            var cpf =$("#inputCpfRegistry").val()+"";
+            if(cpf.length==11){
+                $("#inputCpfRegistry").val(
+                    cpf.substring(0,3)+"."+
+                    cpf.substring(3,6)+"."+
+                    cpf.substring(6,9)+"-"+
+                    cpf.substring(9,11)
+                );
+            }
         },50);
     }
 
@@ -299,8 +309,9 @@ const RegistryCredentials = () => {
             $("#textAlertCelularRegistry").text("");
         }
         var user = userJson;
+        var noMaskTelephone = $("#inputCelularRegistry").val()+""
         user.strEmail=$("#inputEmailRegistry").val()+"";
-        user.strTelephone=$("#inputCelularRegistry").val()+"";
+        user.strTelephone=noMaskTelephone.replaceAll(" ","").replace("-","").replace("(","").replace(")","");
         setUserJson(user);
         return bool;
     }
@@ -309,6 +320,15 @@ const RegistryCredentials = () => {
             var user = userJson;
             $("#inputEmailRegistry").val(user.strEmail);
             $("#inputCelularRegistry").val(user.strTelephone);
+            var number =$("#inputCelularRegistry").val()+"";
+            if(number.length==11){
+                $("#inputCelularRegistry").val(
+                    "("+number.substring(0,2)+") "+
+                    number.substring(2,3)+" "+
+                    number.substring(3,7)+"-"+
+                    number.substring(7,11)
+                );
+            }
         },50);
     }
     //Método que valida as informações vindas da etapa de contato
@@ -508,7 +528,7 @@ const RegistryCredentials = () => {
             }
         }
         var user = userJson;
-        user.strPassword=$("#inputNomeRegistry").val()+"";
+        user.strPassword=$("#inputSenhaRegistry").val()+"";
         user.config_id.bolReceivePromotions = ($("#inputReceivePromotionRegistry").prop("checked"))?true:false;
         user.config_id.bolReceiveUpdatingPrice = ($("#inputReceiveUpdatingPriceRegistry").prop("checked"))?true:false;
         setUserJson(user);
@@ -541,8 +561,6 @@ const RegistryCredentials = () => {
         .then(function (response) {
             token = response.data.token_type + " " + response.data.access_token;
             sessionStorage.setItem("userJson",JSON.stringify(response.data));
-            //var userJson = JSON.parse(sessionStorage.getItem("userJson")+"");
-            //console.log(userJson.strEmail);
             window.location.href="http://localhost:3000/";
         })
         .catch(function (response) {
