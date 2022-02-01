@@ -199,7 +199,7 @@ const RegistryCredentials = () => {
                 strPassword: ''
         }
         );
-        const [card,setCard]= useState(
+        const [card,setCard]= useState([
             {
                 numberCard: '',
                 monthCardValidity: '',
@@ -207,7 +207,7 @@ const RegistryCredentials = () => {
                 strNameHolder: '',
                 codeSecurity: ''
         }
-        );
+        ]);
         const [stepActive,setStepActive] = useState(<PersonalInfo/>);
         var token = "";
         var bodyFormData = new FormData();
@@ -466,22 +466,22 @@ const RegistryCredentials = () => {
             }
         }
         var newCard = card;
-        card.numberCard=$("#inputNumberCardRegistry").val()+"";
-        card.monthCardValidity=$("#inputMonthValidityRegitry").val()+"";
-        card.yearCardValidity=$("#inputYearValidityRegitry").val()+"";
-        card.strNameHolder=$("#inputHolderNameRegistry").val()+"";
-        card.codeSecurity=$("#inputSecurityCodeRegistry").val()+"";
+        card[0].numberCard=$("#inputNumberCardRegistry").val()+"";
+        card[0].monthCardValidity=$("#inputMonthValidityRegitry").val()+"";
+        card[0].yearCardValidity=$("#inputYearValidityRegitry").val()+"";
+        card[0].strNameHolder=$("#inputHolderNameRegistry").val()+"";
+        card[0].codeSecurity=$("#inputSecurityCodeRegistry").val()+"";
         setCard(newCard);
         return bool;
     }
     function backupInfoCard(){
         setTimeout(function(){
             var newCard = card;
-            $("#inputNumberCardRegistry").val(newCard.numberCard);
-            $("#inputMonthValidityRegitry").val(newCard.monthCardValidity);
-            $("#inputYearValidityRegitry").val(newCard.yearCardValidity);
-            $("#inputHolderNameRegistry").val(newCard.strNameHolder);
-            $("#inputSecurityCodeRegistry").val(newCard.codeSecurity);
+            $("#inputNumberCardRegistry").val(newCard[0].numberCard);
+            $("#inputMonthValidityRegitry").val(newCard[0].monthCardValidity);
+            $("#inputYearValidityRegitry").val(newCard[0].yearCardValidity);
+            $("#inputHolderNameRegistry").val(newCard[0].strNameHolder);
+            $("#inputSecurityCodeRegistry").val(newCard[0].codeSecurity);
         },50);
     }
     //Método que valida as informações vindas da etapa de nome e Senha
@@ -561,6 +561,7 @@ const RegistryCredentials = () => {
         .then(function (response) {
             token = response.data.token_type + " " + response.data.access_token;
             sessionStorage.setItem("userJson",JSON.stringify(response.data));
+            localStorage.setItem("cardJson",JSON.stringify(card));
             window.location.href="http://localhost:3000/";
         })
         .catch(function (response) {

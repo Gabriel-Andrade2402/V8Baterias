@@ -25,7 +25,7 @@ const ArticlePersonInfo = () =>{
             <div className="col-12 col-sm-12 py-3 px-5">
                 <div className="col-12 col-sm-12">
                     <div className="col-12 col-sm-12"><label className="labelInput">Nome</label></div>
-                    <label className='text-danger' id="textAlertPersonalipPersonalName"></label>
+                    <label className='text-danger' style={{display:"none"}} id="textAlertPersonalipPersonalName"></label>
                     <div className="col-12 col-sm-12 mt-1">
                         <input type='text' id='ipPersonalName' onChange={()=>{
                             userJson.strName=$("#ipPersonalName").val();
@@ -34,14 +34,14 @@ const ArticlePersonInfo = () =>{
                 </div>
                 <div className="col-12 col-sm-12 mt-3">
                     <div className="col-12 col-sm-12"><label className="labelInput">E-mail</label></div>
-                    <label className='text-danger' id="textAlertPersonalipPersonalMail"></label>
+                    <label className='text-danger' style={{display:"none"}} id="textAlertPersonalipPersonalMail"></label>
                     <div className="col-12 col-sm-12 mt-1">
                         <input type='text' id='ipPersonalMail' readOnly={true} className="col-7 px-3 col-sm-7"/>
                     </div>
                 </div>
                 <div className="col-12 col-sm-12 mt-3">
                     <div className="col-12 col-sm-12"><label className="labelInput">Celular</label></div>
-                    <label className='text-danger' id="textAlertPersonalipPersonalCel"></label>
+                    <label className='text-danger' style={{display:"none"}} id="textAlertPersonalipPersonalCel"></label>
                     <div className="col-12 col-sm-12 mt-1">
                         <input type='text' id='ipPersonalCel' onChange={()=>{
                             userJson.strTelephone = $("#ipPersonalCel").val()
@@ -50,7 +50,7 @@ const ArticlePersonInfo = () =>{
                 </div>
                 <div className="col-12 col-sm-12 mt-3">
                     <div className="col-12 col-sm-12"><label className="labelInput">CPF</label></div>
-                    <label className='text-danger' id="textAlertPersonalipPersonalCpf"></label>
+                    <label className='text-danger' style={{display:"none"}} id="textAlertPersonalipPersonalCpf"></label>
                     <div className="col-12 col-sm-12 mt-1">
                         <input type='text' id='ipPersonalCpf'
                         maxLength={11} readOnly={true} className="col-7 px-3 col-sm-7"/>
@@ -67,7 +67,7 @@ const ArticlePersonInfo = () =>{
                         </div>
                         <div className="col-12 col-sm-12">
                             <div className="col-12 col-sm-12"><label className="labelInput">Rua</label></div>
-                            <label className='text-danger' id="textAlertPersonalroadAddress1"></label>
+                            <label className='text-danger' style={{display:"none"}} id="textAlertPersonalroadAddress1"></label>
                             <div className="col-12 col-sm-12 mt-1">
                                 <input type='text' id='roadAddress1' onChange={()=>{
                                     userJson.listAddress[0].strRoad=$("#roadAddress1").val()
@@ -76,7 +76,7 @@ const ArticlePersonInfo = () =>{
                         </div>
                         <div className="col-12 col-sm-12">
                             <div className="col-12 col-sm-12"><label className="labelInput">Número</label></div>
-                            <label className='text-danger' id="textAlertPersonalnumberAddress1"></label>
+                            <label className='text-danger' style={{display:"none"}} id="textAlertPersonalnumberAddress1"></label>
                             <div className="col-12 col-sm-12 mt-1">
                                 <input type='number' id='numberAddress1' onChange={()=>{
                                     userJson.listAddress[0].numResidence=$("#numberAddress1").val()
@@ -85,7 +85,7 @@ const ArticlePersonInfo = () =>{
                         </div>
                         <div className="col-12 col-sm-12">
                             <div className="col-12 col-sm-12"><label className="labelInput">Cep</label></div>
-                            <label className='text-danger' id="textAlertPersonalcepAddress1"></label>
+                            <label className='text-danger' style={{display:"none"}} id="textAlertPersonalcepAddress1"></label>
                             <div className="col-12 col-sm-12 mt-1">
                                 <input type='text' maxLength={8} id='cepAddress1' onChange={()=>{
                                 var number =$("#cepAddress1").val()+"";
@@ -101,7 +101,7 @@ const ArticlePersonInfo = () =>{
                         </div>
                         <div className="col-12 col-sm-12">
                             <div className="col-12 col-sm-12"><label className="labelInput">Ponto de referência</label></div>
-                            <label className='text-danger' id="textAlertPersonalreferencePointAddress1"></label>
+                            <label className='text-danger' style={{display:"none"}} id="textAlertPersonalreferencePointAddress1"></label>
                             <div className="col-12 col-sm-12 mt-1">
                                 <input type='text' id='referencePointAddress1' onChange={()=>{
                                     userJson.listAddress[0].strReferencePoint=$("#referencePointAddress1").val()
@@ -110,7 +110,7 @@ const ArticlePersonInfo = () =>{
                         </div>
                         <div className="col-12 col-sm-12">
                             <div className="col-12 col-sm-12"><label className="labelInput">Observações</label></div>
-                            <label className='text-danger' id="textAlertPersonalobsPointAddress1"></label>
+                            <label className='text-danger' style={{display:"none"}} id="textAlertPersonalobsPointAddress1"></label>
                             <div className="col-12 col-sm-12 mt-1">
                                 <input type='text' id='obsPointAddress1' onChange={()=>{
                                     userJson.listAddress[0].strObservation=$("#obsPointAddress1").val()
@@ -223,35 +223,35 @@ const ArticlePersonInfo = () =>{
         "</div>"+
         "<div class=\"col-12 col-sm-12\">"+
             "<div class=\"col-12 col-sm-12\"><label class=\"labelInput\">Rua</label></div>"+
-            "<label class='text-danger' id=\"textAlertPersonalroadAddress"+index+"\"></label>"+
+            "<label class='text-danger' style=\"display:none\" id=\"textAlertPersonalroadAddress"+index+"\"></label>"+
             "<div class=\"col-12 col-sm-12 mt-1\">"+
                 "<input type='text' id='roadAddress"+index+"' class=\"col-6 px-3 col-sm-6\"/>"+
             "</div>"+
         "</div>"+
         "<div class=\"col-12 col-sm-12\">"+
             "<div class=\"col-12 col-sm-12\"><label class=\"labelInput\">Número</label></div>"+
-            "<label class='text-danger' id=\"textAlertPersonalnumberAddress"+index+"\"></label>"+
+            "<label class='text-danger' style=\"display:none\" id=\"textAlertPersonalnumberAddress"+index+"\"></label>"+
             "<div class=\"col-12 col-sm-12 mt-1\">"+
                 "<input type='number' id='numberAddress"+index+"' class=\"col-6 px-3 col-sm-6\"/>"+
             "</div>"+
         "</div>"+
         "<div class=\"col-12 col-sm-12\">"+
             "<div class=\"col-12 col-sm-12\"><label class=\"labelInput\">Cep</label></div>"+
-            "<label class='text-danger' id=\"textAlertPersonalcepAddress"+index+"\"></label>"+
+            "<label class='text-danger' style=\"display:none\" id=\"textAlertPersonalcepAddress"+index+"\"></label>"+
             "<div class=\"col-12 col-sm-12 mt-1\">"+
                 "<input type='text' maxLength='8' id='cepAddress"+index+"' class=\"col-6 px-3 col-sm-6\"/>"+
             "</div>"+
         "</div>"+
         "<div class=\"col-12 col-sm-12\">"+
             "<div class=\"col-12 col-sm-12\"><label class=\"labelInput\">Ponto de referência</label></div>"+
-            "<label class='text-danger' id=\"textAlertPersonalreferencePointAddress"+index+"\"></label>"+
+            "<label class='text-danger' style=\"display:none\" id=\"textAlertPersonalreferencePointAddress"+index+"\"></label>"+
             "<div class=\"col-12 col-sm-12 mt-1\">"+
                 "<input type='text' id='referencePointAddress"+index+"' class=\"col-6 px-3 col-sm-6\"/>"+
             "</div>"+
         "</div>"+
         "<div class=\"col-12 col-sm-12\">"+
             "<div class=\"col-12 col-sm-12\"><label class=\"labelInput\">Observações</label></div>"+
-            "<label class='text-danger' id=\"textAlertPersonalobsPointAddress"+index+"\"></label>"+
+            "<label class='text-danger' style=\"display:none\" id=\"textAlertPersonalobsPointAddress"+index+"\"></label>"+
             "<div class=\"col-12 col-sm-12 mt-1\">"+
                 "<input type='text' id='obsPointAddress"+index+"' class=\"col-6 px-3 col-sm-6\"/>"+
             "</div>"+
@@ -367,10 +367,13 @@ const ArticlePersonInfo = () =>{
         || textInput.match("\\s(OR|Or|oR|or)\\s")!=null){
             input.addClass("inputDanger");
             $("#textAlertPersonal"+nameInput).text("O formato não é permitido");
+            $("#textAlertPersonal"+nameInput).removeAttr("style");
+            $("#textAlertPersonal"+nameInput).css({display:"block"});
             bool = false;   
         }else{
             input.removeClass("inputDanger");
             $("#textAlertPersonal"+nameInput).text("");
+            $("#textAlertPersonal"+nameInput).css({display:"none"});
         }
         return bool;
     }

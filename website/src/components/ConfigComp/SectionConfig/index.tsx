@@ -1,6 +1,7 @@
 import React,{ useState } from "react";
 import '../../../assets/css/sectionConfig.css'
 import imgLogin from '../../../assets/img/utils/login.png';
+import iconExit from '../../../assets/img/utils/iconExit.png';
 import ArticlePersonInfo from "../Articles/ArticlePersonalInfo";
 import ArticleAlterPassword from "../Articles/ArticleAlterPassword";
 import ArticleRequests from "../Articles/ArticleRequests";
@@ -56,12 +57,20 @@ const SectionConfig = () => {
                 }}>
                     <label className="titleAside">Carrinho</label>
                 </div>
-                <div id='blocoAsideHelp' className="col-12 col-sm-12 blocoAside d-flex justify-content-center" onClick={()=>{
+                {/* <div id='blocoAsideHelp' className="col-12 col-sm-12 blocoAside d-flex justify-content-center" onClick={()=>{
                     setArticle(<ArticleHelp/>);
                     $(".blocoAsideChecked").toggleClass('blocoAsideChecked');
                     $("#blocoAsideHelp").toggleClass('blocoAsideChecked');
                 }}>
                     <label className="titleAside">Ajuda</label>
+                </div> */}
+                <div id='blocoAsideClose' className="row col-12 col-sm-12 blocoAside d-flex justify-content-center" 
+                onClick={()=>{
+                    sessionStorage.removeItem ("userJson");
+                    window.location.href='http://localhost:3000/';
+                }}>
+                        <img className="col-2 col-sm-2 align-self-start" src={iconExit}/>
+                        <label className="titleAside col-sm-3 col-3">Sair</label>
                 </div>
             </aside>
             <section className="col-12 col-sm-9 p-0">
