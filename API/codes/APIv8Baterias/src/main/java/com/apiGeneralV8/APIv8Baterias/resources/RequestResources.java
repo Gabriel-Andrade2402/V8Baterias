@@ -21,7 +21,7 @@ public class RequestResources {
 	@Autowired
 	private RequestService service;
 	
-	@Secured({RolesConfig.ROLE_ADMIN})
+	@Secured({RolesConfig.ROLE_ADMIN,RolesConfig.ROLE_CLIENT})
 	@PostMapping(value="/save")
 	public ResponseEntity<String> save(@RequestBody RequestEntity Request){
 		if(service.saveRequest(Request)!=null) {

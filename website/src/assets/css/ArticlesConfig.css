@@ -88,7 +88,7 @@
     height: 25px;
 }
 .bloco-address{
-    box-shadow: 1px 1px 5px #6d6d6d;
+    box-shadow: 1px 1px 3px #6d6d6d;
     transition: background 0.5s,color 0.5s;
 }
 .bloco-address:hover{

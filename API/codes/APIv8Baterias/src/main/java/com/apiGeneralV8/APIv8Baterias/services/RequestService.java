@@ -100,4 +100,5 @@ public class RequestService {
 	public List<RequestEntity> findRequestsClient(Long id){
 		return repository.findRequestsClient(id);
 	}
+
 }

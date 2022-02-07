@@ -56,12 +56,15 @@ public class RequestEntity implements Serializable{
 	@Getter @Setter private Date dtCanceled;
 	@Column(name="str_reason_cancel")
 	@Getter @Setter private String strReasonCancel;
+	@Column(name="str_code_group_request")
+	@Getter @Setter private String strCodeGroupRequest;
 	
 	//Método usado para atualizar uma entidade a partir dos dados de outra
 	public RequestEntity updateAllData(RequestEntity newEntity) {
 		return new RequestEntity(idRequest, newEntity.getClient_id(), newEntity.getProduct_id(),
 				newEntity.getAddress_id(), newEntity.getService_id(),newEntity.getDtRequest(),
 				newEntity.getStrCodeRequest(), newEntity.getBolPaymentAproved(),
-				newEntity.getStrSituation(), newEntity.getDtCanceled(), newEntity.getStrReasonCancel());
+				newEntity.getStrSituation(), newEntity.getDtCanceled(), newEntity.getStrReasonCancel(),
+				newEntity.getStrCodeGroupRequest());
 	}
 }

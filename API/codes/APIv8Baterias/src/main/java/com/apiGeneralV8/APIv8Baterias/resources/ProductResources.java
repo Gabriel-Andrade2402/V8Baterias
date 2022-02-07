@@ -30,7 +30,7 @@ public class ProductResources {
 		return null;
 	}
 	
-	@Secured({RolesConfig.ROLE_ADMIN})
+	@Secured({RolesConfig.ROLE_ADMIN,RolesConfig.ROLE_CLIENT})
 	@PostMapping(value = "/all")
 	public ResponseEntity<List<ProductEntityDTO>> findAll() {
 		List<ProductEntityDTO> lista= service.findAll();
@@ -53,5 +53,18 @@ public class ProductResources {
 			return ResponseEntity.ok().body("ok");
 		}
 		return null;
+	}
+	
+	@Secured({RolesConfig.ROLE_ADMIN,RolesConfig.ROLE_CLIENT})
+	@PostMapping(value = "/commerce")
+	public ResponseEntity<List<ProductEntityDTO>> findAllProductsActives() {
+		List<ProductEntityDTO> lista= service.findCommerce();
+		return ResponseEntity.ok().body(lista);
+	}
+	@Secured({RolesConfig.ROLE_ADMIN,RolesConfig.ROLE_CLIENT})
+	@PostMapping(value = "/findListProduct")
+	public ResponseEntity<List<ProductEntityDTO>> findListProduct(@RequestBody String[] listCode) {
+		List<ProductEntityDTO> lista= service.findListProduct(listCode);
+		return ResponseEntity.ok().body(lista);
 	}
 }

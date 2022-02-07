@@ -31,6 +31,7 @@ public class RequestEntityDTO implements Serializable{
 	@Getter @Setter private String strSituation;
 	@Getter @Setter private Date dtCanceled;
 	@Getter @Setter private String strReasonCancel;
+	@Getter @Setter private String strCodeGroupRequest;
 	
 	//Método usado para criar uma instância de DTO a partir de uma entidade
 	//ATENÇÃO UMA LISTA NÃO PODE CHAMAR UM createInstance de CLIENT porque isso gera um looping
@@ -45,7 +46,7 @@ public class RequestEntityDTO implements Serializable{
 					new AddressEntityDTO().createInstance(entity.getAddress_id()),
 					entity.getDtRequest(), entity.getStrCodeRequest(),
 					entity.getBolPaymentAproved(), entity.getStrSituation(),
-					entity.getDtCanceled(), entity.getStrReasonCancel());
+					entity.getDtCanceled(), entity.getStrReasonCancel(),entity.getStrCodeGroupRequest());
 		}else {
 			dto =new RequestEntityDTO(entity.getIdRequest(),
 					null,
@@ -54,7 +55,7 @@ public class RequestEntityDTO implements Serializable{
 					new AddressEntityDTO().createInstance(entity.getAddress_id()),
 					entity.getDtRequest(), entity.getStrCodeRequest(),
 					entity.getBolPaymentAproved(), entity.getStrSituation(),
-					entity.getDtCanceled(), entity.getStrReasonCancel());
+					entity.getDtCanceled(), entity.getStrReasonCancel(),entity.getStrCodeGroupRequest());
 		}
 		return dto;
 	}

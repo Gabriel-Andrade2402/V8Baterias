@@ -48,7 +48,7 @@ const renderProfile = ({exists}:props) => {
     }else{
         return (
             <div className="col-sm-2 row align-self-center">
-                <Link className="col-sm-12 btn btn-dark col-12 p-2" to="/">
+                <Link className="col-sm-12 btn btn-dark col-12 p-2" to="/login">
                     Logar
                 </Link>
             </div>
