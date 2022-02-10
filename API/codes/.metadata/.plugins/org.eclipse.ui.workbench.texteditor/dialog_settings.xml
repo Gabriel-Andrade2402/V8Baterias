@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="Role"/>
+		<item key="selection" value="USEr"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="uSEr"/>
 			<item value="User"/>
 			<item value="UserConfigEntity"/>
 			<item value="userRepository"/>
@@ -15,14 +16,6 @@
 			<item value="AddressEntity"/>
 			<item value="repositoryAddress"/>
 			<item value="u"/>
-			<item value="Office"/>
-			<item value="ServiceEntity"/>
-			<item value="Service"/>
-			<item value="RequestEntity"/>
-			<item value="Request"/>
-			<item value="Product"/>
-			<item value="Config"/>
-			<item value="Client"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Role"/>

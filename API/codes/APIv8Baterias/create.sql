@@ -89,6 +89,35 @@ create table tb_storys (
         str_title varchar(255),
         primary key (id_storys)
     )
+create table tb_role_config (
+       role_config_id bigint not null,
+        str_name varchar(255),
+        primary key (role_config_id)
+    )
+create table tb_user_config (
+       user_config_id bigint not null,
+        str_email varchar(255),
+        name varchar(255),
+        str_password varchar(255),
+        primary key (user_config_id)
+    )    
+create table user_role (
+    user_config_id bigint not null,
+    role_config_id bigint not null
+)
+
+alter table tb_user_config 
+       add constraint UK_pjq9mejd1i6px2n1s0or23cwk unique (str_email)
+
+alter table user_role 
+       add constraint FKk943hv0e1cxxovpodt67yk42q 
+       foreign key (role_config_id) 
+       references tb_role_config
+alter table user_role 
+       add constraint FKb4qtts80ketnd6dkmfkq2ajck 
+       foreign key (user_config_id) 
+       references tb_user_config
+
 alter table tb_admin 
     add constraint UK_grdvns5xqaw76dgeemvqa9dqk unique (str_mail)
 
