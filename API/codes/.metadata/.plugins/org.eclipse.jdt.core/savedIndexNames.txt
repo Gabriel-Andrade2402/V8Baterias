@@ -57,10 +57,10 @@ INDEX VERSION 1.131+C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\
 4250896682.index
 4004656859.index
 3216503889.index
-3299213283.index
-2298201151.index
-2957037024.index
 3899948289.index
+2298201151.index
+3299213283.index
+2957037024.index
 791077301.index
 2681094862.index
 3878111079.index
@@ -89,8 +89,8 @@ INDEX VERSION 1.131+C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\
 3351464134.index
 3395398901.index
 4123927873.index
-3334142464.index
 2261097863.index
+3334142464.index
 697831713.index
 2749816993.index
 1134140127.index

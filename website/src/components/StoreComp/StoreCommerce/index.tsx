@@ -164,6 +164,7 @@ const StoreCommerce = () => {
         })
             .then(function (response) {
             token = response.data.token_type + " " + response.data.access_token;
+            console.log(token);
             findCommerce();
             })
             .catch(function (response) {
@@ -179,6 +180,7 @@ const StoreCommerce = () => {
             },
         })
         .then(function (response) {
+            console.log(response);
             initializeCommerce(response.data);
         })
         .catch(function (response) {
