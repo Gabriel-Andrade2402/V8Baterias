@@ -10244,3 +10244,131 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact antlr:antlr:j
 2022-02-10 20:28:51,355 [Worker-35: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
 2022-02-10 21:28:54,036 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2022-02-10 21:52:55,129 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-02-10 22:16:00,410 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-02-10 22:16:58,721 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:16:58,723 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:16:58,730 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:16:58,770 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:16:58,785 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:16:58,785 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:16:58,785 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:36:59,381 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:36:59,381 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:36:59,385 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:36:59,473 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:36:59,478 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:36:59,478 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:36:59,478 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:37:01,831 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:37:01,832 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:37:01,833 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:37:01,951 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:37:01,963 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:37:01,963 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:37:01,963 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:43:38,540 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:43:38,541 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:43:38,542 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:43:38,593 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:43:38,598 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:43:38,598 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:43:38,599 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:44:52,387 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:44:52,387 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:44:52,389 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:44:52,444 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:44:52,449 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:44:52,450 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:44:52,450 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:48:21,777 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-02-10 22:48:52,448 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:48:52,451 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:48:52,458 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:48:52,546 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:48:52,552 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:48:52,552 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:48:52,552 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:50:40,589 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:50:40,590 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:50:40,595 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:50:40,652 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:50:40,655 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:50:40,656 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:50:40,656 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:53:19,362 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:53:19,362 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:53:19,363 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:53:19,397 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:53:19,401 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:53:19,402 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:53:19,402 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:54:14,241 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:54:14,242 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:54:14,243 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:54:14,284 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:54:14,287 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:54:14,287 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:54:14,288 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:54:21,997 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:54:21,997 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:54:21,999 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:54:22,083 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:54:22,088 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:54:22,088 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:54:22,088 [Worker-10: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:55:21,790 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:55:21,790 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:55:21,827 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:55:21,911 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:55:21,917 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:55:21,917 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:55:21,918 [Worker-11: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:56:17,261 [Worker-10: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:56:17,261 [Worker-10: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:56:17,263 [Worker-10: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:56:17,283 [Worker-10: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:56:17,287 [Worker-10: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:56:17,287 [Worker-10: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:56:17,287 [Worker-10: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:56:45,628 [Worker-13: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:56:45,629 [Worker-13: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:56:45,630 [Worker-13: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:56:45,651 [Worker-13: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:56:45,683 [Worker-13: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:56:45,683 [Worker-13: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:56:45,683 [Worker-13: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:57:13,470 [Worker-6: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:57:13,470 [Worker-6: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:57:13,471 [Worker-6: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:57:13,502 [Worker-6: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:57:13,506 [Worker-6: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:57:13,506 [Worker-6: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:57:13,506 [Worker-6: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:57:57,024 [Worker-9: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:57:57,024 [Worker-9: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:57:57,027 [Worker-9: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:57:57,054 [Worker-9: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:57:57,058 [Worker-9: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:57:57,058 [Worker-9: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:57:57,061 [Worker-9: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:59:31,471 [Worker-12: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:59:31,471 [Worker-12: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:59:31,472 [Worker-12: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:59:31,496 [Worker-12: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:59:31,499 [Worker-12: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:59:31,499 [Worker-12: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:59:31,499 [Worker-12: Launching APIv8Baterias - ApIv8BateriasApplication] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 22:59:47,614 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:59:47,614 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:59:47,615 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 22:59:47,636 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 22:59:47,639 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 22:59:47,639 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 22:59:47,639 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources
+2022-02-10 23:00:17,934 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 23:00:17,934 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 23:00:17,935 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2022-02-10 23:00:17,956 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2022-02-10 23:00:17,959 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2022-02-10 23:00:17,959 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2022-02-10 23:00:17,959 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias\src\test\resources

@@ -28,11 +28,10 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-@Configuration
-@EnableWebSecurity
-@Component 
-@Order(Ordered.HIGHEST_PRECEDENCE) 
+@Configuration 
+@Order(Ordered.LOWEST_PRECEDENCE) 
 public class Cors extends WebSecurityConfigurerAdapter implements Filter{
+//public class Cors{
 	public Cors() {
     }
 	@Override

@@ -21,11 +21,9 @@ import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
 
 @Configuration
-public class OAuth2ServerConfiguration {
-
-    private static final String RESOURCE_ID = "restservice";
-
-    @Configuration
+public class Oauth2 {
+	private static final String RESOURCE_ID = "restservice";
+	@Configuration
     @EnableResourceServer
     protected static class ResourceServerConfiguration extends
             ResourceServerConfigurerAdapter {
@@ -44,19 +42,7 @@ public class OAuth2ServerConfiguration {
                     .clearAuthentication(true)
                     .and().authorizeRequests()
                     .anyRequest().fullyAuthenticated();
-            
-            /*  http
-			        .httpBasic()
-			            .and()
-			        .authorizeRequests()
-			            .antMatchers("/rest/**").permitAll()
-			            .and()
-			        .authorizeRequests()
-			            .antMatchers("/secure/**").hasAnyRole("ADMIN")
-			            .anyRequest().authenticated()
-			            .and()
-			        .formLogin()
-			            .permitAll();*/
+                    //.antMatchers(HttpMethod.OPTIONS, "/**").permitAll();
         }
 
     }
@@ -111,5 +97,4 @@ public class OAuth2ServerConfiguration {
         }
 
     }
-
 }
