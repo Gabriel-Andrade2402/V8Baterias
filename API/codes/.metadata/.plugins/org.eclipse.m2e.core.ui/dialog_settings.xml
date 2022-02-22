@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\Programacao\Workspaces\V8Baterias\API\codes\APIv8Baterias"/>
 			<item value="C:\Users\Gabriel\Desktop\Programacao\Workspaces\V8-Baterias\API\codes\APIv8Baterias"/>
 		</list>
 		<list key="projectNameTemplate">
