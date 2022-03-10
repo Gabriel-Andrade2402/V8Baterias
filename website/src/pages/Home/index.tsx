@@ -26,8 +26,7 @@ const Home = () => {
           },
           headers: {
               "Content-Type": "application/json",
-              "Authorization":"Bearer TEST-5733289434620462-021313-2d8589e80ce978cc5111abf8e9ec51d1-1073610524",
-              "Access-Control-Allow-Origin":"*"
+              "Authorization":"Bearer TEST-5733289434620462-021313-2d8589e80ce978cc5111abf8e9ec51d1-1073610524"
           },
       })
           .then(function (response) {
